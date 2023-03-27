@@ -3,7 +3,7 @@ const app = require("express")();
 const bodyParser = require("body-parser");
 const logger = require("morgan");
 var firebase = require("firebase");
-const { response } = require("express");
+const { response } =  require("express");
 
 //firebase configuration for weather db
 
