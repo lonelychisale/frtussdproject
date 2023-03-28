@@ -28,6 +28,7 @@ const firebaseConfig = {
 const registrationconfig = {
   apiKey: "AIzaSyBTSs9vQ39HhpH8Y4HR4X3OjkoO0BTv5ew",
 
+  
   authDomain: "formdata-f4646.firebaseapp.com",
 
   databaseURL: "https://formdata-f4646-default-rtdb.firebaseio.com",
