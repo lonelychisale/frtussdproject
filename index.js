@@ -222,7 +222,21 @@ else if(dataarray[4]!='' && dataarray[1]=='1' && dataarraysize==5){
   ${advisorytitilejoin}`
 }
 else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6){
-  response =`CON hie there`
+  contentarray = []
+  contentindex = `${--dataarray[5]}`
+  advisorycontent =selectedadvisorytitles =advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].content
+  specifictitlename = selectedadvisorytitles =advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].title
+  
+  //looping through contents
+  advisorycontent.forEach(element => {
+    contentarray.push(element.id + '.' + element.content)
+  });
+
+  //conventing titles to string
+  contenttostring = contentarray.toString()
+  contentjoin = contenttostring.replace(/,/g, '\n')
+  response =`END advisories under  ${specifictitlename}
+  ${contentjoin}`
 }
 /*
   //working on advesories
