@@ -162,7 +162,7 @@ app.post("*", (req, res) => {
  function secondcategory(){
   //looping through second category
   specificarrayvalue.forEach(element => {
-    secondadvisorycategoryarray.push(element.name)
+    secondadvisorycategoryarray.push(element.id +'.' + element.name)
     
   });
  }
