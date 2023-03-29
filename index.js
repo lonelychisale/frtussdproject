@@ -173,6 +173,7 @@ app.post("*", (req, res) => {
  secondcategoryjoin = secondcategorytostring.replace(/,/g ,'\n') 
 
  response =`CON select the subcategory for ${selectedcategory }
+ ${secondcategoryjoin}
  `
  }
 /*
