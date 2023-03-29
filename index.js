@@ -182,12 +182,12 @@ app.post("*", (req, res) => {
  }
  
  else if(dataarray[3]!='' && dataarray[1]=='1' && dataarraysize==4){
-
+  previousindex = `${--dataarray[2]}`
    secondcategoryindex = `${--dataarray[3]}`
 
   const thirdadvisorycategoryarray= []
-  productsarray = advesoryjson.sectors[0].categories[secondcategoryindex].products
-  selectedsecondcategory=advesoryjson.sectors[0].categories[secondcategoryindex].name
+  productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products
+  selectedsecondcategory=advesoryjson.sectors[previousindex].categories[secondcategoryindex].name
  
   function thirdcategory(){
     
@@ -203,6 +203,7 @@ app.post("*", (req, res) => {
   response=`CON select subcategory of ${selectedsecondcategory}
   ${thirdcategoryjoin}`
  }
+ 
 /*
   //working on advesories
   else if (text == "2*1") {
