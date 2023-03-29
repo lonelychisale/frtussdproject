@@ -59,7 +59,7 @@ let languageglobalvariable;
 newregref.child("+265995536312").on("value", (snapshot) => {
   languageglobalvariable = snapshot.val().translated_languge;
 });
-console.log(languageglobalvariable);
+//console.log(languageglobalvariable);
 //inintilizing the app
 firebase.initializeApp(firebaseConfig);
 
@@ -70,6 +70,7 @@ const ref = db.ref("weather/districts");
 
 
 //declaring advisory variables
+console.log(advesoryjson.sectors[0].name)
 const categories =advesoryjson.sectors
 const categoriesarray =[]
 categories.forEach(element => {
@@ -171,7 +172,8 @@ app.post("*", (req, res) => {
  secondcategorytostring = secondadvisorycategoryarray.toString()
  secondcategoryjoin = secondcategorytostring.replace(/,/g ,'\n') 
 
- response =`CON select the subcategory for `
+ response =`CON select the subcategory for ${selectedcategory }
+ `
  }
 /*
   //working on advesories
