@@ -230,7 +230,7 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6){
   //looping through contents
   advisorycontent.forEach(element => {
     selector = 0
-    contentarray.push(`${++selector}` + '.' + element)
+    contentarray.push('-' + '.' + element)
   });
 
   //conventing titles to string
