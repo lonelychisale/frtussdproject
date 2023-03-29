@@ -221,6 +221,9 @@ else if(dataarray[4]!='' && dataarray[1]=='1' && dataarraysize==5){
   response = `CON select advisory title for ${specificadvisorytilte}
   ${advisorytitilejoin}`
 }
+else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6){
+  response =`CON hie there`
+}
 /*
   //working on advesories
   else if (text == "2*1") {
