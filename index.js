@@ -204,9 +204,23 @@ app.post("*", (req, res) => {
   ${thirdcategoryjoin}`
  }
  
- else if(dataarray[4]!='' && dataarraysize==5 && dataarray[1]=='1'){
-  response = `CON hie theres`
- }
+else if(dataarray[4]!='' && dataarray[1]=='1' && dataarraysize==5){
+  titleindex = `${--dataarray[4]}`
+  advisorytitlearray = []
+  selectedadvisorytitles = productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section
+  specificadvisorytilte =productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].name
+
+  //looping through sections
+  selectedadvisorytitles.forEach(element => {
+    advisorytitlearray.push(element.id + '.' + element.title)
+  });
+
+  //changing the array to string
+  advisorytitiletostring = advisorytitlearray.toString()
+  advisorytitilejoin = advisorytitiletostring.replace(/,/g , '\n')
+  response = `CON select advisory title for ${specificadvisorytilte}
+  ${advisorytitilejoin}`
+}
 /*
   //working on advesories
   else if (text == "2*1") {
