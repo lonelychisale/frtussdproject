@@ -196,8 +196,7 @@ app.post("*", (req, res) => {
   //converting the array value to stirng
   thirdadvisorycategorytostring = thirdadvisorycategoryarray.toString()
   thirdcategoryjoin = thirdadvisorycategorytostring.replace(/,/g ,'\n')
-  response=`select subcategory of ${selectedsecondcategory}
-  ${thirdcategoryjoin}`
+  response=`select subcategory of `
  }
 /*
   //working on advesories
