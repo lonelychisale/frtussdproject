@@ -171,8 +171,7 @@ app.post("*", (req, res) => {
  secondcategorytostring = secondadvisorycategoryarray.toString()
  secondcategoryjoin = secondcategorytostring.replace(/,/g ,'\n') 
 
- response =`CON select the subcategory for ${selectedcategory}
- ${secondcategoryjoin}`
+ response =`CON select the subcategory for `
  }
 /*
   //working on advesories
