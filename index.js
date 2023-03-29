@@ -93,7 +93,10 @@ app.post("*", (req, res) => {
       2.Main Menu
       3.Help
       4.Change language`;
-  } else if (text == "1") {
+  }
+  
+  /*
+  else if (text == "1") {
     response = `CON Welcome to Mlimi Registration services. 
         
         1. Start Registration
@@ -344,7 +347,7 @@ app.post("*", (req, res) => {
     update();
     response = `END you have successfully switched to chichewa languge`;
   }
-
+*/
   //send the response back
   res.set("Content-Type: text/plain");
   res.send(response);
