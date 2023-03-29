@@ -121,7 +121,9 @@ app.post("*", (req, res) => {
     }
     registration();
     response = `END you have successfully registered`;
-  } else if (text == "2") {
+  } 
+  */
+  else if (text == "2") {
     response = `CON Mlimi Main Manu
 		1. Advesories
 		2. Weather reports
@@ -129,7 +131,8 @@ app.post("*", (req, res) => {
 		4. Account
 		5. help`;
   }
-
+  
+/*
   //working on advesories
   else if (text == "2*1") {
     async function disp() {
