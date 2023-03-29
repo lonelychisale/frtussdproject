@@ -70,7 +70,11 @@ const ref = db.ref("weather/districts");
 
 
 //declaring advisory variables
-console.log(advesoryjson.sectors[0].categories[0].products)
+namesss = advesoryjson.sectors[0].categories[0].products
+namesss.forEach(element => {
+  console.log(element.name)
+  
+});
 const categories =advesoryjson.sectors
 const categoriesarray =[]
 categories.forEach(element => {
@@ -181,21 +185,7 @@ app.post("*", (req, res) => {
 
    secondcategoryindex = `${--dataarray[3]}`
 
-  const thirdadvisorycategoryarray= []
-  productsarray = advesoryjson.sectors[0].categories[secondcategoryindex].products
-  selectedsecondcategory=advesoryjson.sectors[0].categories[secondcategoryindex].name
- 
-  function thirdcategory(){
-    
-    productsarray.forEach(element => {
-      thirdadvisorycategoryarray.push(element.id + '.' + element.name)
-    });
-  }
-  thirdcategory()
 
-  //converting the array value to stirng
-  thirdadvisorycategorytostring = thirdadvisorycategoryarray.toString()
-  thirdcategoryjoin = thirdadvisorycategorytostring.replace(/,/g ,'\n')
   response=`select subcategory of `
  }
 /*
