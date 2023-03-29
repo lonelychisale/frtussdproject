@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const logger = require("morgan");
 var firebase = require("firebase");
 const { response } =  require("express");
+const advesoryjson = require("./mlimi_english.json")
+
 
 //firebase configuration for weather db
 
@@ -64,6 +66,20 @@ firebase.initializeApp(firebaseConfig);
 //getting database
 var db = firebase.database();
 const ref = db.ref("weather/districts");
+
+//console.log(advesoryjson)
+
+//declaring advisory variables
+const categories =advesoryjson.sectors
+const categoriesarray =[]
+categories.forEach(element => {
+  categoriesname =element.id + '.' + element.name
+  categoriesarray.push(categoriesname)
+});
+
+categoriesnametostring = categoriesarray.toString()
+categoriesnamejoin = categoriesnametostring.replace(/,/g, '\n')
+
 
 const port = process.env.PORT || 3030;
 
@@ -134,7 +150,8 @@ app.post("*", (req, res) => {
   
   //working advesory from the json file
  else if(text == "2*1"){
-  response =`CON select the advisory catergory`
+  response =`CON select the advisory catergory 
+  ${categoriesnamejoin}`
  } 
 /*
   //working on advesories

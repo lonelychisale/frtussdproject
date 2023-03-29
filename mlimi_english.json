@@ -1,0 +1,613 @@
+{
+  "sectors": [
+    {
+      "id": 1,
+      "name": "Crops",
+      "image": "crops",
+      "categories": [
+        {
+          "id": 1,
+          "image": "cereals",
+          "name": "Cereals",
+          "products": [
+            {
+              "id": 1,
+              "image": "maize",
+              "name": "Maize",
+              "section": [
+                {
+                  "id": 1,
+                  "image": "maize_section",
+                  "title": "Choice of variety",
+                  "audio": "maize_01",
+                  "content": [
+                    "Select maize seed according to agro-ecology and rainfall pattern of your area",
+                    "The Department of Agricultural Research services and seed companies have a wide range of varieties suited to all agro-ecological zones and needs of the farmer"
+                  ]
+                },
+                {
+                  "id": 2,
+                  "image": "maize_section",
+                  "title": "Source of seed",
+                  "audio": "maize_02",
+                  "content": [
+                    "Research institutions",
+                    "Accredited seed companies",
+                    "Agro-dealers",
+                    "For hybrid maize, new seed should be bought for every production to ensure optimum yields",
+                    "Open pollinated varieties (Composite) maize varieties can be recycled for another two seasons. If you bought certified seed in season one, you may plant seed from your harvest for another 2 years/productions. Ensure to buy new seed in the fourth season as recycling further lowers yield.",
+                    "For local maize, select seed of desirable attributes at harvest"
+                  ]
+                },
+                {
+                  "id": 3,
+                  "image": "maize_section",
+                  "title": "Site selection",
+                  "audio": "maize_03",
+                  "content": [
+                    "Select deep, well-drained, fertile soils, and where total seasonal rainfall exceeds 500 mm",
+                    "Maize is reasonably tolerant to soil acidity, but if the soil is very acid, lime to improve the soil and enhance maize yields",
+                    "Maize is susceptible to both drought and waterlogging, therefore avoid poorly drained soils, apply practices like ridging, drainage and early planting to remedy these challenges.",
+                    "Drought during the four-week period spanning flowering (silking and tasselling) can cause serious yield losses, and therefore some form of water conservation is important (e.g., pot-holing, mulching, tied/box-ridges), especially in the drier areas.",
+                    "Temperatures above 38 degrees celcius affect yield by affecting pollen viability while temperatures below 10 retards maize growth."
+                  ]
+                },
+                {
+                  "id": 4,
+                  "image": "maize_section",
+                  "title": "Land preparation",
+                  "audio": "maize_04",
+                  "content": [
+                    "Prepare land early to ensure early planting",
+                    "Clear, plough and harrow the land where maize is to be planted",
+                    "In most cases, maize is planted on ridges while in some cases, the crop is planted in rows, especially under irrigated conditions. Ridges and rows should be spaced at 75cm apart"
+                  ]
+                },
+                {
+                  "id": 5,
+                  "image": "maize_section",
+                  "title": "Planting pattern and seed rates",
+                  "audio": "maize_05",
+                  "content": [
+                    "Under rain fed conditions, plant after first effective rains, when the soils are sufficiently wetted to a depth of 15cm. This is usually between October and December.",
+                    "Under irrigation, plant when the soil is wet enough to such a depth of 15cm continuously for a longer duration. In most such cases, soils are continuously wet and are in wetted residual conditions",
+                    "Plant one seed per station every 25cm in the rows /ridges that are 75 cm apart",
+                    "You may also opt to plant 2 seeds per station every 50 cm in rows/ridges spaced at 75 cm apart. Similarly, a farmer may opt to plant 3. seeds per station every 50 cm in rows/ridges spaced at 75 cm apart",
+                    "Seed rate is 25 kg/ha (10kg/acre)"
+                  ]
+                },
+                {
+                  "id": 6,
+                  "image": "maize_section",
+                  "title": "Fertilizer application",
+                  "audio": "maize_06",
+                  "content": [
+                    "Apply basal dressing fertilizer is applied at planting, soon after planting or 5 to 7 days after seed emergency",
+                    "100kg (2 bags) of NPK (23:21:0+4S, Zn) are sufficient for one hectare",
+                    "Apply one full Coca-Cola bottle top of NPK fertilizer using the dollop method where a hole which is about 3-5cm deep is made between planting stations (where maize is planted at 25 cm apart) or on both sides of the seed station if planted at 50 and 90 cm apart",
+                    "Apply top dressing fertilizers 3 weeks from basal dressing fertilizer application",
+                    "Use a similar dollop methodology as it was done during basal dressing",
+                    "150kg (3bags) of Urea are sufficient for one hectare"
+                  ]
+                },
+                {
+                  "id": 7,
+                  "image": "maize_section",
+                  "title": "Weeding",
+                  "audio": "maize_07",
+                  "content": [
+                    "Keep the maize field as free from weeds as much as possible",
+                    "Ensure maize crop is weed free for the first 2-6 weeks. Two to three hoe weeding rounds are enough after planting",
+                    "Weeding can be done manually or using herbicides",
+                    "Crop rotation and other cultural practices also help in reducing weed intensity."
+                  ]
+                },
+                {
+                  "id": 8,
+                  "image": "maize_section",
+                  "title": "Disease and pest control in maize",
+                  "audio": "maize_08",
+                  "content": [
+                    "Maize is affected by leaf blight, maize streak virus, cob rot, grey leaf spot diseases.",
+                    "Important pests of maize are Fall army worms, maize stalk borer, leaf rollers, earth worms and termites",
+                    "Pests and diseases in maize can be controlled by planting resistant/tolerant varieties, good cultural practices and use of chemicals where ever necessary i.e. Crop rotation, early planting, right plant population/densities, and practices that ensure a healthy plant (proper soil pH and fertility) reduce the impact of pest and disease problems"
+                  ]
+                },
+                {
+                  "id": 9,
+                  "image": "maize_section",
+                  "title": "Maize harvesting",
+                  "audio": "maize_09",
+                  "content": [
+                    "Harvest maize once it is dry",
+                    "Stoking is recommended for cobs to complete drying",
+                    "Once dry, remove cobs from stalks for shelling and storage or use"
+                  ]
+                },
+                {
+                  "id": 10,
+                  "image": "maize_section",
+                  "title": "Maize storage",
+                  "audio": "maize_10",
+                  "content": [
+                    "Store well dried and cleaned maize grain",
+                    "Maize for storage should be well treated with storage pesticides following recommendations on safe use and correct application rates",
+                    "Check stored maize every 3-6 months to ensure safety from pest attack",
+                    "Maize grain is conveniently stored when packed in 50kg or 100kg bags stacked on pallets or poles for air circulation.",
+                    "Avoid contact of bags of maize with the floor and walls that may emit moisture. Storage facility should be leak-proof."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "image": "legumes",
+          "name": "Legumes",
+          "products": [
+            {
+              "id": 1,
+              "image": "groundnuts",
+              "name": "Groundnuts",
+              "section": [
+                {
+                  "id": 1,
+                  "image": "groundnuts_section",
+                  "title": "Choice of variety",
+                  "audio": "",
+                  "content": [
+                    "CG7 does well in a wide range of agro-ecologies",
+                    "Nsinjiro and Chalimbana 2005 are suitable for plateau areas",
+                    "Early maturing varieties like Kakoma, Baka and Chitala are good for the Lakeshore and Shire Valley",
+                    "CG 8, CG 9, CG 10 and CG 11, are medium duration Virginia varieties, and mature between 120-130 days, are well adapted to mid-altitude agro-ecologies",
+                    "CG 12, CG 13 and CG 14, are short duration Spanish varieties, maturing within 90-110 days, are well adapted for low-altitude agro-ecologies"
+                  ]
+                },
+                {
+                  "id": 2,
+                  "image": "groundnuts_section",
+                  "title": "Source of seed",
+                  "audio": "",
+                  "content": [
+                    "Research institutions",
+                    "Accredited seed companies",
+                    "Agro-dealers are the best",
+                    "Recycling groundnut seed is acceptable for only two seasons. If you bought certified seed in season one, you may plant seed from your harvest for another 2 years. Ensure to buy new seed in the fourth season as recycling further lowers yield. Test  seed for germination so that seed rate can be adjusted accordingly to ensure optimum population is achieved"
+                  ]
+                },
+                {
+                  "id": 3,
+                  "image": "groundnuts_section",
+                  "title": "Site selection for groundnuts production",
+                  "audio": "",
+                  "content": [
+                    "Select deep, well-drained loamy-sand, sandy-loam, or sandy-clay-loam soil with moderate organic matter. Avoid fallow and virgin lands as these may not have the appropriate natural rhizobium for effective nodulation. A soil test  at a reputable soil laboratory helps determine whether the soil needs soil amendments or not"
+                  ]
+                },
+                {
+                  "id": 4,
+                  "image": "groundnuts_section",
+                  "title": "Land preparation",
+                  "audio": "",
+                  "content": [
+                    "Prepare land early enough to plant with the effective early rains in accordance with the chosen groundnut planting pattern",
+                    "Prepare flat-topped ridges 30cm high spaced 75 cm apart or flat seed beds"
+                  ]
+                },
+                {
+                  "id": 5,
+                  "image": "groundnuts_section",
+                  "title": "Dressing groundnuts seed with inoculant and fungicide before planting",
+                  "audio": "",
+                  "content": [
+                    "Treat groundnut seed with inoculant before planting to enhance biological nitrogen fixation (BNF) that meets the crop’s N requirement for high yield and quality",
+                    "Fungicide dressing protects the seed and the subsequent seedlings against soil fungi for optimum plant population."
+                  ]
+                },
+                {
+                  "id": 6,
+                  "image": "groundnuts_section",
+                  "title": "Planting pattern and seed rates",
+                  "audio": "",
+                  "content": [
+                    "Plant one seed every 10cm for Spanish varieties and 15cm for Virginia varieties in rows grooved 5-6 cm deep along the ridges",
+                    "Seed rate is between 50-70 kg/ha for Spanish varieties and 80-100 kg/ha for Virginia varieties for single row planting and 110-130 kg/ha for Spanish varieties and 180-200 kg/ha for Virginia varieties for double row planting",
+                    "Do not plant rainfed groundnuts after 15th January because of relatively high populations of aphids that transmit groundnut rosette virus. Planting late may result in dry conditions during the latter part of the growing cycle, affecting pod filling causing lower yields and greater potential for aflatoxin, if prolonged",
+                    "If planting on flat land, spacing between rows should be 45 cm apart."
+                  ]
+                },
+                {
+                  "id": 7,
+                  "image": "groundnuts_section",
+                  "title": "Fertilizer application",
+                  "audio": "",
+                  "content": [
+                    "Groundnut can benefit from residual fertility and in some cases no additional fertilizer may be required if the crop is grown on well-managed land previously treated with a balanced fertilizer",
+                    "In areas where native fertility is low addition of fertilizer will increase yield. Apply 100 kg/ha (40kg/acre) of superphosphate before or at planting",
+                    "The fertilizer should be applied in a band on the ridge, or broadcast onto the soil and ploughed under before sowing",
+                    "The fertilizer should be applied in a band on the ridge, or broadcast onto the soil and ploughed under before sowing"
+                  ]
+                },
+                {
+                  "id": 8,
+                  "image": "groundnuts_section",
+                  "title": "Weeding",
+                  "audio": "",
+                  "content": [
+                    "Two to three hoe weeding rounds are enough between 3-6 weeks after planting",
+                    "Hand weeding is recommended, if necessary, at pegging and beyond",
+                    "Pre-emergence herbicides applied appropriately are another alternative and cost-saving weed control technology",
+                    "Crop rotation and other cultural practices also help in reducing weed intensity"
+                  ]
+                },
+                {
+                  "id": 9,
+                  "image": "groundnuts_section",
+                  "title": "Disease and pest control in groundnuts",
+                  "audio": "",
+                  "content": [
+                    "Groundnuts are affected by early and late leaf spot, rust and groundnut rosette diseases as well as termites, aphids, hilda spp, white grabs and leaf miners",
+                    "Pests and diseases in groundnuts can be controlled by planting resistant varieties, good cultural practices and use of chemicals where ever necessary i.e. Crop rotation, Pests and diseases in groundnuts can be controlled by planting resistant varieties, good cultural practices and use of chemicals where ever necessary i.e. Early planting, higher plant densities, and practices that ensure a healthy plant (proper soil pH and fertility) reduce the impact of pest and disease problems. Removing or burying diseased infected crop residues, The newly released varieties, CG8, CG9, CG10, CG11, CG12, CG13 and CG14 are resistant to groundnut rosette disease and other foliar diseases"
+                  ]
+                },
+                {
+                  "id": 10,
+                  "image": "groundnuts_section",
+                  "title": "Groundnut harvesting",
+                  "audio": "",
+                  "content": [
+                    "A dry period is required at harvesting time.",
+                    "Harvest groundnuts as soon as they are mature to avoid fungal infections and aflatoxin contamination, loss of pods and sprouting",
+                    "Maturity can be determined by keeping a record of planting dates and following duration to maturity per variety and confirmed by looking at a layer of the skin inside the pod. Mature pods have dark brown spots",
+                    "Dry the pods on the plant in windrows or in ‘Mandela cocks’ right in the field for about a week depending on weather conditions.",
+                    "The pods are then plucked off the plants for further drying prior to storage"
+                  ]
+                },
+                {
+                  "id": 11,
+                  "image": "groundnuts_section",
+                  "title": "Groundnut storage",
+                  "audio": "",
+                  "content": [
+                    "Groundnuts are best stored in shells, bagged and stacked on pallets in a dry and well-ventilated leak-proof storage room at least half a meter away from the walls.",
+                    "Do not store damaged, shrivelled, rotten and fungal infected pods",
+                    "There should be a gap between stacks to allow free air circulation. Stacks should not be more than 10 bags high"
+                  ]
+                },
+                {
+                  "id": 12,
+                  "image": "groundnuts_section",
+                  "title": "Shelling groundnut",
+                  "audio": "",
+                  "content": [
+                    "Groundnuts should be shelled only when they are to be used or sold if the market require shelled nuts",
+                    "Shelled nuts are easily damaged by pests and moulds which predispose them to aflatoxin contamination",
+                    "Groundnuts are shelled either manually or by time-saving mechanical means"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "image": "soybean",
+              "name": "Soybean",
+              "section": [
+                {
+                  "id": 1,
+                  "image": "soybean_section",
+                  "title": "Choice of variety",
+                  "audio": "",
+                  "content": [
+                    "Tikolore and Solitaire are adaptable to a wide range of agro-ecologies",
+                    "Makwacha, Nasoko, Serenade, Soprano and Pan1867 are adapted to medium to high altitude areas",
+                    "Ocepara4 is good for medium altitudes",
+                    "Several other varieties high yielding varieties are under trial and are due for release soon",
+                    "Maturity period, market preference and yielding potential are important considerations in choice of a variety to be grown"
+                  ]
+                },
+                {
+                  "id": 2,
+                  "image": "soybean_section",
+                  "title": "Source of seed",
+                  "audio": "",
+                  "content": [
+                    "Research institutions",
+                    "Accredited seed companies",
+                    "Agro-dealers are the best",
+                    "Recycling groundnut seed is acceptable for only two seasons. If you bought certified seed in season one, you may plant seed from your harvest for another 2 years. Ensure to buy new seed in the fourth season as recycling further lowers yield. Test  seed for germination so that seed rate can be adjusted accordingly to ensure optimum population is achieved"
+                  ]
+                },
+                {
+                  "id": 3,
+                  "image": "soybean_section",
+                  "title": "Site selection",
+                  "audio": "",
+                  "content": [
+                    "Select moderate slope",
+                    "well drained loamy soils",
+                    "land which has not had soybeans planted for the previous two years",
+                    "soybean should not follow tobacco",
+                    "Select land which is not heavily infected with rust and not heavily infested with couch grass"
+                  ]
+                },
+                {
+                  "id": 4,
+                  "image": "soybean_section",
+                  "title": "Land preparation",
+                  "audio": "",
+                  "content": [
+                    "Prepare land early enough to sow with the effective early rains in accordance with the chosen soybean planting pattern",
+                    "Prepare flat-topped ridges 30cm high spaced 75 cm apart or flat seed beds"
+                  ]
+                },
+                {
+                  "id": 5,
+                  "image": "soybean_section",
+                  "title": "Dressing soybean seed with inoculant before planting",
+                  "audio": "",
+                  "content": [
+                    "Treat soybean seed with inoculant before planting to enhance BNF that meets the crop’s N requirement for high yield and quality.",
+                    "Fungicide dressing protects the seed and the subsequent seedlings against soil fungi for optimum plant population"
+                  ]
+                },
+                {
+                  "id": 6,
+                  "image": "soybean_section",
+                  "title": "Planting pattern and seed rates",
+                  "audio": "",
+                  "content": [
+                    "Plant one seed every 5cm on two rows spaced 20-30cm apart in grooves 2.5-3 cm deep along the ridges",
+                    "Seed rate is between 60-65 kg/ha for small seeded varieties like Tikolore and 80-100 kg/ha for large seeded varieties like Makwacha and Nasoko",
+                    "Here in Malawi, soybean can be planted in summer (December–April) and/or during winter (off-season) i.e. May/June with irrigation or in dimbas under residual moisture",
+                    "If grown under irrigation, planting should be done be¬tween May to June in low lying dry areas. Take note that soybean yields are re¬duced when grown off season due to photoperiod sensitivity of the crop",
+                    "Dependent upon the variety of soybean you have chosen to plant and the land cropping history, a soybean farmer maybe required to apply inoculant to seed at planting. For example, Tikolore may not require inoculation, while all the other varieties would. Where a previous crop of soybean was grown in the last 3 years, a new crop may still benefit from indigenous bacteria left by the earlier crop"
+                  ]
+                },
+                {
+                  "id": 7,
+                  "image": "soybean_section",
+                  "title": "Fertilizer application",
+                  "audio": "",
+                  "content": [
+                    "Under normal conditions, soybean as a legume should provide itself with nitrogen through biological nitrogen fixation",
+                    "A good fertilizer recommendation for soybean production depends on good soil test",
+                    "Where necessary, apply 100kg of 23:10:5 +4S or D-Compound/ha at planting or one week after planting. Use banding method incorporating 18g fertilizer per metre ridge spacing"
+                  ]
+                },
+                {
+                  "id": 8,
+                  "image": "soybean_section",
+                  "title": "Weeding",
+                  "audio": "",
+                  "content": [
+                    "Do first hoe weeding 2 weeks after planting. Subsequent weeding operations can be done when deemed necessary",
+                    "If an herbicide is applied at planting, one hoe weeding or none at all may be required at 5–6 weeks after planting",
+                    "Crop rotation and other cultural practices also help in reducing weed intensity"
+                  ]
+                },
+                {
+                  "id": 9,
+                  "image": "soybean_section",
+                  "title": "Disease and pest control in soybeans",
+                  "audio": "",
+                  "content": [
+                    "Spray Folicur to control rust",
+                    "Bacterial pus¬tule, frogeye and soybean cyst nematodes can be controlled by good cultural practices, field hygiene and use of certified seed",
+                    "Insect pests like cat¬erpillars, soybean looper, leaf miners, leaf rollers and termites can also be controlled by good cultural practices, field hygiene and use of certified seed",
+                    "Spray with Cyper¬methrin or Dimethoate if severity warrants control by insecticide"
+                  ]
+                },
+                {
+                  "id": 10,
+                  "image": "soybean_section",
+                  "title": "Harvesting and threshing soybeans",
+                  "audio": "",
+                  "content": [
+                    "Harvesting in the morning soon after the dew disappears when the air temperature is still low to avoid shattering",
+                    "Dry the harvest on tarpaulins",
+                    "Thresh manually using pliable sticks or mechanically"
+                  ]
+                },
+                {
+                  "id": 11,
+                  "image": "soybean_section",
+                  "title": "Cleaning soybeans",
+                  "audio": "",
+                  "content": [
+                    "Soybeans are cleaned by winnowing, sieving and grading to separate the sound seeds from rots, discoloured, shrivelled, splits, cracked, disease- and insect-damaged seeds, persistent debris, foreign matter, other crop seed, weed seed and other variety seed"
+                  ]
+                },
+                {
+                  "id": 12,
+                  "image": "soybean_section",
+                  "title": "Storage",
+                  "audio": "",
+                  "content": [
+                    "Storage allows farmers to sell the grain when returns are at maximum",
+                    "Soybean grain is conveniently stored when packed in 50kg or 100kg bags stacked on pallets or poles for air circulation",
+                    "Avoid contact of bags of soybean with the floor and walls that may emit moisture. Storage facility should be leak-proof"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "image": "oil_and_seeds",
+          "name": "Oil and Seeds",
+          "products": [
+            {
+              "id": 1,
+              "image": "sun_flower",
+              "name": "Sunflower",
+              "section": [
+                {
+                  "id": 1,
+                  "image": "sunflower_section",
+                  "title": "Choice of variety",
+                  "audio": "",
+                  "content": [
+                    "PAN 7351, PAN 7049, PAN 7033 hybrids are adaptable to mid-altitude agro-ecologies",
+                    "Milika is an Open pollinated varieties (OPV) variety that farmers are allowed to import from Zambia for production only",
+                    "Local recycled varieties. If planning to recycle select clean, plump grains from field OR storage",
+                    "Other hybrid varieties and an OPV were under trial and are due for release soon",
+                    "Maturity period, market preference (oil and protein content) and yielding potential are important considerations in choice of a variety to be grown."
+                  ]
+                },
+                {
+                  "id": 2,
+                  "image": "sunflower_section",
+                  "title": "Source of seed",
+                  "audio": "",
+                  "content": [
+                    "Accredited seed companies",
+                    "Agro-dealers are the best",
+                    "Selection from previous harvest",
+                    "Recycling sunflower seed is acceptable for Open pollinated varieties and only two seasons. If you bought certified seed in season one, you may plant seed from your harvest for another 2 years. Ensure to buy new seed in the fourth season as recycling further lowers yield. For hybrids, new seed has to be bought for every production",
+                    "Test seed for germination so that seed rate can be adjusted accordingly to ensure optimum population is achieved"
+                  ]
+                },
+                {
+                  "id": 3,
+                  "image": "sunflower_section",
+                  "title": "Site selection",
+                  "audio": "",
+                  "content": [
+                    "Select deep, well-drained loam soils with good physical conditions such as good water holding capacity",
+                    "Sunflower can, be successfully grown on loam, sandy loam or sandy clay loam, or turf soils, as well as poor and slightly brackish soils, provided the soil is well-drained",
+                    "Sunflower does well on soils with a pH range of 6.5 – 7.5",
+                    "Ensure rotation. Crop rotation help reduce pest and disease attack as well as weed intensity"
+                  ]
+                },
+                {
+                  "id": 4,
+                  "image": "sunflower_section",
+                  "title": "Land preparation",
+                  "audio": "",
+                  "content": [
+                    "Prepare land early enough to sow at the appropriate time",
+                    "Sunflower reacts positively to good soil preparation, prepare you land to fine tilt",
+                    "A fine, well-prepared seed bed ensures good germination and an even stand ",
+                    "If planting on ridges, make ridges 30cm high spaced 75 cm apart"
+                  ]
+                },
+                {
+                  "id": 5,
+                  "image": "sunflower_section",
+                  "title": "Dressing seed with a fungicide before planting",
+                  "audio": "",
+                  "content": [
+                    "If possible, dress sunflower seed with fungicides before planting",
+                    "Fungicide dressing protects the seed and the subsequent seedlings against soil fungi for optimum plant population"
+                  ]
+                },
+                {
+                  "id": 6,
+                  "image": "sunflower_section",
+                  "title": "Planting pattern and seed rates",
+                  "audio": "",
+                  "content": [
+                    "Plant one seed every 25cm, Or 2 seeds every 50cm, planting seed at 2-3 cm deep",
+                    "If planted on flat surface make single rows at 45cm apart, using same spacing between hills",
+                    "Seed rate is between 5 kg/ha or 2 kg/acre",
+                    "If planting recycled seed, increase the seed rate",
+                    "If planted more seeds per station, thin to one or 2 at 3 weeks after planting",
+                    "Sunflower is not very sensitive to date of planting, and may be grown over a long period in most areas- Planting may continue up to February in low lying areas and wetlands",
+                    "Sunflower has the ability to utilise nutrients which were applied to, but not utilised fully by a previous crop in the rotation system. It can, therefore, be successfully grown after other crops that were fertilized well, and do relatively well",
+                    "Sunflower is also planted in relay with cereals (maize or sorghum). This is common practice in the Shire highlands (Phalombe, Chiradzulu, Blantyre) and the crop benefits from residual fertilizers from the cereals"
+                  ]
+                },
+                {
+                  "id": 7,
+                  "image": "sunflower_section",
+                  "title": "Fertilizer application",
+                  "audio": "",
+                  "content": [
+                    "A good fertilizer recommendation for sunflower production depends on good soil test",
+                    "The bracket recommendation is 150kg of 23:21:0+4S and 100 kg of urea per hectare",
+                    "It is recommended to apply fertilizer which has boron where boron is deficient in the soils",
+                    "Apply the 23:21:0+4S fertilizer at planting or 10 days after planting for better root development and plant vigor",
+                    "Apply Urea 14 days after application of first fertilizer and after thinning. A standard cup number 5 can be used to apply fertilizer",
+                    "In most sunflower producing areas, farmers do not apply fertilizers. To achieve a good yield, fertilizer application is important, especially for hybrid varieties"
+                  ]
+                },
+                {
+                  "id": 8,
+                  "image": "sunflower_section",
+                  "title": "Weeding",
+                  "audio": "",
+                  "content": [
+                    "Ensure field is weed free in the first 6 weeks after planting",
+                    "Do first hoe/hand weeding 2 weeks after planting. Subsequent weeding operations can be done when deemed necessary",
+                    "If a herbicide is applied at planting, one hoe weeding or none at all may be required at 5–6 weeks after planting",
+                    "Crop rotation and other cultural practices also help in reducing weed intensity"
+                  ]
+                },
+                {
+                  "id": 9,
+                  "image": "sunflower_section",
+                  "title": "Control of diseases and insect pests in sunflower",
+                  "audio": "",
+                  "content": [
+                    "A number of pest and diseases may attack sunflower. Oftentimes attacks are not serious enough to cause economic damage or impact on yield",
+                    "The only one disease of real economic importance is Sclerotinia Head Rot. The most effective and economical way of controlling diseases is to plant resistant cultivars and to follow good cultural practices, field hygiene and use of certified seed",
+                    "For, pests (grasshoppers, spidermites, bollworms), based on severity and potential yield loss, chemical control is recommended",
+                    "Spray appropriate agro-chemicals only if warrants control"
+                  ]
+                },
+                {
+                  "id": 10,
+                  "image": "sunflower_section",
+                  "title": "Maturity and Harvesting",
+                  "audio": "",
+                  "content": [
+                    "Maturity can be determined by keeping a record of planting dates and following duration to maturity per variety and confirmed by looking at the crop physiological changes",
+                    "Sunflower crop is mature when the backs of the heads turn from green to yellow and the outer tracts (small leaves) around the head circumference turn brown and brittle",
+                    "The fleshy heads and the stems will still be high in moisture",
+                    "Harvest when the backs of the heads are still slightly damp to reduce losses",
+                    "If bird damage is not a serious problem in the field, allow seed curing to take place on the standing stalk",
+                    "If harvest is required before the seed is completely dry, the heads must be cut and placed in thin layers on an open drying floor with occasional turning",
+                    "This drying operation will take 5-8 days"
+                  ]
+                },
+                {
+                  "id": 11,
+                  "image": "sunflower_section",
+                  "title": "Threshing and cleaning",
+                  "audio": "",
+                  "content": [
+                    "Once dry, the dried heads can be threshed by beating with sticks or rubbing them on a rough or slotted threshing board or by a threshing machine",
+                    "The seed should then be winnowed to remove all chaff and foreign matter",
+                    "Cleaning helps avoid molding and contamination by insects",
+                    "Dry sunflower grains below 12% moisture for temporary storage and below 9% moisture for long time storage (2-3 months)"
+                  ]
+                },
+                {
+                  "id": 12,
+                  "image": "sunflower_section",
+                  "title": "Storage",
+                  "audio": "",
+                  "content": [
+                    "Storage allows farmers to sell the grain when returns are at maximum",
+                    "Store in containers or sacks that are clean and treated with insecticide to avoid damage",
+                    "Sunflower grain is conveniently stored when packed in 50kg or 100kg bags stacked on pallets or poles for air circulation",
+                    "Avoid stored sunflower bags from coming in contact with the floor and walls that may emit moisture",
+                    "Storage facility should be leak-proof"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "livestock",
+      "name": "Livestock",
+      "categories": []
+    }
+  ]
+}
