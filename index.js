@@ -67,7 +67,7 @@ firebase.initializeApp(firebaseConfig);
 var db = firebase.database();
 const ref = db.ref("weather/districts");
 
-//console.log(advesoryjson)
+
 
 //declaring advisory variables
 const categories =advesoryjson.sectors
@@ -154,7 +154,25 @@ app.post("*", (req, res) => {
   ${categoriesnamejoin}`
  } 
  else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3 ){
-  response = `CON hie there`
+  const secondadvisorycategoryarray= []
+  categoryindex =dataarray[2]-1
+  specificarrayvalue =advesoryjson[categoryindex].categories
+  selectedcategory =advesoryjson[categoryindex.name]
+ function secondcategory(){
+  //looping through second category
+  specificarrayvalue.forEach(element => {
+    secondadvisorycategoryarray.push(element.name)
+    
+  });
+ }
+ secondcategory()
+
+ //converting  values to string
+ secondcategorytostring = secondadvisorycategoryarray.toString()
+ secondcategoryjoin = secondcategorytostring.replace(/,/g ,'\n') 
+
+ response =`CON select the subcategory for ${selectedcategory}
+ ${secondcategoryjoin}`
  }
 /*
   //working on advesories
