@@ -153,6 +153,9 @@ app.post("*", (req, res) => {
   response =`CON select the advisory catergory 
   ${categoriesnamejoin}`
  } 
+ else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3 ){
+  response = `CON hie there`
+ }
 /*
   //working on advesories
   else if (text == "2*1") {
