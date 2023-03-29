@@ -178,11 +178,11 @@ app.post("*", (req, res) => {
  }
  
  else if(dataarray[3]!='' && dataarray[1]=='1' && dataarraysize==4){
+
    secondcategoryindex = `${--dataarray[3]}`
-   
 
   const thirdadvisorycategoryarray= []
-  productsarray = advesoryjson.sectors[categoryindex].categories[secondcategoryindex].products
+  productsarray = advesoryjson.sectors[0].categories[secondcategoryindex].products
   selectedsecondcategory=advesoryjson.sectors[0].categories[secondcategoryindex].name
  
   function thirdcategory(){
