@@ -179,16 +179,18 @@ app.post("*", (req, res) => {
  
  else if(dataarray[3]!='' && dataarray[1]=='1' && dataarraysize==4){
    secondcategoryindex = `${--dataarray[3]}`
+   categoryindex =`${--dataarray[2]}`
 
   const thirdadvisorycategoryarray= []
   specificarrayvalue =categories[categoryindex].categories
   selectedcategory =categories[categoryindex].name
- 
+  productsarray = advesoryjson.sectors[categoryindex].categories[secondcategoryindex].products
+  selectedsecondcategory=advesoryjson.sectors[categoryindex].categories[secondcategoryindex].name
  
   function thirdcategory(){
-    productsarray = advesoryjson.sectors[categoryindex].categories[secondcategoryindex].products
+    
     productsarray.forEach(element => {
-      thirdadvisorycategoryarray.push(element.name)
+      thirdadvisorycategoryarray.push(element.id + '.' + element.name)
     });
   }
   thirdcategory()
@@ -196,7 +198,7 @@ app.post("*", (req, res) => {
   //converting the array value to stirng
   thirdadvisorycategorytostring = thirdadvisorycategoryarray.toString()
   thirdcategoryjoin = thirdadvisorycategorytostring.replace(/,/g ,'\n')
-  response=`select subcategory of
+  response=`select subcategory of ${selectedsecondcategory}
   ${thirdcategoryjoin}`
  }
 /*
