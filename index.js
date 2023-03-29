@@ -204,6 +204,9 @@ app.post("*", (req, res) => {
   ${thirdcategoryjoin}`
  }
  
+ else if(dataarray[4]!='' && dataarraysize==5 && dataarray[1]=='1'){
+  response = `CON hie theres`
+ }
 /*
   //working on advesories
   else if (text == "2*1") {
