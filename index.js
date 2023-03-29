@@ -229,7 +229,8 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6){
   
   //looping through contents
   advisorycontent.forEach(element => {
-    contentarray.push(element.id + '.' + element.content)
+    selector = 0
+    contentarray.push(++selector + '.' + element)
   });
 
   //conventing titles to string
