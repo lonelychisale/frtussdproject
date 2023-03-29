@@ -185,8 +185,23 @@ app.post("*", (req, res) => {
 
    secondcategoryindex = `${--dataarray[3]}`
 
+  const thirdadvisorycategoryarray= []
+  productsarray = advesoryjson.sectors[0].categories[secondcategoryindex].products
+  selectedsecondcategory=advesoryjson.sectors[0].categories[secondcategoryindex].name
+ 
+  function thirdcategory(){
+    
+    productsarray.forEach(element => {
+      thirdadvisorycategoryarray.push(element.id + '.' + element.name)
+    });
+  }
+  thirdcategory()
 
-  response=`select subcategory of `
+  //converting the array value to stirng
+  thirdadvisorycategorytostring = thirdadvisorycategoryarray.toString()
+  thirdcategoryjoin = thirdadvisorycategorytostring.replace(/,/g ,'\n')
+  response=`CON select subcategory of ${selectedsecondcategory}
+  ${thirdcategoryjoin}`
  }
 /*
   //working on advesories
