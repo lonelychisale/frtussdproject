@@ -132,6 +132,10 @@ app.post("*", (req, res) => {
 		5. help`;
   }
   
+  //working advesory from the json file
+ else if(text == "2*1"){
+  response =`CON select the advisory catergory`
+ } 
 /*
   //working on advesories
   else if (text == "2*1") {
