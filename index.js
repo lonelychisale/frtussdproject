@@ -156,7 +156,7 @@ app.post("*", (req, res) => {
  } 
  else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3 ){
   const secondadvisorycategoryarray= []
-  categoryindex =dataarray[2]-1
+  categoryindex =`${--dataarray[2]}`
   specificarrayvalue =categories[categoryindex].categories
   selectedcategory =categories[categoryindex].name
  function secondcategory(){
