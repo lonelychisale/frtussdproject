@@ -156,8 +156,8 @@ app.post("*", (req, res) => {
  else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3 ){
   const secondadvisorycategoryarray= []
   categoryindex =dataarray[2]-1
-  specificarrayvalue =advesoryjson[categoryindex].categories
-  selectedcategory =advesoryjson[categoryindex.name]
+  specificarrayvalue =categories[categoryindex].categories
+  selectedcategory =categories[categoryindex].name
  function secondcategory(){
   //looping through second category
   specificarrayvalue.forEach(element => {
