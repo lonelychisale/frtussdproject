@@ -176,6 +176,10 @@ app.post("*", (req, res) => {
  ${secondcategoryjoin}
  `
  }
+ 
+ else if(dataarray[3]!='' && dataarray[1]=='1' && dataarraysize==4){
+  response=`select subcategory of`
+ }
 /*
   //working on advesories
   else if (text == "2*1") {
