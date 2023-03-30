@@ -96,10 +96,9 @@ const weatherdistrictsjoin = waetherdstrictstostring.replace(/,/g , '\n')
 const temperature = weatherdistricts[0].weeklyTemps[0]
 
 //testing home page naviagation
-var namestring ='my name is lonely chisale'
-var namesarray = namestring.split('')
+var namestring ='my  * name * is *lonely* chisale'
+var namesarray = namestring.split("*")
 namesarray.length = 0
-emeptyarray=namesarray.splice(0,namesarray.length);
 console.log(namesarray)
 
 
