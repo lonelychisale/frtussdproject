@@ -93,7 +93,9 @@ const waetherdstrictstostring = weatherdistrictsarray.toString()
 const weatherdistrictsjoin = waetherdstrictstostring.replace(/,/g , '\n')
 
 //working on weekly temprature
-const temperature = weatherdistricts[0].weeklyTemps
+const temperature = weatherdistricts[0].weeklyTemps[0]
+console.log(temperature)
+
 
 
 
@@ -313,6 +315,15 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarraysize==4){
   response = `CON select day for temperature of ${districtname}
   ${daysjoin}
   `
+}
+else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarraysize==5){
+  daysindex = `${--dataarray[4]}`
+  dayname = weatherdistricts[districtindex].weeklyTemps[daysindex].title
+  maxtemp = weatherdistricts[districtindex].weeklyTemps[daysindex].max
+  mintemp = weatherdistricts[districtindex].weeklyTemps[daysindex].min
+  statustemp = weatherdistricts[districtindex].weeklyTemps[daysindex].status
+
+  response =`CON on ${dayname} it will ${statustemp} with maximum temperature of ${maxtemp} and minimum temperature of ${mintemp}`
 }
 
 /*
