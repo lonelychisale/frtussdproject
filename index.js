@@ -184,7 +184,7 @@ app.post("*", (req, res) => {
  else if(text == "2*1"){
   response =`CON select the advisory catergory 
   ${categoriesnamejoin}
-  *.home`
+  #.home`
  } 
  else if(text=='2*1*#'){
   dataarray.length = 0
