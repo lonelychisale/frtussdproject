@@ -82,7 +82,17 @@ categoriesnametostring = categoriesarray.toString()
 categoriesnamejoin = categoriesnametostring.replace(/,/g, '\n')
 
 //working on weather
-console.log(weatherjson)
+const weatherdistricts = weatherjson.weather.districts
+const weatherdistrictsarray = []
+weatherdistricts.forEach(element => {
+  weatherdistrictsarray.push(element.id + '.' + element.name) 
+});
+
+//changing weatherdistrictsarray to string
+const waetherdstrictstostring = weatherdistrictsarray.toString()
+const weatherdistrictsjoin = waetherdstrictstostring.replace(/,/g , '\n')
+
+
 
 
 const port = process.env.PORT || 3030;
@@ -240,7 +250,8 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6){
 
 //working on weather
 else if(text == "2*2"){
-  response =`CON start working on weather`
+  response =`CON select prefered district
+  ${weatherdistrictsjoin}`
 }
 
 /*
