@@ -98,7 +98,8 @@ const temperature = weatherdistricts[0].weeklyTemps[0]
 //testing home page naviagation
 var namestring ='my name is lonely chisale'
 var namesarray = namestring.split('')
-namesarray.pop('e')
+namesarray.length = 0
+emeptyarray=namesarray.splice(0,namesarray.length);
 console.log(namesarray)
 
 
@@ -170,7 +171,7 @@ app.post("*", (req, res) => {
     #.home`;
   }
   else if(text=='2*#'){
-    dataarray =[]
+    dataarray.length = 0
     response = `CON Welcome to Farm Radio Trust
     1.Register
     2.Main Menu
@@ -186,7 +187,7 @@ app.post("*", (req, res) => {
   *.home`
  } 
  else if(text=='2*1*#'){
-  dataarray=[]
+  dataarray.length = 0
   response = `CON Welcome to Farm Radio Trust
     1.Register
     2.Main Menu
