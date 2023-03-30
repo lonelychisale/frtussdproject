@@ -453,6 +453,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     weeklyweather();
   }
 
+  */
   //working on market menu
   else if (text == "2*3") {
     response = `CON MLIMI Market
@@ -488,7 +489,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     response = `END contact for free on *8111# AIRTEL or *7111# TNM `;
   }
 
-  //changing language
+  /*changing language
   else if (text == "4") {
     response = `CON Choose your preffered language
 1.english
@@ -518,7 +519,8 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     update();
     response = `END you have successfully switched to chichewa languge`;
   }
-*/
+  */
+
   //send the response back
   res.set("Content-Type: text/plain");
   res.send(response);
