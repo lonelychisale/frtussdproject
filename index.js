@@ -253,6 +253,13 @@ else if(text == "2*2"){
   ${weatherdistrictsjoin}`
 }
 else if(dataarray[1]=='2' && dataarray[2]!='' && dataarraysize==3){
+  response = `CON select what you want for ${districtname}
+  1.actions
+  2.expected
+  3.weekly temperature
+  `
+}
+else if(dataarray[1]=='2' && dataarray[3]=='1' && dataarraysize==4){
   districtindex = `${--dataarray[2]}`
   districtactionarray = []
   districtname = weatherdistricts[districtindex].name
@@ -268,7 +275,8 @@ else if(dataarray[1]=='2' && dataarray[2]!='' && dataarraysize==3){
   ${actionsjoin}
   `
 }
-else if(dataarray[1]=='2' && dataarray[3]!='' && dataarraysize==4){
+
+else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarray[4]!='' && dataarraysize==5){
   districtexpectionsarray = []
   districtexpecteds = weatherdistricts[districtindex].expected
   
@@ -284,7 +292,8 @@ else if(dataarray[1]=='2' && dataarray[3]!='' && dataarraysize==4){
   ${expectedsjoin}
   `
 }
-else if(dataarray[1]=='2' && dataarray[4]!='' && dataarraysize==5){
+else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[5]!='' && dataarraysize==6){
+  weathertemperature = weatherdistricts[districtindex].weeklyTemps
   response = `CON working on temperature`
 }
 
