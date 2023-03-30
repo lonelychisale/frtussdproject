@@ -253,6 +253,8 @@ else if(text == "2*2"){
   ${weatherdistrictsjoin}`
 }
 else if(dataarray[1]=='2' && dataarray[2]!='' && dataarraysize==3){
+  districtindex = `${--dataarray[2]}`
+  districtname = weatherdistricts[districtindex].name
   response = `CON select what you want for ${districtname}
   1.actions
   2.expected
