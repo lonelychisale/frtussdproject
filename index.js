@@ -293,7 +293,8 @@ else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarraysize==4){
   expectedtostring = districtexpectionsarray.toString()
   expectedsjoin = expectedtostring.replace(/,/g , '\n')
 
-  response = `CON select expected for 
+  response = `CON select expected for ${districtname}
+  ${expectedsjoin}
   `
 }
 else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarraysize==4){
