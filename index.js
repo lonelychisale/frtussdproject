@@ -279,8 +279,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='1' && dataarraysize==4){
 }
 
 else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarray[4]!='' && dataarraysize==5){
-  districtindex = `${--dataarray[2]}`
-  districtname = weatherdistricts[districtindex].name
+  /*
   districtexpectionsarray = []
   districtexpecteds = weatherdistricts[districtindex].expected
   
@@ -292,8 +291,8 @@ else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarray[4]!='' && dataarrays
   //changing array of expectations to string
   expectedtostring = districtexpectionsarray.toString()
   expectedsjoin = expectedtostring.replace(/,/g , '\n')
-  response = `CON select expected for ${districtname}
-  ${expectedsjoin}
+  */
+  response = `CON select expected for 
   `
 }
 else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[5]!='' && dataarraysize==6){
