@@ -94,7 +94,6 @@ const weatherdistrictsjoin = waetherdstrictstostring.replace(/,/g , '\n')
 
 
 
-
 const port = process.env.PORT || 3030;
 
 app.use(logger("dev"));
@@ -252,6 +251,22 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6){
 else if(text == "2*2"){
   response =`CON select prefered district
   ${weatherdistrictsjoin}`
+}
+else if(dataarray[1]=='2' && dataarray[6]!='' && dataarraysize==7){
+  districtindex = `${--dataarray[6]}`
+  districtactionarray = []
+  districtname = weatherdistricts[districtindex].name
+  districtactions = weatherdistricts[districtindex].actions
+  districtactions.forEach(element => {
+    districtactionarray.push('> ' + element) 
+  });
+
+  //changing the arrayof actions to string
+  actionstosting = districtactionarray.toString()
+  actionsjoin = actionstosting.replace(/,/g , '\n')
+  response = `CON select actions for ${districtname}
+  ${actionsjoin}
+  `
 }
 
 /*
