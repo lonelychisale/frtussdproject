@@ -185,7 +185,7 @@ app.post("*", (req, res) => {
   ${categoriesnamejoin}
   *.home`
  } 
- else if(text=='2*1#'){
+ else if(text=='2*1*#'){
   dataarray=[]
   response = `CON Welcome to Farm Radio Trust
     1.Register
