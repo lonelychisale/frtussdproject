@@ -278,11 +278,8 @@ else if(dataarray[1]=='2' && dataarray[3]=='1' && dataarraysize==4){
   `
 }
 
-else if(dataarray[1]=="2" && dataarray[3]=="2" && dataarray[4]!="" && dataarraysize==5){
-  response = `CON expecteds`
-}
- /*
-else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarray[4]!='' && dataarraysize==5){
+ 
+else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarraysize==4){
  
   districtexpectionsarray = []
   districtexpecteds = weatherdistricts[districtindex].expected
@@ -299,7 +296,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarray[4]!='' && dataarrays
   response = `CON select expected for 
   `
 }
-else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[5]!='' && dataarraysize==6){
+else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarraysize==4){
   weathertemperature = weatherdistricts[districtindex].weeklyTemps
   response = `CON working on temperature`
 }
