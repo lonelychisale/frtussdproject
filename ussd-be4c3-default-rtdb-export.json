@@ -1,0 +1,384 @@
+{
+  "weather": {
+    "districts": [
+      {
+        "actions": [
+          "Alimi akulimbikitsidwa kumvera mauthenga a za nyengo a tsiku ndi tsiku",
+          "Alimi afunse upangili kwa alangizi a za malimidwe pa nkhani ya ulimi"
+        ],
+        "expected": [
+          "Alimi akulimbikitsidwa kumvera mauthenga a za nyengo a tsiku ndi tsiku",
+          "Alimi afunse upangili kwa alangizi a za malimidwe pa nkhani ya ulimi"
+        ],
+        "id": 1,
+        "name": "Lilongwe",
+        "weeklyTemps": [
+          {
+            "max": 23,
+            "min": 19,
+            "status": "Cloudy and warm with a chance of rain showers",
+            "statusIcon": "clouds",
+            "title": "Tue"
+          },
+          {
+            "max": 25,
+            "min": 17,
+            "status": "Cloudy and warm with a chance of rain showers",
+            "statusIcon": "clouds",
+            "title": "Wed"
+          },
+          {
+            "max": 25,
+            "min": 17,
+            "status": "Cloudy with rain",
+            "statusIcon": "rainy",
+            "title": "Thu"
+          },
+          {
+            "max": 27,
+            "min": 18,
+            "status": "Cloudy with a chance of heavy rain",
+            "statusIcon": "cloudy day",
+            "title": "Fri"
+          },
+          {
+            "max": 27,
+            "min": 19,
+            "status": "Cloudy with a chance of heavy rain",
+            "statusIcon": "cloudy day",
+            "title": "Sat"
+          },
+          {
+            "max": 27,
+            "min": 18,
+            "status": "Cloudy and hot with heavy rain",
+            "statusIcon": "rain",
+            "title": "Sun"
+          },
+          {
+            "max": 27,
+            "min": 17,
+            "status": "Cloudy with a chance of heavy rain",
+            "statusIcon": "cloudy day",
+            "title": "Mon"
+          }
+        ]
+      },
+      {
+        "actions": [
+          "Alimi akulimbikitsidwa kumvera mauthenga a za nyengo a tsiku ndi tsiku",
+          "Alimi afunse upangili kwa alangizi a za malimidwe pa nkhani ya ulimi"
+        ],
+        "expected": [
+          "Alimi akulimbikitsidwa kumvera mauthenga a za nyengo a tsiku ndi tsiku",
+          "Alimi afunse upangili kwa alangizi a za malimidwe pa nkhani ya ulimi"
+        ],
+        "id": 2,
+        "name": "Kasungu",
+        "weeklyTemps": [
+          {
+            "max": 24,
+            "min": 18,
+            "status": "Cloudy and hot with rain showers",
+            "statusIcon": "rainy",
+            "title": "Tue"
+          },
+          {
+            "max": 25,
+            "min": 18,
+            "status": "Cloudy and hot with rain",
+            "statusIcon": "rainy",
+            "title": "Wed"
+          },
+          {
+            "max": 27,
+            "min": 18,
+            "status": "Cloudy and warm with rain",
+            "statusIcon": "rainy",
+            "title": "Thu"
+          },
+          {
+            "max": 27,
+            "min": 19,
+            "status": "Cloudy with a chance of rain ",
+            "statusIcon": "cloudy day",
+            "title": "Fri"
+          },
+          {
+            "max": 27,
+            "min": 20,
+            "status": "Cloudy with rain",
+            "statusIcon": "rain",
+            "title": "Sat"
+          },
+          {
+            "max": 27,
+            "min": 19,
+            "status": "Cloudy with rain ",
+            "statusIcon": "rain",
+            "title": "Sun"
+          },
+          {
+            "max": 28,
+            "min": 19,
+            "status": "Cloudy with a chance of rain  ",
+            "statusIcon": "cloudy day",
+            "title": "Mon"
+          }
+        ]
+      },
+      {
+        "actions": [
+          "Alimi akulimbikitsidwa kumvera mauthenga a za nyengo a tsiku ndi tsiku",
+          "Alimi afunse upangili kwa alangizi a za malimidwe pa nkhani ya ulimi"
+        ],
+        "expected": [
+          "Pali chiyembekezo cha nyengo ya Mvula yomwe ikhale yochuluka m'masiku ena",
+          "Pali chiyembekezo cha nyengo yofunda"
+        ],
+        "id": 3,
+        "name": "Machinga",
+        "weeklyTemps": [
+          {
+            "max": 24,
+            "min": 20,
+            "status": "Cloudy and warm with a chance of rain showers",
+            "statusIcon": "clouds",
+            "title": "Tue"
+          },
+          {
+            "max": 26,
+            "min": 20,
+            "status": "Cloudy and warm with a chance of rain showers",
+            "statusIcon": "clouds",
+            "title": "Wed"
+          },
+          {
+            "max": 25,
+            "min": 21,
+            "status": "Cloudy and hot with a chance of rain",
+            "statusIcon": "clouds",
+            "title": "Thu"
+          },
+          {
+            "max": 27,
+            "min": 20,
+            "status": "Cloudy and hot with a chance of rain",
+            "statusIcon": "clouds",
+            "title": "Fri"
+          },
+          {
+            "max": 26,
+            "min": 20,
+            "status": "Cloudy and warm with a chance of heavy rain",
+            "statusIcon": "clouds",
+            "title": "Sat"
+          },
+          {
+            "max": 24,
+            "min": 21,
+            "status": "Cloudy with a chance of heavy rain",
+            "statusIcon": "cloudy day",
+            "title": "Sun"
+          },
+          {
+            "max": 27,
+            "min": 21,
+            "status": "Cloudy with a chance of rain showers",
+            "statusIcon": "clouds",
+            "title": "Mon"
+          }
+        ]
+      },
+      {
+        "actions": [
+          "Alimi akulimbikitsidwa kumvera mauthenga a za nyengo a tsiku ndi tsiku",
+          "Alimi afunse upangili kwa alangizi a za malimidwe pa nkhani ya ulimi"
+        ],
+        "expected": [
+          "Pali chiyembekezo cha nyengo ya Mvula yomwe ikhale yochuluka m'masiku ena",
+          "Pali chiyembekezo cha nyengo yofunda"
+        ],
+        "id": 4,
+        "name": "Phalombe",
+        "weeklyTemps": [
+          {
+            "max": 24,
+            "min": 20,
+            "status": "Cloudy and warm with a chance of rain showers",
+            "statusIcon": "cloudy day",
+            "title": "Tue"
+          },
+          {
+            "max": 27,
+            "min": 19,
+            "status": "Cloudy and hot with a chance of rain",
+            "statusIcon": "clouds",
+            "title": "Wed"
+          },
+          {
+            "max": 28,
+            "min": 20,
+            "status": "Cloudy and hot with a chance of rain",
+            "statusIcon": "clouds",
+            "title": "Thu"
+          },
+          {
+            "max": 27,
+            "min": 21,
+            "status": "Cloudy and hot with a chance of rain",
+            "statusIcon": "clouds",
+            "title": "Fri"
+          },
+          {
+            "max": 27,
+            "min": 21,
+            "status": "Cloudy and warm with a chance of heavy rain",
+            "statusIcon": "cloudy day",
+            "title": "Sat"
+          },
+          {
+            "max": 25,
+            "min": 21,
+            "status": "Cloudy with a chance of heavy rain",
+            "statusIcon": "cloudy day",
+            "title": "Sun"
+          },
+          {
+            "max": 25,
+            "min": 21,
+            "status": "Cloudy with a chance of rain ",
+            "statusIcon": "cloudy day",
+            "title": "Mon"
+          }
+        ]
+      },
+      {
+        "actions": [
+          "Alimi akulimbikitsidwa kumvera mauthenga a za nyengo a tsiku ndi tsiku",
+          "Alimi afunse upangili kwa alangizi a za malimidwe pa nkhani ya ulimi"
+        ],
+        "expected": [
+          "Pali chiyembekezo cha mvula yomwe ikhoza kukhala yochuluka mmasiku ena m'sabatayi",
+          "Pali chiyembekezo cha nyengo yofunda"
+        ],
+        "id": 5,
+        "name": "Dowa",
+        "weeklyTemps": [
+          {
+            "max": 21,
+            "min": 16,
+            "status": "Cloudy with a chance of rain showers",
+            "statusIcon": "cloudy day",
+            "title": "Tue"
+          },
+          {
+            "max": 23,
+            "min": 17,
+            "status": "Cloudy with a chance of rain",
+            "statusIcon": "cloudy day",
+            "title": "Wed"
+          },
+          {
+            "max": 24,
+            "min": 17,
+            "status": "Cloudy and warm with a chance of rain showers",
+            "statusIcon": "cloudy day",
+            "title": "Thu"
+          },
+          {
+            "max": 26,
+            "min": 18,
+            "status": "Cloudy and warm with a chance of rain",
+            "statusIcon": "cloudy day",
+            "title": "Fri"
+          },
+          {
+            "max": 26,
+            "min": 18,
+            "status": "Cloudy with rain",
+            "statusIcon": "rainy",
+            "title": "Sat"
+          },
+          {
+            "max": 25,
+            "min": 18,
+            "status": "Cloudy with a chance of rain showers",
+            "statusIcon": "cloudy day",
+            "title": "Sun"
+          },
+          {
+            "max": 25,
+            "min": 18,
+            "status": "Cloudy with a chance of rain",
+            "statusIcon": "cloudy day",
+            "title": "Mon"
+          }
+        ]
+      },
+      {
+        "actions": [
+          "Alimi akulimbikitsidwa kumvera mauthenga a za nyengo a tsiku ndi tsiku",
+          "Alimi afunse upangili kwa alangizi a za malimidwe pa nkhani ya ulimi"
+        ],
+        "expected": [
+          "Pali chiyembekezo cha mvula yomwe ikhoza kukhala yochuluka mmasiku ena m'sabatayi",
+          "Pali chiyembekezo cha nyengo yofunda"
+        ],
+        "id": 6,
+        "name": "Ntchisi",
+        "weeklyTemps": [
+          {
+            "max": 22,
+            "min": 17,
+            "status": "Cloudy and mild with rain showers",
+            "statusIcon": "rainy",
+            "title": "Tue"
+          },
+          {
+            "max": 22,
+            "min": 17,
+            "status": "Cloudy with a chance of rain showers",
+            "statusIcon": "cloudy day",
+            "title": "Wed"
+          },
+          {
+            "max": 24,
+            "min": 17,
+            "status": "Cloudy with a chance of rain",
+            "statusIcon": "cloudy day",
+            "title": "Thu"
+          },
+          {
+            "max": 25,
+            "min": 18,
+            "status": "Cloudy and warm with a chance of rain",
+            "statusIcon": "clouds",
+            "title": "Fri"
+          },
+          {
+            "max": 25,
+            "min": 18,
+            "status": "Cloudy and warm a achance of rain",
+            "statusIcon": "clouds",
+            "title": "Sat"
+          },
+          {
+            "max": 24,
+            "min": 18,
+            "status": "Cloudy with a chance of rain",
+            "statusIcon": "cloudy day",
+            "title": "Sun"
+          },
+          {
+            "max": 25,
+            "min": 18,
+            "status": "Cloudy with a chance of rain",
+            "statusIcon": "cloudy day",
+            "title": "Mon"
+          }
+        ]
+      }
+    ]
+  }
+}

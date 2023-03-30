@@ -5,6 +5,7 @@ const logger = require("morgan");
 var firebase = require("firebase");
 const { response } =  require("express");
 const advesoryjson = require("./mlimi_english.json")
+const weatherjson = require("./ussd-be4c3-default-rtdb-export.json")
 
 
 //firebase configuration for weather db
@@ -55,11 +56,6 @@ let phone = `+265995536312`;
 const regref = regdb.ref("sectors");
 const newregref = regdb.ref("users");
 
-let languageglobalvariable;
-newregref.child("+265995536312").on("value", (snapshot) => {
-  languageglobalvariable = snapshot.val().translated_languge;
-});
-//console.log(languageglobalvariable);
 //inintilizing the app
 firebase.initializeApp(firebaseConfig);
 
@@ -72,7 +68,7 @@ const ref = db.ref("weather/districts");
 //declaring advisory variables
 namesss = advesoryjson.sectors[0].categories[0].products
 namesss.forEach(element => {
-  console.log(element.name)
+  //console.log(element.name)
   
 });
 const categories =advesoryjson.sectors
@@ -84,6 +80,9 @@ categories.forEach(element => {
 
 categoriesnametostring = categoriesarray.toString()
 categoriesnamejoin = categoriesnametostring.replace(/,/g, '\n')
+
+//working on weather
+console.log(weatherjson)
 
 
 const port = process.env.PORT || 3030;
@@ -238,33 +237,13 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6){
   response =`END advisories under  ${specifictitlename}
   ${contentjoin}`
 }
+
+//working on weather
+else if(text == "2*2"){
+  response =`CON start working on weather`
+}
+
 /*
-  //working on advesories
-  else if (text == "2*1") {
-    async function disp() {
-      await promise();
-    }
-
-    function promise() {
-      return new Promise((resolve, reject) => {
-        regref.on("value", (snapshot) => {
-          const crops = [];
-          const selector = 0;
-          snapshot.forEach((element) => {
-            var cropname = ++selector + element.val().name;
-            crops.push(cropname);
-          });
-          const spliting = crops.toString().split(",");
-          const joiingcrops = spliting.join("\n");
-
-          response = `CON choose advisory category \n${joiingcrops}`;
-        });
-      });
-    }
-
-    disp();
-  }
-
   //working on weather menu
   else if (text == "2*2") {
     response = `END please  wait..data is being processed`;
