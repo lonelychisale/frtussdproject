@@ -268,6 +268,22 @@ else if(dataarray[1]=='2' && dataarray[6]!='' && dataarraysize==7){
   ${actionsjoin}
   `
 }
+else if(dataarray[1]=='2' && dataarray[7]!='' && dataarraysize==8){
+  districtexpectionsarray = []
+  districtexpecteds = weatherdistricts[districtindex].expected
+  
+  //looping through expecteds
+  districtexpecteds.forEach(element => {
+    districtexpectionsarray.push('> ' + element)
+  });
+
+  //changing array of expectations to string
+  expectedtostring = districtexpectionsarray.toString()
+  expectedsjoin = expectedtostring.replace(/,/g , '\n')
+  response = `CON select expected for ${districtname}
+  ${expectedsjoin}
+  `
+}
 
 /*
   //working on weather menu
