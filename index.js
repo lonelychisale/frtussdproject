@@ -323,7 +323,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   mintemp = weatherdistricts[districtindex].weeklyTemps[daysindex].min
   statustemp = weatherdistricts[districtindex].weeklyTemps[daysindex].status
 
-  response =`CON on ${dayname} it will ${statustemp} with maximum temperature of ${maxtemp} and minimum temperature of ${mintemp}`
+  response =`END on ${dayname} it will ${statustemp} , having maximum temperature of ${maxtemp} and minimum temperature of ${mintemp}`
 }
 
 /*
