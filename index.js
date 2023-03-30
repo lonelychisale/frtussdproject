@@ -167,9 +167,9 @@ app.post("*", (req, res) => {
 		3. Marketing
 		4. Account
 		5. help
-    6.home`;
+    #.home`;
   }
-  else if(text=='2*6'){
+  else if(text=='2*#'){
     dataarray =[]
     response = `CON Welcome to Farm Radio Trust
     1.Register
@@ -182,8 +182,18 @@ app.post("*", (req, res) => {
   //working advesory from the json file
  else if(text == "2*1"){
   response =`CON select the advisory catergory 
-  ${categoriesnamejoin}`
+  ${categoriesnamejoin}
+  *.home`
  } 
+ else if(text=='2*1#'){
+  dataarray=[]
+  response = `CON Welcome to Farm Radio Trust
+    1.Register
+    2.Main Menu
+    3.Help
+    4.Change language`;
+
+ }
  else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3 ){
   const secondadvisorycategoryarray= []
   categoryindex =`${--dataarray[2]}`
