@@ -92,6 +92,9 @@ weatherdistricts.forEach(element => {
 const waetherdstrictstostring = weatherdistrictsarray.toString()
 const weatherdistrictsjoin = waetherdstrictstostring.replace(/,/g , '\n')
 
+//working on weekly temprature
+const temperature = weatherdistricts[0].weeklyTemps
+
 
 
 const port = process.env.PORT || 3030;
@@ -293,13 +296,23 @@ else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarraysize==4){
   expectedtostring = districtexpectionsarray.toString()
   expectedsjoin = expectedtostring.replace(/,/g , '\n')
 
-  response = `CON select expected for ${districtname}
+  response = `CON  expected for ${districtname}
   ${expectedsjoin}
   `
 }
 else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarraysize==4){
   weathertemperature = weatherdistricts[districtindex].weeklyTemps
-  response = `CON working on temperature`
+  weathertemperaturearray = []
+  selectors = 0
+  weathertemperature.forEach(element => {
+  weathertemperaturearray.push(++selectors + '.' + element.title)
+});
+//changing weather temperaturedays to string
+  daystostring = weathertemperaturearray.toString()
+  daysjoin = daystostring.replace(/,/g, '\n')
+  response = `CON select day for temperature of ${districtname}
+  ${daysjoin}
+  `
 }
 
 /*
