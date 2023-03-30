@@ -94,9 +94,12 @@ const weatherdistrictsjoin = waetherdstrictstostring.replace(/,/g , '\n')
 
 //working on weekly temprature
 const temperature = weatherdistricts[0].weeklyTemps[0]
-console.log(temperature)
 
-
+//testing home page naviagation
+var namestring ='my name is lonely chisale'
+var namesarray = namestring.split('')
+namesarray.pop('e')
+console.log(namesarray)
 
 
 const port = process.env.PORT || 3030;
@@ -163,7 +166,17 @@ app.post("*", (req, res) => {
 		2. Weather reports
 		3. Marketing
 		4. Account
-		5. help`;
+		5. help
+    6.home`;
+  }
+  else if(text=='2*6'){
+    dataarray =[]
+    response = `CON Welcome to Farm Radio Trust
+    1.Register
+    2.Main Menu
+    3.Help
+    4.Change language`;
+
   }
   
   //working advesory from the json file
@@ -323,7 +336,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   mintemp = weatherdistricts[districtindex].weeklyTemps[daysindex].min
   statustemp = weatherdistricts[districtindex].weeklyTemps[daysindex].status
 
-  response =`END on ${dayname} it be will ${statustemp} , having maximum temperature of ${maxtemp} and minimum temperature of ${mintemp}`
+  response =`END on ${dayname} it will be ${statustemp} , having maximum temperature of ${maxtemp} and minimum temperature of ${mintemp}`
 }
 
 /*
