@@ -97,10 +97,15 @@ const temperature = weatherdistricts[0].weeklyTemps[0]
 
 //testing home page naviagation
 var namestring ='my  * name * is *lonely* chisale'
+var name ='lonely'
 var namesarray = namestring.split("*")
+
+if(name=='lonely'){
 namesarray.splice(0,namesarray.length)
 console.log(namesarray)
-
+}
+namesarray.push('lonely')
+console.log(namesarray)
 
 const port = process.env.PORT || 3030;
 
@@ -115,7 +120,7 @@ app.get("*", (req, res) => {
 app.post("*", (req, res) => {
   let { sessionId, serviceCode, phoneNumber, text, response } = req.body;
   //creating an array of data
-  let dataarray = text.split("*");
+   dataarray = text.split("*");
   let name;
   let surname;
   let language;
