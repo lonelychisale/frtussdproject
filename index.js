@@ -147,6 +147,28 @@ app.post("*", (req, res) => {
       4.Change language`;
       break;
   }
+
+  switch (text) {
+    case '2':
+    response = `CON Mlimi Main Manu
+		1. Advesories
+		2. Weather reports
+		3. Marketing
+		4. Account
+		5. help
+    #.home`;
+  
+    default:
+      response = `CON Invalid input, try again.
+      Mlimi Main Manu
+      1. Advesories
+		  2. Weather reports
+		  3. Marketing
+		  4. Account
+		  5. help
+      #.home`;
+      break;
+  }
   /*
   if (text === "") {
     response = `CON Welcome to Farm Radio Trust
