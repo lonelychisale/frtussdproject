@@ -530,7 +530,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   }
 
   */
-  //working on market menu
+  /*working on market menu
   else if (text == "2*3") {
     response = `CON MLIMI Market
   1. Minimum Farm Gate Prices
