@@ -129,6 +129,25 @@ app.post("*", (req, res) => {
   let dataarraysize = dataarray.length;
   //first
 
+  switch (text) {
+    case '':
+      response = `CON Welcome to Farm Radio Trust
+      1.Register
+      2.Main Menu
+      3.Help
+      4.Change language`;
+      break;
+  
+    default:
+      response = `END Invalid input, try again.
+      Welcome to Farm Radio Trust
+      1.Register
+      2.Main Menu
+      3.Help
+      4.Change language`;
+      break;
+  }
+  /*
   if (text === "") {
     response = `CON Welcome to Farm Radio Trust
       1.Register
@@ -164,7 +183,7 @@ app.post("*", (req, res) => {
     registration();
     response = `END you have successfully registered`;
   } 
-  */
+  
   else if (text == "2") {
     response = `CON Mlimi Main Manu
 		1. Advesories
@@ -483,7 +502,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     weeklyweather();
   }
 
-  */
+  
   //working on market menu
   else if (text == "2*3") {
     response = `CON MLIMI Market
