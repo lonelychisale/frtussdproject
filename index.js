@@ -129,53 +129,20 @@ app.post("*", (req, res) => {
   let dataarraysize = dataarray.length;
   //first
 
-  switch (text) {
-    case '':
-      response = `CON Welcome to Farm Radio Trust
-      1.Register
-      2.Main Menu
-      3.Help
-      4.Change language`;
-      break;
-  
-    default:
-      response = `CON Invalid input, try again.
-      Welcome to Farm Radio Trust
-      1.Register
-      2.Main Menu
-      3.Help
-      4.Change language`;
-      break;
-  }
-
-  switch (text) {
-    case '2':
-    response = `CON Mlimi Main Manu
-		1. Advesories
-		2. Weather reports
-		3. Marketing
-		4. Account
-		5. help
-    #.home`;
-  
-    default:
-      response = `CON Invalid input, try again.
-      Mlimi Main Manu
-      1. Advesories
-		  2. Weather reports
-		  3. Marketing
-		  4. Account
-		  5. help
-      #.home`;
-      break;
-  }
-  /*
   if (text === "") {
     response = `CON Welcome to Farm Radio Trust
       1.Register
       2.Main Menu
       3.Help
       4.Change language`;
+  }
+  else{
+    response = `CON Invalid input..try again
+    Welcome to Farm Radio Trust
+    1.Register
+    2.Main Menu
+    3.Help
+    4.Change language`;
   }
   
   /*
@@ -205,8 +172,8 @@ app.post("*", (req, res) => {
     registration();
     response = `END you have successfully registered`;
   } 
-  
-  else if (text == "2") {
+  */
+  if (text == "2") {
     response = `CON Mlimi Main Manu
 		1. Advesories
 		2. Weather reports
@@ -215,7 +182,18 @@ app.post("*", (req, res) => {
 		5. help
     #.home`;
   }
-  else if(text=='2*#'){
+  else{
+    response = `CON Invalid input ..try again
+    Mlimi Main Manu
+		1. Advesories
+		2. Weather reports
+		3. Marketing
+		4. Account
+		5. help
+    #.home`; 
+  }
+
+  if(text=='2*#'){
     dataarray.length = 0
     response = `CON Welcome to Farm Radio Trust
     1.Register
@@ -224,14 +202,29 @@ app.post("*", (req, res) => {
     4.Change language`;
 
   }
+  else{
+    response = `CON Invalid input..try again
+     Welcome to Farm Radio Trust
+    1.Register
+    2.Main Menu
+    3.Help
+    4.Change language`;
+  }
   
   //working advesory from the json file
- else if(text == "2*1"){
+ if(text == "2*1"){
   response =`CON select the advisory catergory 
   ${categoriesnamejoin}
   #.home`
  } 
- else if(text=='2*1*#'){
+ else{
+  response =`CON Invalid input..try again
+  select the advisory catergory 
+  ${categoriesnamejoin}
+  #.home`
+ }
+
+  if(text=='2*1*#'){
   dataarray.splice(0,dataarray.length)
   response = `CON Welcome to Farm Radio Trust
     1.Register
@@ -242,6 +235,18 @@ app.post("*", (req, res) => {
     console.log(dataarray)
 
  }
+ else{
+  dataarray.splice(0,dataarray.length)
+  response = `CON invalid input..try again
+   Welcome to Farm Radio Trust
+    1.Register
+    2.Main Menu
+    3.Help
+    4.Change language`;
+
+    console.log(dataarray)
+ }
+ /*
  else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3 ){
   const secondadvisorycategoryarray= []
   categoryindex =`${--dataarray[2]}`
@@ -524,7 +529,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     weeklyweather();
   }
 
-  
+  */
   //working on market menu
   else if (text == "2*3") {
     response = `CON MLIMI Market
