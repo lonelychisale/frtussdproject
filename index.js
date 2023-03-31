@@ -139,7 +139,7 @@ app.post("*", (req, res) => {
       break;
   
     default:
-      response = `END Invalid input, try again.
+      response = `CON Invalid input, try again.
       Welcome to Farm Radio Trust
       1.Register
       2.Main Menu
