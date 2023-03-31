@@ -120,7 +120,7 @@ app.get("*", (req, res) => {
 app.post("*", (req, res) => {
   let { sessionId, serviceCode, phoneNumber, text, response } = req.body;
   //creating an array of data
-   dataarray = text.split("*");
+  let dataarray = text.split("*");
   let name;
   let surname;
   let language;
@@ -135,14 +135,6 @@ app.post("*", (req, res) => {
       2.Main Menu
       3.Help
       4.Change language`;
-  }
-  else{
-    response = `CON Invalid input..try again
-    Welcome to Farm Radio Trust
-    1.Register
-    2.Main Menu
-    3.Help
-    4.Change language`;
   }
   
   /*
@@ -173,7 +165,7 @@ app.post("*", (req, res) => {
     response = `END you have successfully registered`;
   } 
   */
-  if (text == "2") {
+  else if (text == "2") {
     response = `CON Mlimi Main Manu
 		1. Advesories
 		2. Weather reports
@@ -182,18 +174,7 @@ app.post("*", (req, res) => {
 		5. help
     #.home`;
   }
-  else{
-    response = `CON Invalid input ..try again
-    Mlimi Main Manu
-		1. Advesories
-		2. Weather reports
-		3. Marketing
-		4. Account
-		5. help
-    #.home`; 
-  }
-
-  if(text=='2*#'){
+  else if(text=='2*#'){
     dataarray.length = 0
     response = `CON Welcome to Farm Radio Trust
     1.Register
@@ -202,29 +183,14 @@ app.post("*", (req, res) => {
     4.Change language`;
 
   }
-  else{
-    response = `CON Invalid input..try again
-     Welcome to Farm Radio Trust
-    1.Register
-    2.Main Menu
-    3.Help
-    4.Change language`;
-  }
   
   //working advesory from the json file
- if(text == "2*1"){
+ else if(text == "2*1"){
   response =`CON select the advisory catergory 
   ${categoriesnamejoin}
   #.home`
  } 
- else{
-  response =`CON Invalid input..try again
-  select the advisory catergory 
-  ${categoriesnamejoin}
-  #.home`
- }
-
-  if(text=='2*1*#'){
+ else if(text=='2*1*#'){
   dataarray.splice(0,dataarray.length)
   response = `CON Welcome to Farm Radio Trust
     1.Register
@@ -232,21 +198,7 @@ app.post("*", (req, res) => {
     3.Help
     4.Change language`;
 
-    console.log(dataarray)
-
  }
- else{
-  dataarray.splice(0,dataarray.length)
-  response = `CON invalid input..try again
-   Welcome to Farm Radio Trust
-    1.Register
-    2.Main Menu
-    3.Help
-    4.Change language`;
-
-    console.log(dataarray)
- }
- /*
  else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3 ){
   const secondadvisorycategoryarray= []
   categoryindex =`${--dataarray[2]}`
@@ -530,7 +482,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   }
 
   */
-  /*working on market menu
+  //working on market menu
   else if (text == "2*3") {
     response = `CON MLIMI Market
   1. Minimum Farm Gate Prices
