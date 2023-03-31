@@ -198,6 +198,8 @@ app.post("*", (req, res) => {
     3.Help
     4.Change language`;
 
+    console.log(dataarray)
+
  }
  else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3 ){
   const secondadvisorycategoryarray= []
