@@ -137,7 +137,7 @@ app.post("*", (req, res) => {
       4.Change language`;
   }
   //validating first menu
-  else if(dataarraysize==1 && text!="1" || text!="2" || text!="3" || text!="4"){
+  else if(dataarraysize==1 && (dataarray[0]!="1" || dataarray[0]!="2" || dataarray[0]!="3" || dataarray[0]!="4")){
     text = ""
     dataarray.length = 0
     console.log(dataarray)
