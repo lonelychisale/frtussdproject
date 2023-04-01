@@ -136,6 +136,16 @@ app.post("*", (req, res) => {
       3.Help
       4.Change language`;
   }
+  //validating first menu
+  else if(text!="1" || text!="2" || text!="3" || text!="4"){
+    response = `CON invalid input.try again
+    Welcome to Farm Radio Trust
+      1.Register
+      2.Main Menu
+      3.Help
+      4.Change language
+    `
+  }
   
   /*
   else if (text == "1") {
@@ -183,6 +193,8 @@ app.post("*", (req, res) => {
     4.Change language`;
 
   }
+
+  //validating
   
   //working advesory from the json file
  else if(text == "2*1"){
