@@ -120,7 +120,7 @@ app.get("*", (req, res) => {
 app.post("*", (req, res) => {
   let { sessionId, serviceCode, phoneNumber, text, response } = req.body;
   //creating an array of data
-  let dataarray = [] ;
+  let dataarray = text.split("*");
   let name;
   let surname;
   let language;
@@ -129,7 +129,7 @@ app.post("*", (req, res) => {
   let dataarraysize = dataarray.length;
   //first
 
-  if (text === "") {
+  if (text == "") {
     response = `CON Welcome to Farm Radio Trust
       1.Register
       2.Main Menu
@@ -137,9 +137,11 @@ app.post("*", (req, res) => {
       4.Change language`;
   }
   //validating first menu
-  else if( text!="1" && text!="2" && text!="3" && text!="4"){
-    dataarray.length = 0
+  else if(dataarraysize==1 && text!="1" || text!="2" || text!="3" || text!="4"){
     text = ""
+    dataarray.length = 0
+    console.log(dataarray)
+    console.log(text)
     response = `CON invalid input.try again
     Welcome to Farm Radio Trust
       1.Register
@@ -178,7 +180,6 @@ app.post("*", (req, res) => {
   } 
   */
   else if (text == "2") {
-   dataarray = text.split("*")
     response = `CON Mlimi Main Manu
 		1. Advesories
 		2. Weather reports
