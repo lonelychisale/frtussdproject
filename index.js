@@ -120,7 +120,7 @@ app.get("*", (req, res) => {
 app.post("*", (req, res) => {
   let { sessionId, serviceCode, phoneNumber, text, response } = req.body;
   //creating an array of data
-  let dataarray = text.split("*");
+  let dataarray = [] ;
   let name;
   let surname;
   let language;
@@ -176,6 +176,7 @@ app.post("*", (req, res) => {
   } 
   */
   else if (text == "2") {
+   dataarray = text.split("*")
     response = `CON Mlimi Main Manu
 		1. Advesories
 		2. Weather reports
