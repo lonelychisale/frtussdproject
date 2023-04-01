@@ -137,7 +137,7 @@ app.post("*", (req, res) => {
       4.Change language`;
   }
   //validating first menu
-  else if(dataarraysize==1 && (text!="1" || text!="2" || text!="3" || text!="4")){
+  else if(dataarraysize==1 && (text!="1" && text!="2" && text!="3" && text!="4")){
     response = `CON invalid input.try again
     Welcome to Farm Radio Trust
       1.Register
