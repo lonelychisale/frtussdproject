@@ -138,6 +138,7 @@ app.post("*", (req, res) => {
   }
   //validating first menu
   else if(dataarraysize==1 && text!="1" && text!="2" && text!="3" && text!="4"){
+    let dataarray = [] ;
     response = `CON invalid input.try again
     Welcome to Farm Radio Trust
       1.Register
