@@ -190,13 +190,13 @@ app.post("*", (req, res) => {
     const obj = JSON.parse(rawData);
     
     // Check if the phonenumber already exists in the "languages" array
-    const existingLanguage = obj.languages.find(language => language.phonenumber === '0996691384');
+    const existingLanguage = obj.languages.find(language => language.phonenumber === phoneNumber);
     
     if (!existingLanguage) {
       // Add a new object to the "languages" array
       const newLanguage = {
         name: 'english',
-        phonenumber: '0996691384'
+        phonenumber: phoneNumber
       };
       obj.languages.push(newLanguage);
     
