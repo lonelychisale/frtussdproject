@@ -2,10 +2,12 @@ const translator = require("translate");
 const app = require("express")();
 const bodyParser = require("body-parser");
 const logger = require("morgan");
+const fs = require('fs');
 var firebase = require("firebase");
 const { response } =  require("express");
 const advesoryjson = require("./mlimi_english.json")
 const weatherjson = require("./ussd-be4c3-default-rtdb-export.json")
+const languagejson = require("./language.json")
 
 
 //firebase configuration for weather db
@@ -81,7 +83,7 @@ categories.forEach(element => {
 categoriesnametostring = categoriesarray.toString()
 categoriesnamejoin = categoriesnametostring.replace(/,/g, '\n')
 
-//working on weather
+/*working on weather
 const weatherdistricts = weatherjson.weather.districts
 const weatherdistrictsarray = []
 weatherdistricts.forEach(element => {
@@ -106,6 +108,58 @@ console.log(namesarray)
 }
 namesarray.push('lonely')
 console.log(namesarray)
+*/
+
+//working on language changing
+//languagejson.languages.name='chichewa'
+//console.log(languagejson.languages.name)
+//updating values of the json file
+
+
+//try autheticating with phone number
+
+  
+  const languagename = "chichewa"
+  const phonenumberr = "0996691384"
+
+  // Read the contents of the JSON file
+  const data = fs.readFileSync('language.json');
+  const obj = JSON.parse(data);
+
+  const newLanguage = {
+    name: 'english',
+    phonenumber: '0996641385'
+  };
+ //obj.languages.push(newLanguage);
+
+  // Update the object based on the user's input
+  const languageToUpdate = obj.languages.find(language => language.phonenumber === '0996641385')
+  if (languageToUpdate) {
+    languageToUpdate.name = languagename;
+
+    // Convert the modified object back to JSON format
+    const json = JSON.stringify(obj);
+
+    // Write the updated JSON data back to the file
+    fs.writeFileSync('language.json', json);
+  console.log('data updated')
+  } else {
+    console.log('data not upadated')
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const port = process.env.PORT || 3030;
 
@@ -127,6 +181,35 @@ app.post("*", (req, res) => {
 
   //array length
   let dataarraysize = dataarray.length;
+
+  //putting data to a json file
+  function insertinglanguagejsn(){
+
+    // Read the existing JSON data from the file
+    const rawData = fs.readFileSync('data.json');
+    const obj = JSON.parse(rawData);
+    
+    // Check if the phonenumber already exists in the "languages" array
+    const existingLanguage = obj.languages.find(language => language.phonenumber === '0996691384');
+    
+    if (!existingLanguage) {
+      // Add a new object to the "languages" array
+      const newLanguage = {
+        name: 'english',
+        phonenumber: '0996691384'
+      };
+      obj.languages.push(newLanguage);
+    
+      // Convert the modified object back to JSON format
+      const json = JSON.stringify(obj);
+    
+      // Write the updated JSON data back to the file
+      fs.writeFileSync('data.json', json);
+    } 
+    
+  }
+  insertinglanguagejsn()
+
   //first
 
   if (text == "") {
@@ -272,7 +355,7 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6){
   ${contentjoin}`
 }
 
-//working on weather
+/*working on weather
 else if(text == "2*2"){
   response =`CON select prefered district
   ${weatherdistrictsjoin}`
@@ -346,7 +429,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   response =`END on ${dayname} it will be ${statustemp} , having maximum temperature of ${maxtemp} and minimum temperature of ${mintemp}`
 }
 
-/*
+
   //working on weather menu
   else if (text == "2*2") {
     response = `END please  wait..data is being processed`;
