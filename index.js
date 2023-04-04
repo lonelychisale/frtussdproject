@@ -186,8 +186,8 @@ app.post("*", (req, res) => {
   function insertinglanguagejsn(){
 
     // Read the existing JSON data from the file
-    const rawData = fs.readFileSync('data.json');
-    const obj = JSON.parse(rawData);
+    const languagejsonfile = fs.readFileSync('language.json');
+    const obj = JSON.parse(languagejsonfile);
     
     // Check if the phonenumber already exists in the "languages" array
     const existingLanguage = obj.languages.find(language => language.phonenumber === phoneNumber);
@@ -204,7 +204,7 @@ app.post("*", (req, res) => {
       const json = JSON.stringify(obj);
     
       // Write the updated JSON data back to the file
-      fs.writeFileSync('data.json', json);
+      fs.writeFileSync('language.json', json);
     } 
     
   }
