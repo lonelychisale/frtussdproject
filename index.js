@@ -122,7 +122,7 @@ console.log(namesarray)
   const languagename = "chichewa"
   const phonenumberr = "0996691384"
 
-  /*Read the contents of the JSON file
+  //Read the contents of the JSON file
   const data = fs.readFileSync('language.json');
   const obj = JSON.parse(data);
 
@@ -148,9 +148,8 @@ console.log(namesarray)
   }
 
 
-*/
 
- //putting data to a json file
+ /*putting data to a json file
  function insertinglanguagejsn(){
 
   // Read the existing JSON data from the file
@@ -178,7 +177,7 @@ console.log(namesarray)
   
 }
 insertinglanguagejsn()
-
+*/
 
 
 
@@ -228,13 +227,13 @@ app.post("*", (req, res) => {
   const obj = JSON.parse(languagejsonfile);
   
   // Check if the phonenumber already exists in the "languages" array
-  const existingLanguage = obj.languages.find(language => language.phonenumber === '0995536312');
+  const existingLanguage = obj.languages.find(language => language.phonenumber === phoneNumber);
   
   if (!existingLanguage) {
     // Add a new object to the "languages" array
     const newLanguage = {
       name: 'english',
-      phonenumber: '0995536312'
+      phonenumber: phoneNumber
     };
     obj.languages.push(newLanguage);
   
@@ -622,37 +621,19 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     response = `END contact for free on *8111# AIRTEL or *7111# TNM `;
   }
 
-  /*changing language
+  //changing language
   else if (text == "4") {
     response = `CON Choose your preffered language
-1.english
-2.chichewa`;
-  } else if (text == "4*1") {
-    function update() {
-      newregref.child(phoneNumber).on("value", (snapshot) => {
-        if (snapshot.val().phonenumber == phoneNumber) {
-          newregref.child(phone).update({
-            translated_languge: "english",
-          });
-        }
-      });
-    }
-    update();
+    1.English
+    2.Chichewa`;
+  }
+   else if (text == "4*1") {
     response = `END you have successfully switched to english languge`;
-  } else if (text == "4*2") {
-    function update() {
-      newregref.child(phoneNumber).on("value", (snapshot) => {
-        if (snapshot.val().phonenumber == phoneNumber) {
-          newregref.child(phone).update({
-            translated_languge: "chichewa",
-          });
-        }
-      });
-    }
-    update();
+  }
+   else if (text == "4*2") {
     response = `END you have successfully switched to chichewa languge`;
   }
-  */
+  
 
   //send the response back
   res.set("Content-Type: text/plain");
