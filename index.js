@@ -115,9 +115,6 @@ console.log(namesarray)
 //console.log(languagejson.languages.name)
 //updating values of the json file
 
-
-//try autheticating with phone number
-
   
   const languagename = "chichewa"
   const phonenumberr = "0996691384"
@@ -593,7 +590,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   2. Sell Products
   3. Buy Available Products `;
   } else if (text == "2*3*1") {
-    response = `CON choose product price per kg
+    response = `END choose product price per kg
   1. Maize, MK220
   2. Rice Polished, MK700
   3. Rice Unpolished, MK300
@@ -628,9 +625,58 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     2.Chichewa`;
   }
    else if (text == "4*1") {
+    const languagename = `${dataarray[1]}`
+
+  //Read the contents of the JSON file
+  const data = fs.readFileSync('language.json');
+  const obj = JSON.parse(data);
+
+  // Update the object based on the user's input
+  const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber)
+  if (languageToUpdate) {
+    languageToUpdate.name = languagename;
+
+    // Convert the modified object back to JSON format
+    const json = JSON.stringify(obj);
+
+    // Write the updated JSON data back to the file
+    fs.writeFileSync('language.json', json);
+  console.log('data updated')
+  } else {
+    console.log('data not upadated')
+  }
+
+
+
     response = `END you have successfully switched to english languge`;
   }
+
    else if (text == "4*2") {
+    const languagename = `${dataarray[1]}`
+  const phonenumberr = "0996691384"
+
+  //Read the contents of the JSON file
+  const data = fs.readFileSync('language.json');
+  const obj = JSON.parse(data);
+
+
+  // Update the object based on the user's input
+  const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber)
+  if (languageToUpdate) {
+    languageToUpdate.name = languagename;
+
+    // Convert the modified object back to JSON format
+    const json = JSON.stringify(obj);
+
+    // Write the updated JSON data back to the file
+    fs.writeFileSync('language.json', json);
+  console.log('data updated')
+  } else {
+    console.log('data not upadated')
+  }
+
+
+
     response = `END you have successfully switched to chichewa languge`;
   }
   
