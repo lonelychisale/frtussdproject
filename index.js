@@ -58,6 +58,8 @@ let phone = `+265995536312`;
 const regref = regdb.ref("sectors");
 const newregref = regdb.ref("users");
 
+
+
 //inintilizing the app
 firebase.initializeApp(firebaseConfig);
 
@@ -471,57 +473,24 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     2.Chichewa`;
   }
    else if (text == "4*1") {
-    const languagename = `${dataarray[1]}`
+    languagename = `${dataarray[1]}`
+    languageupdate = newregref.child(phoneNumber)
 
-  //Read the contents of the JSON file
-  const data = fs.readFileSync('language.json');
-  const obj = JSON.parse(data);
+    languageupdate.update({
+      translated_languge:'English',
 
-  // Update the object based on the user's input
-  const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber)
-  if (languageToUpdate) {
-    languageToUpdate.name = languagename;
-
-    // Convert the modified object back to JSON format
-    const json = JSON.stringify(obj);
-
-    // Write the updated JSON data back to the file
-    fs.writeFileSync('language.json', json);
-  console.log('data updated')
-  } else {
-    console.log('data not upadated')
-  }
-
-
-
+    })
     response = `END you have successfully switched to english languge`;
   }
 
    else if (text == "4*2") {
-    const languagename = `${dataarray[1]}`
-  const phonenumberr = "0996691384"
+     languagename = `${dataarray[1]}`
+     languageupdate = newregref.child(phoneNumber)
 
-  //Read the contents of the JSON file
-  const data = fs.readFileSync('language.json');
-  const obj = JSON.parse(data);
-
-
-  // Update the object based on the user's input
-  const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber)
-  if (languageToUpdate) {
-    languageToUpdate.name = languagename;
-
-    // Convert the modified object back to JSON format
-    const json = JSON.stringify(obj);
-
-    // Write the updated JSON data back to the file
-    fs.writeFileSync('language.json', json);
-  console.log('data updated')
-  } else {
-    console.log('data not upadated')
-  }
-
-
+     languageupdate.update({
+       translated_languge:'Chichewa',
+ 
+     })
 
     response = `END you have successfully switched to chichewa languge`;
   }
