@@ -477,7 +477,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     languageupdate = newregref.child(phoneNumber)
 
     languageupdate.update({
-      translated_languge:'English',
+      translated_languge:"English"
 
     })
     response = `END you have successfully switched to english languge`;
@@ -488,7 +488,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
      languageupdate = newregref.child(phoneNumber)
 
      languageupdate.update({
-       translated_languge:'Chichewa',
+       translated_languge:"Chichewa"
  
      })
 
