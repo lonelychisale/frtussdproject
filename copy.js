@@ -888,3 +888,133 @@ else if(text=='2*2*0'){
 	console.log(`Server running on port ${port}`)
 	})
 
+
+
+     /*working on weather menu
+  else if (text == "2*2") {
+    response = `END please  wait..data is being processed`;
+    async function disp() {
+      await promise();
+    }
+
+    function promise() {
+      return new Promise((resolve, reject) => {
+        ref.on("value", (snapshot) => {
+          let districts = [];
+          snapshot.forEach((element) => {
+            var datadistrict = element.val().name;
+            districts.push(datadistrict);
+          });
+
+          const indexDistricts = districts.map(
+            (ds, index) => `${index + 1}. ${ds}`
+          );
+
+          const spliting = indexDistricts.toString().split(",");
+          const joiingdistricts = spliting.join("\n");
+
+          response = `CON choose district for weather \n${joiingdistricts}`;
+          console.log(response);
+        });
+      });
+    }
+
+    disp();
+  } else if (dataarray[1] == "2" && dataarraysize == 3) {
+    response = `CON choose weather information 
+ 1.actions
+ 2.expected
+ 3.weakily weather`;
+  } else if (dataarray[1] == "2" && dataarraysize == 4 && dataarray[3] == 1) {
+    function getactions() {
+      var index = `/${--dataarray[2]}`;
+      const actionsref = ref.child(index);
+
+      actionsref.on("value", (snapshot) => {
+        var actionsarray = [];
+        var selector = 0;
+        var districtname = snapshot.val().name;
+        actions = snapshot.val().actions;
+
+        actions.forEach((element) => {
+          var allactions = ++selector + "." + element;
+          actionsarray.push(allactions);
+        });
+
+        //conerting an array to sting
+        var arraytostring = actionsarray.toString();
+        var splitactions = arraytostring.split(",");
+        var spacedaction = splitactions.join("\n");
+
+        response = `END actions for ${districtname} district \n ${spacedaction}`;
+      });
+    }
+    getactions();
+  } else if (dataarray[1] == "2" && dataarraysize == 4 && dataarray[3] == 2) {
+    function getexpected() {
+      var index = `/${--dataarray[2]}`;
+      const actionsref = ref.child(index);
+
+      actionsref.on("value", (snapshot) => {
+        var expectedarray = [];
+        var selector = 0;
+        var districtname = snapshot.val().name;
+        expecteds = snapshot.val().expected;
+
+        expecteds.forEach((element) => {
+          var allexpecteds = ++selector + "." + element;
+          expectedarray.push(allexpecteds);
+        });
+
+        //conerting an array to sting
+        var arraytostring = expectedarray.toString();
+        var splitexpecteds = arraytostring.split(",");
+        var spaceExpecteds = splitexpecteds.join("\n");
+
+        response = `END expectetions for ${districtname} district \n ${spaceExpecteds}`;
+      });
+    }
+    getexpected();
+  } else if (dataarray[1] == "2" && dataarraysize == 4 && dataarray[3] == 3) {
+    function weeklyweather() {
+      var index = `/${--dataarray[2]}`;
+      const actionsref = ref.child(index + "/weeklyTemps");
+
+      actionsref.on("value", (snapshot) => {
+        var titlemaxmintemparray = [];
+        var titlestatusarray = [];
+        snapshot.forEach((element) => {
+          var titlemaxmintemp =
+            element.val().title +
+            "  :  " +
+            element.val().max +
+            " " +
+            element.val().min;
+          var titlestatus = element.val().title + " : " + element.val().status;
+
+          //pushing data to specific arrays
+          titlemaxmintemparray.push(titlemaxmintemp);
+          titlestatusarray.push(titlestatus);
+        });
+
+        //changing an array to string
+        var titlemaxmintempstring = titlemaxmintemparray.toString();
+        var titlestatusstring = titlestatusarray.toString();
+
+        //splinting data
+        var titlemaxmintempsplit = titlemaxmintempstring.split(",");
+        var titilestatussplit = titlestatusstring.split(",");
+
+        //adding next spaces
+        var titlesmaxmintemppace = titlemaxmintempsplit.join("\n");
+        var titlestatusSpace = titilestatussplit.join("\n");
+
+        response = `END WEEKLY WEATHER REPORTS \n Days  Max  Min \n${titlesmaxmintemppace}\n\nWeather Status For Specific Days\n${titlestatusSpace}
+    `;
+      });
+    }
+    weeklyweather();
+  }
+
+  */
+ 
