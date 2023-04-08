@@ -219,7 +219,7 @@ app.post("*", (req, res) => {
   } 
   
 
-  /*
+
   else if (text == "1") {
     response = `CON Welcome to Mlimi Registration services. 
         
@@ -246,7 +246,7 @@ app.post("*", (req, res) => {
     registration();
     response = `END you have successfully registered`;
   } 
-  */
+  
   else if (text == "2") {
     response = `CON Mlimi Main Manu
 		1. Advesories
