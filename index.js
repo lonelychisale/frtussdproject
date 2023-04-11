@@ -124,7 +124,7 @@ console.log(namesarray)
 //updating values of the json file
 
   
-  const languagename = "english"
+  const languagename = "English"
   const phonenumberr = "0996691384"
 
   /*Read the contents of the JSON file
@@ -286,7 +286,7 @@ const existingLanguage = obj.languages.find(language => language.phonenumber ===
 
 if (!existingLanguage) {
   const newLanguage = {
-    name: 'english',
+    name: 'English',
     phonenumber: phoneNumber
   };
   
