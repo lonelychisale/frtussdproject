@@ -220,7 +220,7 @@ app.post("*", (req, res) => {
 // function for updating language based on phone number
 function updateLanguage() {
   return new Promise((resolve, reject) => {
-    newregref.child(phoneNumber).on("value",(snapshot)=>{
+    newregref.child(phoneNumber).once("value",(snapshot)=>{
       language = snapshot.val().translated_languge
       console.log(language)
       resolve();
@@ -234,7 +234,7 @@ function updateLanguage() {
   updateLanguage()
     .then(() => {
       // response to display for English language
-      if (text=="") {
+      if (language == 'English' && text=="") {
         // display English response
   response = `CON Welcome to Farm Radio Trust
   1.Register
