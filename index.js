@@ -328,10 +328,10 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
   } 
   else if( text=="" && language == "Chichewa"){
     response = `CON Takulandirani ku Farm Radio Trust
-    1.Register
-    2.Main Menu
-    3.Help
-    4.Change language`;
+    1.Lembetsani
+    2.menyu yayikulu
+    3.chithandizo
+    4.sithani chiyankhulo`;
   }
   
 
