@@ -62,10 +62,9 @@ let mylanguage ='chichewa'
 
 
 newregref.child(phone).on("value",(snapshot)=>{
-  mylanguage = snapshot.val().translated_languge
+  mylanguage = snapshot.val().translated_languge;
+  console.log(mylanguage)
 })
-
-console.log(mylanguage)
 
 //inintilizing the app
 firebase.initializeApp(firebaseConfig);
@@ -222,8 +221,8 @@ app.post("*", (req, res) => {
 function updateLanguage() {
   return new Promise((resolve, reject) => {
     newregref.child(phoneNumber).on("value",(snapshot)=>{
-      mylanguage = snapshot.val().name;
-      console.log(mylanguage)
+      language = snapshot.val().translated_languge
+      console.log(language)
     })
     resolve();
   });
