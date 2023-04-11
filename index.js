@@ -336,13 +336,13 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
   
 
 
-  else if (text == "1") {
+  else if (text == "1" && language =="English") {
     response = `CON Welcome to Mlimi Registration services. 
         
         1. Start Registration
         0. Main Menu
         `;
-  } else if (text == "1*1") {
+  } else if (text == "1*1" && language =="English") {
     response = `CON enter your name`;
   } else if (dataarray[2] != "" && dataarraysize == 3 && dataarray[0] == "1") {
     response = `CON enter surname`;
@@ -362,8 +362,37 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
     registration();
     response = `END you have successfully registered`;
   } 
+
+  //chichewa registration
+  else if (text == "1" && language == "Chichewa") {
+    response = `CON takulandilani ku Mlimi Registration services. 
+        
+        1. yambani kulembesa
+        0. Menu yaikulu
+        `;
+  } else if (text == "1*1" && language == "Chichewa") {
+    response = `CON lembani dzina lanu loyamba`;
+  } else if (dataarray[2] != "" && dataarraysize == 3 && dataarray[0] == "1") {
+    response = `CON lembani Dzina la mbambo`;
+  } else if (dataarray[3] != "" && dataarraysize == 4 && dataarray[0] == "1") {
+    function registration() {
+      name = dataarray[2];
+      surname = dataarray[3];
+      language = "English";
+
+      newregref.child(phoneNumber).set({
+        first_name: name,
+        last_name: surname,
+        translated_languge: language,
+        phonenumber: phoneNumber,
+      });
+    }
+    registration();
+    response = `END you have successfully registered`;
+  } 
+
   
-  else if (text == "2") {
+  else if (text == "2" && language =="English") {
     response = `CON Mlimi Main Manu
 		1. Advesories
 		2. Weather reports
@@ -371,25 +400,25 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 		4. Account
 		5. help`;
   }
-  else if(text=='2*#'){
-    dataarray.length = 0
-    response = `CON Welcome to Farm Radio Trust
-    1.Register
-    2.Main Menu
-    3.Help
-    4.Change language`;
 
+  //chichewa main menu
+  else if (text == "2" && language == "Chichewa") {
+    response = `CON Mlimi Menu yaikulu
+		1. Malangizo
+		2. zanyengo
+		3. Msika
+		4. Account
+		5. chithandizo`;
   }
-
-  //validating
+ 
   
   //working advesory from the json file
- else if(text == "2*1"){
+ else if(text == "2*1" && language =="English"){
   response =`CON select the advisory catergory 
   ${categoriesnamejoin}
 `
  } 
- else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3 ){
+ else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3  && language =="English"){
   const secondadvisorycategoryarray= []
   categoryindex =`${--dataarray[2]}`
   specificarrayvalue =categories[categoryindex].categories
@@ -412,7 +441,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
  `
  }
  
- else if(dataarray[3]!='' && dataarray[1]=='1' && dataarraysize==4){
+ else if(dataarray[3]!='' && dataarray[1]=='1' && dataarraysize==4 && language =="English"){
   previousindex = `${--dataarray[2]}`
    secondcategoryindex = `${--dataarray[3]}`
 
@@ -435,7 +464,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
   ${thirdcategoryjoin}`
  }
  
-else if(dataarray[4]!='' && dataarray[1]=='1' && dataarraysize==5){
+else if(dataarray[4]!='' && dataarray[1]=='1' && dataarraysize==5  && language =="English"){
   titleindex = `${--dataarray[4]}`
   advisorytitlearray = []
   selectedadvisorytitles = productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section
@@ -452,7 +481,7 @@ else if(dataarray[4]!='' && dataarray[1]=='1' && dataarraysize==5){
   response = `CON select advisory title for ${specificadvisorytilte}
   ${advisorytitilejoin}`
 }
-else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6){
+else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language =="English"){
   contentarray = []
   contentindex = `${--dataarray[5]}`
   advisorycontent =selectedadvisorytitles =advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].content
@@ -470,12 +499,105 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6){
   ${contentjoin}`
 }
 
+
+//chichewa advisories
+
+  //working advesory from the json file
+  else if(text == "2*1" && language == "Chichewa"){
+    response =`CON sakhani malangizo a zomwe mkufuna 
+    ${categoriesnamejoin}
+  `
+   } 
+   else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3  && language == "Chichewa"){
+    const secondadvisorycategoryarray= []
+    categoryindex =`${--dataarray[2]}`
+    specificarrayvalue =categories[categoryindex].categories
+    selectedcategory =categories[categoryindex].name
+   function secondcategory(){
+    //looping through second category
+    specificarrayvalue.forEach(element => {
+      secondadvisorycategoryarray.push(element.id +'.' + element.name)
+      
+    });
+   }
+   secondcategory()
+  
+   //converting  values to string
+   secondcategorytostring = secondadvisorycategoryarray.toString()
+   secondcategoryjoin = secondcategorytostring.replace(/,/g ,'\n') 
+  
+   response =`CON sankhani mutundu  wina  wa malangizo a ${selectedcategory }
+   ${secondcategoryjoin}
+   `
+   }
+   
+   else if(dataarray[3]!='' && dataarray[1]=='1' && dataarraysize==4 && language == "Chichewa"){
+    previousindex = `${--dataarray[2]}`
+     secondcategoryindex = `${--dataarray[3]}`
+  
+    const thirdadvisorycategoryarray= []
+    productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products
+    selectedsecondcategory=advesoryjson.sectors[previousindex].categories[secondcategoryindex].name
+   
+    function thirdcategory(){
+      
+      productsarray.forEach(element => {
+        thirdadvisorycategoryarray.push(element.id + '.' + element.name)
+      });
+    }
+    thirdcategory()
+  
+    //converting the array value to stirng
+    thirdadvisorycategorytostring = thirdadvisorycategoryarray.toString()
+    thirdcategoryjoin = thirdadvisorycategorytostring.replace(/,/g ,'\n')
+    response=`CON sankhani mtundu wa malangizo a ${selectedsecondcategory}
+    ${thirdcategoryjoin}`
+   }
+   
+  else if(dataarray[4]!='' && dataarray[1]=='1' && dataarraysize==5){
+    titleindex = `${--dataarray[4]}`
+    advisorytitlearray = []
+    selectedadvisorytitles = productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section
+    specificadvisorytilte =productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].name
+  
+    //looping through sections
+    selectedadvisorytitles.forEach(element => {
+      advisorytitlearray.push(element.id + '.' + element.title)
+    });
+  
+    //changing the array to string
+    advisorytitiletostring = advisorytitlearray.toString()
+    advisorytitilejoin = advisorytitiletostring.replace(/,/g , '\n')
+    response = `CON sakhani mutu wa malangizo a ${specificadvisorytilte}
+    ${advisorytitilejoin}`
+  }
+  else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language == "Chichewa"){
+    contentarray = []
+    contentindex = `${--dataarray[5]}`
+    advisorycontent =selectedadvisorytitles =advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].content
+    specifictitlename = selectedadvisorytitles =advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].title
+    
+    //looping through contents
+    advisorycontent.forEach(element => {
+      contentarray.push('> ' + element)
+    });
+  
+    //conventing titles to string
+    contenttostring = contentarray.toString()
+    contentjoin = contenttostring.replace(/,/g, '\n')
+    response =`END malangizo a mutu wa  ${specifictitlename}
+    ${contentjoin}`
+  }
+  
+  
+
+
 //working on weather
-else if(text == "2*2"){
+else if(text == "2*2" && language =="English"){
   response =`CON select prefered district
   ${weatherdistrictsjoin}`
 }
-else if(dataarray[1]=='2' && dataarray[2]!='' && dataarraysize==3){
+else if(dataarray[1]=='2' && dataarray[2]!='' && dataarraysize==3 && language =="English"){
   districtindex = `${--dataarray[2]}`
   districtname = weatherdistricts[districtindex].name
   response = `CON select what you want for ${districtname}
@@ -484,7 +606,7 @@ else if(dataarray[1]=='2' && dataarray[2]!='' && dataarraysize==3){
   3.weekly temperature
   `
 }
-else if(dataarray[1]=='2' && dataarray[3]=='1' && dataarraysize==4){
+else if(dataarray[1]=='2' && dataarray[3]=='1' && dataarraysize==4 && language =="English"){
   districtindex = `${--dataarray[2]}`
   districtactionarray = []
   districtname = weatherdistricts[districtindex].name
@@ -502,7 +624,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='1' && dataarraysize==4){
 }
 
  
-else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarraysize==4){
+else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarraysize==4 && language =="English"){
  
   districtexpectionsarray = []
   districtexpecteds = weatherdistricts[districtindex].expected
@@ -520,7 +642,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarraysize==4){
   ${expectedsjoin}
   `
 }
-else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarraysize==4){
+else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarraysize==4 && language =="English"){
   weathertemperature = weatherdistricts[districtindex].weeklyTemps
   weathertemperaturearray = []
   selectors = 0
@@ -534,7 +656,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarraysize==4){
   ${daysjoin}
   `
 }
-else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarraysize==5){
+else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarraysize==5 && language =="English"){
   daysindex = `${--dataarray[4]}`
   dayname = weatherdistricts[districtindex].weeklyTemps[daysindex].title
   maxtemp = weatherdistricts[districtindex].weeklyTemps[daysindex].max
@@ -544,14 +666,90 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   response =`END on ${dayname} it will be ${statustemp} , having maximum temperature of ${maxtemp} and minimum temperature of ${mintemp}`
 }
 
+//chichewa weather
+//working on weather
+else if(text == "2*2" && language == "Chichewa"){
+  response =`CON sankhani Boma
+  ${weatherdistrictsjoin}`
+}
+else if(dataarray[1]=='2' && dataarray[2]!='' && dataarraysize==3 && language == "Chichewa"){
+  districtindex = `${--dataarray[2]}`
+  districtname = weatherdistricts[districtindex].name
+  response = `CON sankhani zomwe mkufuna za Boma la ${districtname}
+  1.actions
+  2.expected
+  3.weekly temperature
+  `
+}
+else if(dataarray[1]=='2' && dataarray[3]=='1' && dataarraysize==4 && language == "Chichewa"){
+  districtindex = `${--dataarray[2]}`
+  districtactionarray = []
+  districtname = weatherdistricts[districtindex].name
+  districtactions = weatherdistricts[districtindex].actions
+  districtactions.forEach(element => {
+    districtactionarray.push('> ' + element) 
+  });
+
+  //changing the arrayof actions to string
+  actionstosting = districtactionarray.toString()
+  actionsjoin = actionstosting.replace(/,/g , '\n')
+  response = `CON sankhani zomwe mkuyenera kuchita mu Boma la ${districtname}
+  ${actionsjoin}
+  `
+}
+
+ 
+else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarraysize==4 && language == "Chichewa"){
+ 
+  districtexpectionsarray = []
+  districtexpecteds = weatherdistricts[districtindex].expected
+  
+  //looping through expecteds
+  districtexpecteds.forEach(element => {
+    districtexpectionsarray.push('> ' + element)
+  });
+
+  //changing array of expectations to string
+  expectedtostring = districtexpectionsarray.toString()
+  expectedsjoin = expectedtostring.replace(/,/g , '\n')
+
+  response = `CON  zomwe mkuyenera kuyembekezera mu  ${districtname}
+  ${expectedsjoin}
+  `
+}
+else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarraysize==4 && language == "Chichewa"){
+  weathertemperature = weatherdistricts[districtindex].weeklyTemps
+  weathertemperaturearray = []
+  selectors = 0
+  weathertemperature.forEach(element => {
+  weathertemperaturearray.push(++selectors + '.' + element.title)
+});
+//changing weather temperaturedays to string
+  daystostring = weathertemperaturearray.toString()
+  daysjoin = daystostring.replace(/,/g, '\n')
+  response = `CON sankhani siku la zanyengo za ${districtname}
+  ${daysjoin}
+  `
+}
+else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarraysize==5 && language == "Chichewa"){
+  daysindex = `${--dataarray[4]}`
+  dayname = weatherdistricts[districtindex].weeklyTemps[daysindex].title
+  maxtemp = weatherdistricts[districtindex].weeklyTemps[daysindex].max
+  mintemp = weatherdistricts[districtindex].weeklyTemps[daysindex].min
+  statustemp = weatherdistricts[districtindex].weeklyTemps[daysindex].status
+
+  response =`END Pa ${dayname} kuzakhara ${statustemp} , ndi kutetha kokulira kwa ${maxtemp} komaso kuchepera kwa ${mintemp}`
+}
+
+
 
   //working on market menu
-  else if (text == "2*3") {
+  else if (text == "2*3" && language =="English") {
     response = `CON MLIMI Market
   1. Minimum Farm Gate Prices
   2. Sell Products
   3. Buy Available Products `;
-  } else if (text == "2*3*1") {
+  } else if (text == "2*3*1" && language =="English") {
     response = `END choose product price per kg
   1. Maize, MK220
   2. Rice Polished, MK700
@@ -562,31 +760,61 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   7. Pure Beans, MK480
   8. White Harricot Beans, MK500
   0.exit`;
-  } else if (text == "2*3*2") {
+  } else if (text == "2*3*2" && language =="English") {
     response = `CON choose product to sell
   1.Maize
   2.Soya bean
   3.Rice
   4.Beans`;
-  } else if (text == "2*3*2*1") {
+  } else if (text == "2*3*2*1" && language =="English") {
     response = `CON enter quantity(kg) of farm product`;
   }
 
+  //cichewa marketing
+  
+  //working on market menu
+  else if (text == "2*3" && language == "Chichewa") {
+    response = `CON MLIMI Market
+  1. Minimum Farm Gate Prices
+  2. Sell Products
+  3. Buy Available Products `;
+  } else if (text == "2*3*1" && language == "Chichewa") {
+    response = `END  mitengo ya zokolora pa  kg
+  1. Chimanga, MK220
+  2. Mpunga okonora, MK700
+  3. Mpunga osakonora, MK300
+  4. Sorghum, MK360
+  5. Malezi, MK480
+  6. Soya, MK480
+  7. Nyemba, MK480
+  8. White Harricot Beans, MK500
+  0.exit`;
+  } else if (text == "2*3*2" && language == "Chichewa") {
+    response = `CON sankhani chomwe mkufuna kugulisa
+  1.Chimanga
+  2.Soya
+  3.Mpunga
+  4.Nyemba`;
+  } else if (text == "2*3*2*1" && language == "Chichewa") {
+    response = `CON enter quantity(kg) of farm product`;
+  }
+
+
   //working on help menu
-  else if (text == "3") {
+  else if (text == "3" && language =="English") {
     response = `CON choose options below for help
 		1.call center`;
-  } else if (text == "3*1") {
+  } else if (text == "3*1" && language =="English") {
     response = `END contact for free on *8111# AIRTEL or *7111# TNM `;
   }
 
   //changing language
-  else if (text == "4") {
+  else if (text == "4" && language =="English") {
     response = `CON Choose your preffered language
     1.English
     2.Chichewa`;
   }
-   else if (text == "4*1") {
+   else if (text == "4*1" && language =="English") {
       // Update the object based on the user's input
       const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber)
       if (languageToUpdate) {
@@ -612,7 +840,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     response = `END you have successfully switched to english languge`;
   }
 
-   else if (text == "4*2") {
+   else if (text == "4*2" && language =="English") {
        // Update the object based on the user's input
        const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber)
        if (languageToUpdate) {
