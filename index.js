@@ -478,17 +478,14 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     2.Chichewa`;
   }
    else if (text == "4*1") {
-    languagename = `${dataarray[1]}`
     //updating data to firebase
     newregref.child(phoneNumber).update({
      translated_languge:'English'
-
      })
     response = `END you have successfully switched to english languge`;
   }
 
    else if (text == "4*2") {
-     languagename = `${dataarray[1]}`
      //updating data to firebase
 newregref.child(phoneNumber).update({
   translated_languge:'Chichewa'
