@@ -238,6 +238,20 @@ fs.writeFileSync('data.json', json);
 */
 
 
+const phoneNumber = "0996691384";
+const languageJSON = fs.readFileSync('language.json');
+
+let language = "";
+
+for (let i = 0; i < obj.languages.length; i++) {
+  if (obj.languages[i].phonenumber === phoneNumber) {
+    language = obj.languages[i].name;
+    break;
+  }
+}
+
+console.log(`Language for phone number ${phoneNumber} is ${language}`);
+
 
 
 
@@ -290,16 +304,35 @@ if (!existingLanguage) {
 }
 
 
+
+const languageJSON = fs.readFileSync('language.json');
+
+
+for (let i = 0; i < obj.languages.length; i++) {
+  if (obj.languages[i].phonenumber === phoneNumber) {
+    language = obj.languages[i].name;
+    break;
+  }
+}
+
+console.log(`Language for phone number ${phoneNumber} is ${language}`);
  
   //first
 
-  if (text == "") {
+  if (text == "" && language =="English") {
     response = `CON Welcome to Farm Radio Trust
       1.Register
       2.Main Menu
       3.Help
       4.Change language`;
   } 
+  else if( text=="" && language == "Chichewa"){
+    response = `CON Takulandirani ku Farm Radio Trust
+    1.Register
+    2.Main Menu
+    3.Help
+    4.Change language`;
+  }
   
 
 
