@@ -257,6 +257,7 @@ function updateLanguage() {
     })
     .catch((error) => {
       console.log('Error updating language:', error);
+      response = `CON Error updating language. Please try again later.`;
     });
 
 
