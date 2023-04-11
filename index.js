@@ -554,79 +554,51 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     2.Chichewa`;
   }
    else if (text == "4*1") {
-    englishlanguage ="English"
       // Update the object based on the user's input
-  // read the content of the file
-fs.readFile('language.json', (err, data) => {
-  if (err) {
-    console.log('Error reading file:', err);
-    return;
-  }
-  
-  // parse the JSON data to an object
-  const obj = JSON.parse(data);
-  
-  // find the language to update
-  const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber);
-  
-  if (languageToUpdate) {
-    languageToUpdate.name ="English";
-  
-    // Convert the modified object back to JSON format
-    const json = JSON.stringify(obj);
-  
-    // Write the updated JSON data back to the file
-    fs.writeFile('language.json', json, (err) => {
-      if (err) {
-        console.log('Error writing file:', err);
-        return;
+      const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber)
+      if (languageToUpdate) {
+        languageToUpdate.name = "English";
+      
+        // Convert the modified object back to JSON format
+        const json = JSON.stringify(obj);
+      
+        // Write the updated JSON data back to the file
+        fs.writeFile('language.json', json, (err) => {
+          if (err) {
+            console.log('Error updating language:', err);
+          } else {
+            console.log('Data updated');
+          }
+        });
+      } else {
+        console.log('Data not updated');
       }
-  
-      console.log('Data updated successfully');
-    });
-  } else {
-    console.log('Language not found for the phone number:', phoneNumber);
-  }
-});
-
+      
    
     response = `END you have successfully switched to english languge`;
   }
 
    else if (text == "4*2") {
- // read the content of the file
-fs.readFile('language.json', (err, data) => {
-  if (err) {
-    console.log('Error reading file:', err);
-    return;
-  }
-  
-  // parse the JSON data to an object
-  const obj = JSON.parse(data);
-  
-  // find the language to update
-  const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber);
-  
-  if (languageToUpdate) {
-    languageToUpdate.name = "Chichewa";
-  
-    // Convert the modified object back to JSON format
-    const json = JSON.stringify(obj);
-  
-    // Write the updated JSON data back to the file
-    fs.writeFile('language.json', json, (err) => {
-      if (err) {
-        console.log('Error writing file:', err);
-        return;
-      }
-  
-      console.log('Data updated successfully');
-    });
-  } else {
-    console.log('Language not found for the phone number:', phoneNumber);
-  }
-});
-
+       // Update the object based on the user's input
+       const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber)
+       if (languageToUpdate) {
+         languageToUpdate.name = "Chichewa";
+       
+         // Convert the modified object back to JSON format
+         const json = JSON.stringify(obj);
+       
+         // Write the updated JSON data back to the file
+         fs.writeFile('language.json', json, (err) => {
+           if (err) {
+             console.log('Error updating language:', err);
+           } else {
+             console.log('Data updated');
+           }
+         });
+       } else {
+         console.log('Data not updated');
+       }
+       
 
   
 
