@@ -257,6 +257,7 @@ app.post("*", (req, res) => {
   
     // Convert the modified object back to JSON format
     const json = JSON.stringify(obj);
+    console.log(json)
   
     // Write the updated JSON data back to the file
     fs.writeFileSync('language.json', json);
