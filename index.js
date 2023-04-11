@@ -163,7 +163,7 @@ const existingLanguage = obj.languages.find(language => language.phonenumber ===
 if (!existingLanguage) {
   // Add a new object to the "languages" array
   const newLanguage = {
-    name: 'english',
+    name: 'English',
     phonenumber: phone
   };
   obj.languages.push(newLanguage);
@@ -319,14 +319,14 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
  
   //first
 
-  if (text == "" && language =="english") {
+  if (text == "" && language =="English") {
     response = `CON Welcome to Farm Radio Trust
       1.Register
       2.Main Menu
       3.Help
       4.Change language`;
   } 
-  else if( text=="" && language == "chichewa"){
+  else if( text=="" && language == "Chichewa"){
     response = `CON Takulandirani ku Farm Radio Trust
     1.Register
     2.Main Menu
