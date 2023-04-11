@@ -223,8 +223,9 @@ function updateLanguage() {
     newregref.child(phoneNumber).on("value",(snapshot)=>{
       language = snapshot.val().translated_languge
       console.log(language)
+      resolve();
     })
-    resolve();
+    
   });
 }
 
@@ -242,7 +243,7 @@ function updateLanguage() {
   4.Change language`;
       }
       // response to display for French language
-      else if (language == 'Chichewa' && text== "") {
+      else if (language == 'Chichewa' && text == "") {
         response = `CON Takulandira ku Farm Radio Trust
   1.Register
   2.Main Menu
