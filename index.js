@@ -124,10 +124,10 @@ console.log(namesarray)
 //updating values of the json file
 
   
-  const languagename = "chichewa"
+  const languagename = "english"
   const phonenumberr = "0996691384"
 
-  //Read the contents of the JSON file
+  /*Read the contents of the JSON file
   const data = fs.readFileSync('language.json');
   const obj = JSON.parse(data);
 
@@ -146,12 +146,39 @@ console.log(namesarray)
     const json = JSON.stringify(obj);
 
     // Write the updated JSON data back to the file
-    fs.writeFileSync('language.json', json);
-  //console.log('data updated')
+    fs.writeFile('language.json', json);
+  console.log('data updated')
   } else {
-   // console.log('data not upadated')
+   console.log('data not upadated')
   }
 
+*/
+// Read the existing JSON data from the file
+const languagejsonfile = fs.readFileSync('language.json');
+const obj = JSON.parse(languagejsonfile);
+
+// Check if the phonenumber already exists in the "languages" array
+const existingLanguage = obj.languages.find(language => language.phonenumber === phone);
+
+if (!existingLanguage) {
+  // Add a new object to the "languages" array
+  const newLanguage = {
+    name: 'english',
+    phonenumber: phone
+  };
+  obj.languages.push(newLanguage);
+
+  // Convert the modified object back to JSON format
+  const json = JSON.stringify(obj);
+
+  // Write the updated JSON data back to the file
+  fs.writeFile('language.json', json, (err) => {
+    if (err) throw err;
+    console.log('Data updated in language.json');
+  });
+} else {
+  console.log('Phone number already exists in language.json');
+}
 
 
  /*putting data to a json file
@@ -236,36 +263,33 @@ app.post("*", (req, res) => {
   let dataarraysize = dataarray.length;
 
 
+// Read the existing JSON data from the file
+const languagejsonfile = fs.readFileSync('language.json');
+const obj = JSON.parse(languagejsonfile);
 
- function insertinglanguagejsn(){
+// Check if the phonenumber already exists in the "languages" array
+const existingLanguage = obj.languages.find(language => language.phonenumber === phoneNumber);
 
-  // Read the existing JSON data from the file
-  const languagejsonfile = fs.readFileSync('language.json');
-  const obj = JSON.parse(languagejsonfile);
-  console.log(phoneNumber)
-  
-  // Check if the phonenumber already exists in the "languages" array
-  const existingLanguage = obj.languages.find(language => language.phonenumber === phoneNumber);
-  
-  if (!existingLanguage) {
-    // Add a new object to the "languages" array
-    const newLanguage = {
-      name: 'english',
-      phonenumber: phoneNumber
-    };
-    obj.languages.push(newLanguage);
-  
-    // Convert the modified object back to JSON format
-    const json = JSON.stringify(obj);
-    console.log(json)
-  
-    // Write the updated JSON data back to the file
-    fs.writeFileSync('language.json', json);
-    console.log('data inserted')
-  } 
-  
+if (!existingLanguage) {
+  // Add a new object to the "languages" array
+  const newLanguage = {
+    name: 'english',
+    phonenumber: phoneNumber
+  };
+  obj.languages.push(newLanguage);
+
+  // Convert the modified object back to JSON format
+  const json = JSON.stringify(obj);
+
+  // Write the updated JSON data back to the file
+  fs.writeFile('language.json', json, (err) => {
+    if (err) throw err;
+    console.log('Data updated in language.json');
+  });
+} else {
+  console.log('Phone number already exists in language.json');
 }
-insertinglanguagejsn()
+
 
  
   //first
