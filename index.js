@@ -234,7 +234,7 @@ function updateLanguage() {
   updateLanguage()
     .then(() => {
       // response to display for English language
-      if (language == 'English' && text=="") {
+      if (language == "English" && text=="") {
         // display English response
   response = `CON Welcome to Farm Radio Trust
   1.Register
