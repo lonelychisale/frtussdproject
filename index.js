@@ -62,9 +62,9 @@ let mylanguage ='chichewa'
 
 
 newregref.child(phone).on("value",(snapshot)=>{
-  mylanguage = snapshot.val().translated_languge;
-  console.log(mylanguage)
+  mylanguage = snapshot.val().translated_languge
 })
+
 
 //inintilizing the app
 firebase.initializeApp(firebaseConfig);
@@ -215,61 +215,8 @@ app.post("*", (req, res) => {
   //array length
   let dataarraysize = dataarray.length;
 
-
-
-// function for updating language based on phone number
-function updateLanguage() {
-  return new Promise((resolve, reject) => {
-    newregref.child(phoneNumber).once("value",(snapshot)=>{
-      language = snapshot.val().translated_languge
-      console.log(language)
-      resolve();
-    })
-    
-  });
-}
-
-
-  // Call the updateLanguage function and then display the response based on the updated language
-  updateLanguage()
-    .then(() => {
-      // response to display for English language
-      if (language == "English" && text=="") {
-        // display English response
-  response = `CON Welcome to Farm Radio Trust
-  1.Register
-  2.Main Menu
-  3.Help
-  4.Change language`;
-      }
-      // response to display for French language
-      else if (language == 'Chichewa' && text == "") {
-        response = `CON Takulandira ku Farm Radio Trust
-  1.Register
-  2.Main Menu
-  3.Help
-  4.Change language`;
-      }
-      // response to display for other languages
-      else {
-        console.log('failed to work on language')
-      }
-    })
-    .catch((error) => {
-      console.log('Error updating language:', error);
-      response = `CON Error updating language. Please try again later.`;
-    });
-
-
-
-
-
-
-
-
-
  
-  /*first
+  //first
 
   if (text == "") {
     response = `CON Welcome to Farm Radio Trust
@@ -550,7 +497,7 @@ newregref.child(phoneNumber).update({
     response = `END you have successfully switched to chichewa languge`;
   }
   
-*/
+
   //send the response back
   res.set("Content-Type: text/plain");
   res.send(response);
