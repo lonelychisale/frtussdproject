@@ -138,7 +138,7 @@ console.log(namesarray)
  //obj.languages.push(newLanguage);
 
   // Update the object based on the user's input
-  const languageToUpdate = obj.languages.find(language => language.phonenumber === '0996641385')
+  const languageToUpdate = obj.languages.find(language => language.phonenumber === '08839578452')
   if (languageToUpdate) {
     languageToUpdate.name = languagename;
 
@@ -147,9 +147,9 @@ console.log(namesarray)
 
     // Write the updated JSON data back to the file
     fs.writeFileSync('language.json', json);
-  console.log('data updated')
+  //console.log('data updated')
   } else {
-    console.log('data not upadated')
+   // console.log('data not upadated')
   }
 
 
@@ -162,13 +162,13 @@ console.log(namesarray)
   const obj = JSON.parse(languagejsonfile);
   
   // Check if the phonenumber already exists in the "languages" array
-  const existingLanguage = obj.languages.find(language => language.phonenumber === '08839578453');
+  const existingLanguage = obj.languages.find(language => language.phonenumber === '08839578452');
   
   if (!existingLanguage) {
     // Add a new object to the "languages" array
     const newLanguage = {
       name: 'english',
-      phonenumber: '08839578453'
+      phonenumber: '08839578452'
     };
     obj.languages.push(newLanguage);
   
@@ -182,13 +182,33 @@ console.log(namesarray)
   
 }
 insertinglanguagejsn()
+
+
+
+const fs = require('fs');
+
+// Read the existing JSON data from the file
+const rawData = fs.readFileSync('data.json');
+const obj = JSON.parse(rawData);
+
+// Find the language object with phonenumber "0996691384"
+const languageToUpdate = obj.languages.find(language => language.phonenumber === '0996691384');
+
+// Update the "name" property for the found language object
+if (languageToUpdate) {
+  languageToUpdate.name = 'french-updated';
+}
+
+// Convert the modified object back to JSON format
+const json = JSON.stringify(obj);
+
+// Write the updated JSON data back to the file
+fs.writeFileSync('data.json', json);
+
+
+
+
 */
-
-
-
-
-
-
 
 
 
@@ -214,6 +234,36 @@ app.post("*", (req, res) => {
 
   //array length
   let dataarraysize = dataarray.length;
+
+
+
+ function insertinglanguagejsn(){
+
+  // Read the existing JSON data from the file
+  const languagejsonfile = fs.readFileSync('language.json');
+  const obj = JSON.parse(languagejsonfile);
+  
+  // Check if the phonenumber already exists in the "languages" array
+  const existingLanguage = obj.languages.find(language => language.phonenumber === phoneNumber);
+  
+  if (!existingLanguage) {
+    // Add a new object to the "languages" array
+    const newLanguage = {
+      name: 'english',
+      phonenumber: phoneNumber
+    };
+    obj.languages.push(newLanguage);
+  
+    // Convert the modified object back to JSON format
+    const json = JSON.stringify(obj);
+  
+    // Write the updated JSON data back to the file
+    fs.writeFileSync('language.json', json);
+    console.log('data inserted')
+  } 
+  
+}
+insertinglanguagejsn()
 
  
   //first
@@ -479,18 +529,41 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     2.Chichewa`;
   }
    else if (text == "4*1") {
-    //updating data to firebase
-    newregref.child(phoneNumber).update({
-     translated_languge:'English'
-     })
+    englishlanguage ="English"
+      // Update the object based on the user's input
+  const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber)
+  if (languageToUpdate) {
+    languageToUpdate.name = englishlanguage;
+
+    // Convert the modified object back to JSON format
+    const json = JSON.stringify(obj);
+
+    // Write the updated JSON data back to the file
+    fs.writeFileSync('language.json', json);
+  console.log('data updated')
+  } else {
+    console.log('data not upadated')
+  }
+   
     response = `END you have successfully switched to english languge`;
   }
 
    else if (text == "4*2") {
-     //updating data to firebase
-newregref.child(phoneNumber).update({
-  translated_languge:'Chichewa'
-})
+       chichewalanguage ="Chichewa"
+       // Update the object based on the user's input
+  const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber)
+  if (languageToUpdate) {
+    languageToUpdate.name = chichewalanguage;
+
+    // Convert the modified object back to JSON format
+    const json = JSON.stringify(obj);
+
+    // Write the updated JSON data back to the file
+    fs.writeFileSync('language.json', json);
+  console.log('data updated')
+  } else {
+    console.log('data not upadated')
+  }
 
   
 
