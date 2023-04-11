@@ -570,7 +570,7 @@ fs.readFile('language.json', (err, data) => {
   const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber);
   
   if (languageToUpdate) {
-    languageToUpdate.name = englishlanguage;
+    languageToUpdate.name ="English";
   
     // Convert the modified object back to JSON format
     const json = JSON.stringify(obj);
@@ -594,10 +594,7 @@ fs.readFile('language.json', (err, data) => {
   }
 
    else if (text == "4*2") {
-       chichewalanguage ="Chichewa"
-      
-       
-       // read the content of the file
+ // read the content of the file
 fs.readFile('language.json', (err, data) => {
   if (err) {
     console.log('Error reading file:', err);
@@ -611,7 +608,7 @@ fs.readFile('language.json', (err, data) => {
   const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber);
   
   if (languageToUpdate) {
-    languageToUpdate.name = chichewalanguage;
+    languageToUpdate.name = "Chichewa";
   
     // Convert the modified object back to JSON format
     const json = JSON.stringify(obj);
