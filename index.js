@@ -54,11 +54,16 @@ const regiintialize = firebase.initializeApp(
 
 const regdb = regiintialize.database();
 
-let phone = `+265995536312`;
+let phone = `+265995537312`;
 const regref = regdb.ref("sectors");
 const newregref = regdb.ref("users");
 
 
+
+
+newregref.on("value",(snapshot)=>{
+  console.log(snapshot.val())
+})
 
 //inintilizing the app
 firebase.initializeApp(firebaseConfig);
@@ -474,13 +479,22 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   }
    else if (text == "4*1") {
     languagename = `${dataarray[1]}`
-   
+    //updating data to firebase
+    newregref.child(phoneNumber).update({
+     translated_languge:'English'
+
+     })
     response = `END you have successfully switched to english languge`;
   }
 
    else if (text == "4*2") {
      languagename = `${dataarray[1]}`
-     
+     //updating data to firebase
+newregref.child(phoneNumber).update({
+  translated_languge:'Chichewa'
+})
+
+  
 
     response = `END you have successfully switched to chichewa languge`;
   }
