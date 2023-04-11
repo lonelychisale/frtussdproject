@@ -222,7 +222,7 @@ app.post("*", (req, res) => {
 function updateLanguage() {
   return new Promise((resolve, reject) => {
     newregref.child(phoneNumber).on("value",(snapshot)=>{
-      mylanguage = childSnapshot.val().name;
+      mylanguage = snapshot.val().name;
       console.log(mylanguage)
     })
     resolve();
