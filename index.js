@@ -242,6 +242,7 @@ app.post("*", (req, res) => {
   // Read the existing JSON data from the file
   const languagejsonfile = fs.readFileSync('language.json');
   const obj = JSON.parse(languagejsonfile);
+  console.log(phoneNumber)
   
   // Check if the phonenumber already exists in the "languages" array
   const existingLanguage = obj.languages.find(language => language.phonenumber === phoneNumber);
