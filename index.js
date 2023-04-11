@@ -319,14 +319,14 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
  
   //first
 
-  if (text == "" && language =="English") {
+  if (text == "" && language =="english") {
     response = `CON Welcome to Farm Radio Trust
       1.Register
       2.Main Menu
       3.Help
       4.Change language`;
   } 
-  else if( text=="" && language == "Chichewa"){
+  else if( text=="" && language == "chichewa"){
     response = `CON Takulandirani ku Farm Radio Trust
     1.Register
     2.Main Menu
