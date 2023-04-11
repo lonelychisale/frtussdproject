@@ -568,6 +568,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
             console.log('Error updating language:', err);
           } else {
             console.log('Data updated');
+            console.Console(json)
           }
         });
       } else {
