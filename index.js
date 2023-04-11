@@ -271,23 +271,22 @@ const obj = JSON.parse(languagejsonfile);
 const existingLanguage = obj.languages.find(language => language.phonenumber === phoneNumber);
 
 if (!existingLanguage) {
-  // Add a new object to the "languages" array
   const newLanguage = {
     name: 'english',
     phonenumber: phoneNumber
   };
+  
   obj.languages.push(newLanguage);
-
+  
   // Convert the modified object back to JSON format
   const json = JSON.stringify(obj);
-
+  console.log(json)
+  
   // Write the updated JSON data back to the file
   fs.writeFile('language.json', json, (err) => {
     if (err) throw err;
-    console.log('Data updated in language.json');
+    console.log('Data written to file');
   });
-} else {
-  console.log('Phone number already exists in language.json');
 }
 
 
