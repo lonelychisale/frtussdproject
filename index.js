@@ -799,6 +799,22 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     response = `CON enter quantity(kg) of farm product`;
   }
 
+  //my account menu
+  else if(text=='2*4' && language =="English"){
+    response=`CON Mlimi Account
+    1. Our Farm Group
+    2. Change Languege 
+    3. what we Buy`
+}
+
+//my account menu in chichewa
+else if(text=='2*4' && language == "Chichewa"){
+  response=`CON Mlimi Account
+  1.Ma group anthu a alimi
+  2. sithani chiyankhulo 
+  3. zomwe timagura`
+}
+
 
   //working on help menu
   else if (text == "3" && language =="English") {
@@ -806,6 +822,14 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
 		1.call center`;
   } else if (text == "3*1" && language =="English") {
     response = `END contact for free on *8111# AIRTEL or *7111# TNM `;
+  }
+
+  //help menu in chichewa
+  else if (text == "3" && language == "Chichewa") {
+    response = `CON sankhani njira yomwe mungathandizikire
+		1.call center`;
+  } else if (text == "3*1"&& language == "Chichewa") {
+    response = `END Imbani mwaulere pa *8111# AIRTEL kapena *7111# TNM `;
   }
 
   //changing language
@@ -863,9 +887,66 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
        }
        
 
-  
-
     response = `END you have successfully switched to chichewa languge`;
+  }
+
+
+  //changing language in chichewa
+  else if (text == "4" && language == "Chichewa") {
+    response = `CON Sankhani chiyankhuro chomwe mkufuna
+    1.Cingerezi
+    2.Chichewa`;
+  }
+   else if (text == "4*1" && language == "Chichewa") {
+      // Update the object based on the user's input
+      const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber)
+      if (languageToUpdate) {
+        languageToUpdate.name = "English";
+      
+        // Convert the modified object back to JSON format
+        const json = JSON.stringify(obj);
+      
+        // Write the updated JSON data back to the file
+        fs.writeFile('language.json', json, (err) => {
+          if (err) {
+            console.log('Error updating language:', err);
+          } else {
+            console.log('Data updated');
+            console.log(json)
+          }
+        });
+      } else {
+        console.log('Data not updated');
+      }
+      
+   
+    response = `END kusitha chiyankhuro ku chingerezi kwatheka`;
+  }
+
+   else if (text == "4*2" && language == "Chichewa") {
+       // Update the object based on the user's input
+       const languageToUpdate = obj.languages.find(language => language.phonenumber === phoneNumber)
+       if (languageToUpdate) {
+         languageToUpdate.name = "Chichewa";
+       
+         // Convert the modified object back to JSON format
+         const json = JSON.stringify(obj);
+       
+         // Write the updated JSON data back to the file
+         fs.writeFile('language.json', json, (err) => {
+           if (err) {
+             console.log('Error updating language:', err);
+           } else {
+             console.log('Data updated');
+             console.log(json)
+           }
+         });
+       } else {
+         console.log('Data not updated');
+       }
+       
+
+    response = `END kusitha chiyankhulo ku chichewa kwatheka`;
   }
   
 
