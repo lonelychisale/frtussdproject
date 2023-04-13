@@ -317,7 +317,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
  
 
   //...........first menu...........................................
-  if (text == "" && language =="English") {
+  if (text == "") {
     response = `CON Welcome to Farm Radio Trust
       1.Register
       2.Main Menu
@@ -430,25 +430,33 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
   }
  
   
-  //working advesory from the json file
+  //......................................working advesory from the json file.......................
  else if(text == "2*1" && language =="English"){
+
   response =`CON select the advisory catergory 
   ${categoriesnamejoin}
 `
+
  } 
 
  else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3  && language =="English"){
+
   const secondadvisorycategoryarray= []
   categoryindex =`${--dataarray[2]}`
   specificarrayvalue =categories[categoryindex].categories
   selectedcategory =categories[categoryindex].name
+
  function secondcategory(){
+
   //looping through second category
   specificarrayvalue.forEach(element => {
+
     secondadvisorycategoryarray.push(element.id +'.' + element.name)
     
   });
+
  }
+
  secondcategory()
 
  //converting  values to string
@@ -458,11 +466,13 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
  response =`CON select the subcategory for ${selectedcategory }
  ${secondcategoryjoin}
  `
+
  }
  
  else if(dataarray[3]!='' && dataarray[1]=='1' && dataarraysize==4 && language =="English"){
+
   previousindex = `${--dataarray[2]}`
-   secondcategoryindex = `${--dataarray[3]}`
+  secondcategoryindex = `${--dataarray[3]}`
 
   const thirdadvisorycategoryarray= []
   productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products
@@ -473,18 +483,23 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
     productsarray.forEach(element => {
       thirdadvisorycategoryarray.push(element.id + '.' + element.name)
     });
+
   }
+
   thirdcategory()
 
   //converting the array value to stirng
   thirdadvisorycategorytostring = thirdadvisorycategoryarray.toString()
   thirdcategoryjoin = thirdadvisorycategorytostring.replace(/,/g ,'\n')
+
   response=`CON select subcategory of ${selectedsecondcategory}
   ${thirdcategoryjoin}`
+
  }
 
  
 else if(dataarray[4]!='' && dataarray[1]=='1' && dataarraysize==5  && language =="English"){
+
   titleindex = `${--dataarray[4]}`
   advisorytitlearray = []
   selectedadvisorytitles = productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section
@@ -498,12 +513,15 @@ else if(dataarray[4]!='' && dataarray[1]=='1' && dataarraysize==5  && language =
   //changing the array to string
   advisorytitiletostring = advisorytitlearray.toString()
   advisorytitilejoin = advisorytitiletostring.replace(/,/g , '\n')
+
   response = `CON select advisory title for ${specificadvisorytilte}
   ${advisorytitilejoin}`
+
 }
 
 
 else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language =="English"){
+
   contentarray = []
   contentindex = `${--dataarray[5]}`
   advisorycontent =selectedadvisorytitles =advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].content
@@ -517,17 +535,21 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language ==
   //conventing titles to string
   contenttostring = contentarray.toString()
   contentjoin = contenttostring.replace(/,/g, '\n')
+
   response =`END advisories under  ${specifictitlename}
   ${contentjoin}`
+
 }
 
 
 
   //working advesory from the json file in chichewa
   else if(text == "2*1" && language == "Chichewa"){
+
     response =`CON sakhani malangizo a zomwe mkufuna 
     ${categoriesnamejoin}
   `
+
    } 
 
    
@@ -541,10 +563,13 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language ==
     function secondcategory(){
     //looping through second category
     specificarrayvalue.forEach(element => {
+
       secondadvisorycategoryarray.push(element.id +'.' + element.name)
       
     });
+
    }
+
    secondcategory()
   
    //converting  values to string
@@ -559,7 +584,7 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language ==
    else if(dataarray[3]!='' && dataarray[1]=='1' && dataarraysize==4 && language == "Chichewa"){
 
     previousindex = `${--dataarray[2]}`
-     secondcategoryindex = `${--dataarray[3]}`
+    secondcategoryindex = `${--dataarray[3]}`
   
     const thirdadvisorycategoryarray= []
     productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products
@@ -570,14 +595,18 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language ==
       productsarray.forEach(element => {
         thirdadvisorycategoryarray.push(element.id + '.' + element.name)
       });
+
     }
+
     thirdcategory()
   
     //converting the array value to stirng
     thirdadvisorycategorytostring = thirdadvisorycategoryarray.toString()
     thirdcategoryjoin = thirdadvisorycategorytostring.replace(/,/g ,'\n')
+
     response=`CON sankhani mtundu wa malangizo a ${selectedsecondcategory}
     ${thirdcategoryjoin}`
+
    }
 
    
