@@ -91,7 +91,7 @@ categories.forEach(element => {
 categoriesnametostring = categoriesarray.toString()
 categoriesnamejoin = categoriesnametostring.replace(/,/g, '\n')
 
-/*working on weather
+//working on weather
 const weatherdistricts = weatherjson.weather.districts
 const weatherdistrictsarray = []
 weatherdistricts.forEach(element => {
@@ -116,7 +116,7 @@ console.log(namesarray)
 }
 namesarray.push('lonely')
 console.log(namesarray)
-*/
+
 
 //working on language changing
 //languagejson.languages.name='chichewa'
