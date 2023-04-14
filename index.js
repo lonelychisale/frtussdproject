@@ -352,70 +352,191 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
       `;
 
   }
-  
-  else if (text == "1*1" && language =="English") {
-    response = `CON enter your name`;
 
-  } 
   
-  else if (dataarray[2] != "" && dataarraysize == 3 && dataarray[0] == "1") {
-    response = `CON enter surname`;
+  else if(text=='1*1' && language =="English"){
 
-  }
+    response=`CON Select your District
+    1. Salima
+    2. Zomba
+    3. Mulanje
+    4. Nchinji
+    5. Mzimba`
+
+}
+
   
-  else if (dataarray[3] != "" && dataarraysize == 4 && dataarray[0] == "1") {
-    function registration() {
-      name = dataarray[2];
-      surname = dataarray[3];
-      language = "English";
+else if(dataarraysize==3 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='' &&  language =="English"){
 
-      newregref.child(phoneNumber).set({
-        first_name: name,
-        last_name: surname,
-        translated_languge: language,
-        phonenumber: phoneNumber,
-      });
-    }
-    registration();
+  response= `CON Enter Name Of a T/A(Traditional Authority)
+  `
+}
+
+
+else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]!='' && language =="English"){
+
+  response= `CON Enter the NAme of Group Village Head  `
+
+}
+
+
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[4]!='' && language =="English"){
+
+  response= `CON Enter the Crop Variate of Your Farming 
+  1. Maize
+  2. Beans
+  3. Soya Beans `
+
+}
+
+
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1'  && dataarray[5]!='' && language =="English"){
+
+  response= `CON Enter Your Full Name `
+  
+}
+
+else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[6]!='' && language =="English"){
+
+  response = `CON choose your gender
+  1.Male
+  2.Female`
+
+}
+
+
+else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[7]!=='' && language =="English"){
+
+  response = `CON choose your age range
+  1. 0-18
+  2. 19-25
+  3. 26-40
+  4. 41-60
+  5. 61 above
+  `
+}
+
+
+else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[8]!='' && language =="English"){
+
+  response= `CON Enter Your GroupName `
+  
+}
+
+
+else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[9]!='' && language =="English"){
+
+  response= `CON choose your postion
+  1. chairman/chairlady 
+  2. secretary
+  3. tresurer
+  4. member`
+  
+}
+  
+else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && language =="English") {
+
     response = `END you have successfully registered`;
+
   } 
 
 
   //..................................chichewa registration............................................
-  else if (text == "1" && language == "Chichewa") {
-    response = `CON takulandilani ku Mlimi Registration services. 
-        1. yambani kulembesa
-        0. Menu yaikulu
-        `;
-  } 
-  
-  
-  else if (text == "1*1" && language == "Chichewa") {
-    response = `CON lembani dzina lanu loyamba`;
-  } 
-  
-  else if (dataarray[2] != "" && dataarraysize == 3 && dataarray[0] == "1") {
-    response = `CON lembani Dzina la mbambo`;
+   else if (text == "1" && language == "Chichewa") {
+    response = `CON Takulandilani ku ntchito za Kulembetsa ku Mlimi. 
+        
+        1. Yambani Kulembetsa
+        0. Main Menu
+      `;
+
   }
-  
-  
-  else if (dataarray[3] != "" && dataarraysize == 4 && dataarray[0] == "1") {
-    function registration() {
-      name = dataarray[2];
-      surname = dataarray[3];
-      language = "English";
 
-      newregref.child(phoneNumber).set({
-        first_name: name,
-        last_name: surname,
-        translated_languge: language,
-        phonenumber: phoneNumber,
-      });
-    }
-    registration();
-    response = `END you have successfully registered`;
-  } 
+  
+  else if(text=='1*1' && language == "Chichewa"){
 
+    response=`CON Sankhani Boma
+    1. Salima
+    2. Zomba
+    3. Mulanje
+    4. Nchinji
+    5. Mzimba`
+
+}
+
+  
+else if(dataarraysize==3 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='' && language == "Chichewa"){
+
+  response= `CON lembani zina la a T/A(Traditional Authority)
+  `
+}
+
+
+else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]!='' && language == "Chichewa"){
+
+  response= `CON lembani zina la a  Group Village Head anu  `
+
+}
+
+
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[4]!='' && language == "Chichewa"){
+
+  response= `CON sankhani zomwe mumalima
+  1. chimanga
+  2. nyemba
+  3. Soya `
+
+}
+
+
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1'  && dataarray[5]!='' && language == "Chichewa"){
+
+  response= `CON lembani zina lanu lonse `
+  
+}
+
+else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[6]!='' && language == "Chichewa"){
+
+  response = `CON sankhani jenda
+  1.Male
+  2.Female`
+
+}
+
+
+else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[7]!=='' && language == "Chichewa"){
+
+  response = `CON sankhani zaka zanu
+  1. 0-18
+  2. 19-25
+  3. 26-40
+  4. 41-60
+  5. 61 above
+  `
+}
+
+
+else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[8]!='' && language == "Chichewa"){
+
+  response= `CON Lembani zina la group yanu `
+  
+}
+
+
+else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[9]!='' && language == "Chichewa"){
+
+  response= `CON sankhani udindo wanu
+  1. chairman/chairlady 
+  2. secretary
+  3. tresurer
+  4. member`
+  
+}
+  
+else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && language == "Chichewa") {
+
+    response = `END mwalembetsa bwino`;
+    
+  }
   
   else if (text == "2" && language =="English") {
     response = `CON Mlimi Main Manu
