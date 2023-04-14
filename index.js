@@ -921,16 +921,16 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   else if (text == "2*3" && language == "Chichewa") {
 
     response = `CON MLIMI Market
-  1. Minimum Farm Gate Prices
-  2. Sell Products
-  3. Buy Available Products `;
+  1. Mitengo Yochepera Yapafamu
+  2. kugulitsa malonda
+  3. Gulani Zogulitsa Zomwe Zikupezeka`;
 
   }
   
   
   else if (text == "2*3*1" && language == "Chichewa") {
 
-  response = `END  mitengo ya zokolora pa  kg
+  response = `END  mtengo wazogulitsa pa kg iliyonse
   1. Chimanga, MK220
   2. Mpunga okonora, MK700
   3. Mpunga osakonora, MK300
