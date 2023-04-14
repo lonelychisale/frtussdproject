@@ -6,6 +6,7 @@ const fs = require('fs');
 var firebase = require("firebase");
 const { response } =  require("express");
 const advesoryjson = require("./mlimi_english.json")
+const advisorychichewajson = require("./mlimi_chichewa(1).json")
 const weatherjson = require("./ussd-be4c3-default-rtdb-export.json")
 const languagejson = require("./language.json")
 
@@ -75,7 +76,7 @@ const ref = db.ref("weather/districts");
 
 
 
-//declaring advisory variables
+//.............................declaring global advisory variables for english..................................
 namesss = advesoryjson.sectors[0].categories[0].products
 namesss.forEach(element => {
   //console.log(element.name)
@@ -91,7 +92,35 @@ categories.forEach(element => {
 categoriesnametostring = categoriesarray.toString()
 categoriesnamejoin = categoriesnametostring.replace(/,/g, '\n')
 
-//working on weather
+
+
+//......................global chichewa advisories variables
+var chichewasectors = advisorychichewajson.sectors
+
+//looping throug sectors to get all advisory product names
+var chichewaadvisoryproductnamearray = []
+chichewasectors.forEach(element => {
+  chichewaadvisoryproductnames = element.id + '.' + element.name
+  chichewaadvisoryproductnamearray.push(chichewaadvisoryproductnames)
+  
+});
+
+//converting the array to string
+chichewaadvisoryproductnamestostring = chichewaadvisoryproductnamearray.toString()
+chichewaadvisoryproductnamesjoin = chichewaadvisoryproductnamestostring.replace(/,/g , '\n')
+//console.log(chichewaadvisoryproductnamesjoin)
+
+//working on subcatigory category of specic product name
+var specificproduct = chichewasectors[0].categories[0].products
+console.log(specificproduct)
+
+
+
+
+
+
+
+//........................working on weather.......................................
 const weatherdistricts = weatherjson.weather.districts
 const weatherdistrictsarray = []
 weatherdistricts.forEach(element => {
@@ -105,27 +134,6 @@ const weatherdistrictsjoin = waetherdstrictstostring.replace(/,/g , '\n')
 //working on weekly temprature
 const temperature = weatherdistricts[0].weeklyTemps[0]
 
-//testing home page naviagation
-var namestring ='my  * name * is *lonely* chisale'
-var name ='lonely'
-var namesarray = namestring.split("*")
-
-if(name=='lonely'){
-namesarray.splice(0,namesarray.length)
-console.log(namesarray)
-}
-namesarray.push('lonely')
-console.log(namesarray)
-
-
-//working on language changing
-//languagejson.languages.name='chichewa'
-//console.log(languagejson.languages.name)
-//updating values of the json file
-
-  
-  const languagename = "English"
-  const phonenumberr = "0996691384"
 
   /*Read the contents of the JSON file
   const data = fs.readFileSync('language.json');
@@ -432,7 +440,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
   //......................................working advesory from the json file.......................
  else if(text == "2*1" && language =="English"){
 
-  response =`CON select the advisory catergory 
+  response = `CON select the advisory catergory 
   ${categoriesnamejoin}
 `
 
@@ -442,8 +450,8 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
   const secondadvisorycategoryarray= []
   categoryindex =`${--dataarray[2]}`
-  specificarrayvalue =categories[categoryindex].categories
-  selectedcategory =categories[categoryindex].name
+  specificarrayvalue = categories[categoryindex].categories
+  selectedcategory = categories[categoryindex].name
 
  function secondcategory(){
 
@@ -462,7 +470,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
  secondcategorytostring = secondadvisorycategoryarray.toString()
  secondcategoryjoin = secondcategorytostring.replace(/,/g ,'\n') 
 
- response =`CON select the subcategory for ${selectedcategory }
+ response = `CON select the subcategory for ${selectedcategory }
  ${secondcategoryjoin}
  `
 
@@ -475,7 +483,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
   const thirdadvisorycategoryarray= []
   productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products
-  selectedsecondcategory=advesoryjson.sectors[previousindex].categories[secondcategoryindex].name
+  selectedsecondcategory= advesoryjson.sectors[previousindex].categories[secondcategoryindex].name
  
   function thirdcategory(){
     
@@ -491,7 +499,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
   thirdadvisorycategorytostring = thirdadvisorycategoryarray.toString()
   thirdcategoryjoin = thirdadvisorycategorytostring.replace(/,/g ,'\n')
 
-  response=`CON select subcategory of ${selectedsecondcategory}
+  response = `CON select subcategory of ${selectedsecondcategory}
   ${thirdcategoryjoin}`
 
  }
@@ -501,8 +509,8 @@ else if(dataarray[4]!='' && dataarray[1]=='1' && dataarraysize==5  && language =
 
   titleindex = `${--dataarray[4]}`
   advisorytitlearray = []
-  selectedadvisorytitles = productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section
-  specificadvisorytilte =productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].name
+  selectedadvisorytitles  = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section
+  specificadvisorytilte  = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].name
 
   //looping through sections
   selectedadvisorytitles.forEach(element => {
@@ -523,8 +531,8 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language ==
 
   contentarray = []
   contentindex = `${--dataarray[5]}`
-  advisorycontent =selectedadvisorytitles =advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].content
-  specifictitlename = selectedadvisorytitles =advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].title
+  advisorycontent  = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].content
+  specifictitlename  = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].title
   
   //looping through contents
   advisorycontent.forEach(element => {
@@ -535,7 +543,7 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language ==
   contenttostring = contentarray.toString()
   contentjoin = contenttostring.replace(/,/g, '\n')
 
-  response =`END advisories under  ${specifictitlename}
+  response = `END advisories under  ${specifictitlename}
   ${contentjoin}`
 
 }
@@ -546,24 +554,27 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language ==
   else if(text == "2*1" && language == "Chichewa"){
 
     response =`CON sakhani malangizo a zomwe mkufuna 
-    ${categoriesnamejoin}
+    ${chichewaadvisoryproductnamesjoin}
   `
 
    } 
 
    
+
+
    else if(dataarray[2] !='' && dataarray[1]=='1' && dataarraysize==3  && language == "Chichewa"){
 
-    const secondadvisorycategoryarray= []
+    
+    const chichewasecondadvisorycategoryarray= []
     categoryindex =`${--dataarray[2]}`
-    specificarrayvalue =categories[categoryindex].categories
-    selectedcategory =categories[categoryindex].name
+    specificproduct = chichewasectors[categoryindex].categories
+    chichewaselectedcategory =chichewasectors[categoryindex].name
 
     function secondcategory(){
     //looping through second category
-    specificarrayvalue.forEach(element => {
+    specificproduct.forEach(element => {
 
-      secondadvisorycategoryarray.push(element.id +'.' + element.name)
+      chichewasecondadvisorycategoryarray.push(element.id +'.' + element.name)
       
     });
 
@@ -572,27 +583,29 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language ==
    secondcategory()
   
    //converting  values to string
-   secondcategorytostring = secondadvisorycategoryarray.toString()
-   secondcategoryjoin = secondcategorytostring.replace(/,/g ,'\n') 
+   chichewasecondcategorytostring = chichewasecondadvisorycategoryarray.toString()
+   chichewasecondcategoryjoin = chichewasecondcategorytostring.replace(/,/g ,'\n') 
   
-   response =`CON sankhani mutundu  wina  wa malangizo a ${selectedcategory }
-   ${secondcategoryjoin}
+   response =`CON sankhani mutundu  wina  wa malangizo a ${chichewaselectedcategory }
+   ${chichewasecondcategoryjoin}
    `
    }
+
+
    
    else if(dataarray[3]!='' && dataarray[1]=='1' && dataarraysize==4 && language == "Chichewa"){
 
     previousindex = `${--dataarray[2]}`
     secondcategoryindex = `${--dataarray[3]}`
   
-    const thirdadvisorycategoryarray= []
-    productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products
-    selectedsecondcategory=advesoryjson.sectors[previousindex].categories[secondcategoryindex].name
+    const chichewathirdadvisorycategoryarray= []
+    chichewaproductsarray = chichewasectors[previousindex].categories[secondcategoryindex].products
+    chichewaselectedsecondcategory=chichewasectors[previousindex].categories[secondcategoryindex].name
    
     function thirdcategory(){
       
-      productsarray.forEach(element => {
-        thirdadvisorycategoryarray.push(element.id + '.' + element.name)
+      chichewaproductsarray.forEach(element => {
+        chichewathirdadvisorycategoryarray.push(element.id + '.' + element.name)
       });
 
     }
@@ -600,55 +613,56 @@ else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language ==
     thirdcategory()
   
     //converting the array value to stirng
-    thirdadvisorycategorytostring = thirdadvisorycategoryarray.toString()
-    thirdcategoryjoin = thirdadvisorycategorytostring.replace(/,/g ,'\n')
+    chichewathirdadvisorycategorytostring = chichewathirdadvisorycategoryarray.toString()
+    chichewathirdcategoryjoin = chichewathirdadvisorycategorytostring.replace(/,/g ,'\n')
 
-    response=`CON sankhani mtundu wa malangizo a ${selectedsecondcategory}
-    ${thirdcategoryjoin}`
+    response=`CON sankhani mtundu wa malangizo a ${chichewaselectedsecondcategory}
+    ${chichewathirdcategoryjoin}`
 
    }
 
    
+
   else if(dataarray[4]!='' && dataarray[1]=='1' && dataarraysize==5){
 
     titleindex = `${--dataarray[4]}`
-    advisorytitlearray = []
-    selectedadvisorytitles = productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section
-    specificadvisorytilte =productsarray = advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].name
+    chichewaadvisorytitlearray = []
+    chichewaselectedadvisorytitles = chichewasectors[previousindex].categories[secondcategoryindex].products[titleindex].section
+    chichewaspecificadvisorytilte = chichewasectors[previousindex].categories[secondcategoryindex].products[titleindex].name
   
     //looping through sections
-    selectedadvisorytitles.forEach(element => {
-      advisorytitlearray.push(element.id + '.' + element.title)
+    chichewaselectedadvisorytitles.forEach(element => {
+      chichewaadvisorytitlearray.push(element.id + '.' + element.title)
     });
   
     //changing the array to string
-    advisorytitiletostring = advisorytitlearray.toString()
-    advisorytitilejoin = advisorytitiletostring.replace(/,/g , '\n')
+    chichewaadvisorytitiletostring = chichewaadvisorytitlearray.toString()
+    chichewaadvisorytitilejoin = chichewaadvisorytitiletostring.replace(/,/g , '\n')
 
-    response = `CON sakhani mutu wa malangizo a ${specificadvisorytilte}
-    ${advisorytitilejoin}`
+    response = `CON sakhani mutu wa malangizo a ${chichewaspecificadvisorytilte}
+    ${chichewaadvisorytitilejoin}`
 
   }
 
 
   else if(dataarray[5]!='' && dataarray[1]=='1' && dataarraysize==6 && language == "Chichewa"){
 
-    contentarray = []
+    chichewacontentarray = []
     contentindex = `${--dataarray[5]}`
-    advisorycontent =selectedadvisorytitles =advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].content
-    specifictitlename = selectedadvisorytitles =advesoryjson.sectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].title
+    chichewaadvisorycontent  = chichewasectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].content
+    chichewaspecifictitlename = chichewasectors[previousindex].categories[secondcategoryindex].products[titleindex].section[contentindex].title
     
     //looping through contents
-    advisorycontent.forEach(element => {
-      contentarray.push('> ' + element)
+    chichewaadvisorycontent.forEach(element => {
+      chichewacontentarray.push('> ' + element)
     });
   
     //conventing titles to string
-    contenttostring = contentarray.toString()
-    contentjoin = contenttostring.replace(/,/g, '\n')
+    chichwacontenttostring = chichewacontentarray.toString()
+    chichewacontentjoin = chichewacontenttostring.replace(/,/g, '\n')
 
-    response =`END malangizo a mutu wa  ${specifictitlename}
-    ${contentjoin}`
+    response =`END malangizo a mutu wa  ${chichewaspecifictitlename}
+    ${chichewacontentjoin}`
 
   }
   
