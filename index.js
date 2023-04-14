@@ -271,7 +271,6 @@ app.post("*", (req, res) => {
   let dataarray = text.split("*");
   let name;
   let surname;
-  let language = "English";
 
   //array length
   let dataarraysize = dataarray.length;
