@@ -317,7 +317,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
  
 
   //...........first menu...........................................
-  if (text == "") {
+  if (text == "" && language == "English") {
     response = `CON Welcome to Farm Radio Trust
       1.Register
       2.Main Menu
@@ -374,7 +374,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
   } 
 
 
-  //chichewa registration
+  //..................................chichewa registration............................................
   else if (text == "1" && language == "Chichewa") {
     response = `CON takulandilani ku Mlimi Registration services. 
         1. yambani kulembesa
