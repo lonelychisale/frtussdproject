@@ -377,7 +377,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
 else if(text=='1*1*0' && language =="English"){
 
-  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
+  secregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
     ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
   'karonga','chitipa','mulanje','thyolo']
 
@@ -400,7 +400,7 @@ else if(text=='1*1*0' && language =="English"){
 
 else if(text=='1*1*0*0' && language =="English"){
 
-  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
+  lastregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
     ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
   'karonga','chitipa','mulanje','thyolo']
 
@@ -616,7 +616,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   console.log(secregdstrictindex)
   
 
-  Registratindisrict        = registrationdistricts[secregdstrictindex]
+  Registratindisrict        = secregistrationdistricts[secregdstrictindex]
   console.log(Registratindisrict)
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
@@ -731,7 +731,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     lastregpostionindex          =`${--dataarray[12]}`
   
   
-    Registratindisrict        = registrationdistricts[secregdstrictindex]
+    Registratindisrict        = lastregistrationdistricts[secregdstrictindex]
     RegistrationTA            = `${dataarray[5]}`
     RegistratinGVH            = `${dataarray[6]}`
     Registratinfarnvariety    =farmersvariety[lastregvarietyindex]
