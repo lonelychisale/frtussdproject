@@ -607,14 +607,14 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
   
 else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
-  secregdstrictindex          =`${--dataarray[4]}`
+  secregdstrictindex          =`${--dataarray[3]}`
   secregvarietyindex          =`${--dataarray[6]}`
   secregenderindex            =`${--dataarray[8]}`
   secregageindex              =`${--dataarray[9]}`
   secregpostionindex          =`${--dataarray[11]}`
 
 
-  Registratindisrict        = registrationdistricts[secregdstrictindex]
+  Registratindisrictsec        = registrationdistricts[secregdstrictindex]
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
   Registratinfarnvariety    =farmersvariety[secregvarietyindex]
@@ -627,7 +627,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
-  1.${Registratindisrict}
+  1.${Registratindisrictsec}
   2.${RegistrationTA}
   3.${RegistratinGVH }
   4.${Registratinfarnvariety}
@@ -721,14 +721,14 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     
   else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
 
-    lastregdstrictindex          =`${--dataarray[5]}`
+    lastregdstrictindex          =`${--dataarray[4]}`
     lastregvarietyindex          =`${--dataarray[7]}`
     lastregenderindex            =`${--dataarray[9]}`
     lastregageindex              =`${--dataarray[10]}`
     lastregpostionindex          =`${--dataarray[12]}`
   
   
-    Registratindisrict        = registrationdistricts[lastregdstrictindex]
+    Registratindisrictlast       = registrationdistricts[lastregdstrictindex]
     RegistrationTA            = `${dataarray[5]}`
     RegistratinGVH            = `${dataarray[6]}`
     Registratinfarnvariety    =farmersvariety[lastregvarietyindex]
@@ -740,7 +740,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     Registrationphonenumber   =phoneNumber
   
       response = `END END your number ${phoneNumber} have been successfully registered
-      1.${Registratindisrict}
+      1.${Registratindisrictlast}
       2.${RegistrationTA}
       3.${RegistratinGVH }
       4.${Registratinfarnvariety}
