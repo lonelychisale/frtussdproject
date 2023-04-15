@@ -422,7 +422,7 @@ else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[4]!='' && language =="English"){
   
-  farmersvariety = ['chimanga','nyemba','soya']
+  farmersvariety = ['Maize','Beans','soya Beans']
 
   response= `CON Enter the Crop Variate of Your Farming 
   1. Maize
@@ -537,7 +537,7 @@ else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[5]!='' && language =="English"){
   
-  farmersvariety = ['chimanga','nyemba','soya']
+  farmersvariety = ['Maize','Beans','soya Beans']
 
   response= `CON Enter the Crop Variate of Your Farming 
   1. Maize
@@ -605,15 +605,15 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   secregpostionindex          =`${--dataarray[11]}`
 
 
-  Registratindisrict        = registrationdistricts[regdstrictindex]
+  Registratindisrict        = registrationdistricts[secregdstrictindex]
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
-  Registratinfarnvariety    =farmersvariety[regvarietyindex]
+  Registratinfarnvariety    =farmersvariety[secregvarietyindex]
   Registrationfullname      =`${dataarray[7]}`
-  Registrationgender        =farmersgender[regenderindex]
-  Registrationagerange      =farmersagerange[regageindex]
+  Registrationgender        =farmersgender[secregenderindex]
+  Registrationagerange      =farmersagerange[secregageindex]
   Registrationgroupname     =`${dataarray[10]}`
-  Registrationfarmerpositon =farmerposition[regpostionindex]
+  Registrationfarmerpositon =farmerposition[secregpostionindex]
   Registrationphonenumber   =phoneNumber
 
 
@@ -719,15 +719,15 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     lastregpostionindex          =`${--dataarray[12]}`
   
   
-    Registratindisrict        = registrationdistricts[regdstrictindex]
+    Registratindisrict        = registrationdistricts[lastregdstrictindex]
     RegistrationTA            = `${dataarray[5]}`
     RegistratinGVH            = `${dataarray[6]}`
-    Registratinfarnvariety    =farmersvariety[regvarietyindex]
+    Registratinfarnvariety    =farmersvariety[lastregvarietyindex]
     Registrationfullname      =`${dataarray[8]}`
-    Registrationgender        =farmersgender[regenderindex]
-    Registrationagerange      =farmersagerange[regageindex]
+    Registrationgender        =farmersgender[lastregenderindex]
+    Registrationagerange      =farmersagerange[lastregageindex]
     Registrationgroupname     =`${dataarray[111]}`
-    Registrationfarmerpositon =farmerposition[regpostionindex]
+    Registrationfarmerpositon =farmerposition[lastregpostionindex]
     Registrationphonenumber   =phoneNumber
   
       response = `END END your number ${phoneNumber} have been successfully registered
@@ -828,7 +828,7 @@ else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[4]!='' && language == "Chichewa"){
 
-  chichewafarmersvariety = ['chimanga','nyemba','soya']
+  chichewafarmersvariety = ['Maize','Beans','soya Beans']
 
   response= `CON sankhani zomwe mumalima
   1. chimanga
@@ -942,7 +942,7 @@ else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[5]!='' && language == "Chichewa"){
   
-  farmersvariety = ['chimanga','nyemba','soya']
+  farmersvariety = ['Maize','Beans','soya Beans']
 
   response= `CON sankhani zomwe mumalima 
   1. Maize
@@ -1011,15 +1011,15 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   secregpostionindex          =`${--dataarray[11]}`
 
 
-  Registratindisrict        = registrationdistricts[regdstrictindex]
+  Registratindisrict        = registrationdistricts[secregdstrictindex]
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
-  Registratinfarnvariety    =farmersvariety[regvarietyindex]
+  Registratinfarnvariety    =farmersvariety[secregvarietyindex]
   Registrationfullname      =`${dataarray[7]}`
-  Registrationgender        =farmersgender[regenderindex]
-  Registrationagerange      =farmersagerange[regageindex]
+  Registrationgender        =farmersgender[secregenderindex]
+  Registrationagerange      =farmersagerange[secregageindex]
   Registrationgroupname     =`${dataarray[10]}`
-  Registrationfarmerpositon =farmerposition[regpostionindex]
+  Registrationfarmerpositon =farmerposition[secregpostionindex]
   Registrationphonenumber   =phoneNumber
 
 
@@ -1056,7 +1056,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
   else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[6]!='' && language == "Chichewa"){
     
-    farmersvariety = ['chimanga','nyemba','soya']
+    farmersvariety = ['Maize','Beans','soya Beans']
   
     response= `CON sankhani zomwe mumalima
     1. Maize
@@ -1125,15 +1125,15 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     lastregpostionindex          =`${--dataarray[12]}`
   
   
-    Registratindisrict        = registrationdistricts[regdstrictindex]
+    Registratindisrict        = registrationdistricts[lastregdstrictindex]
     RegistrationTA            = `${dataarray[5]}`
     RegistratinGVH            = `${dataarray[6]}`
-    Registratinfarnvariety    =farmersvariety[regvarietyindex]
+    Registratinfarnvariety    =farmersvariety[lastregvarietyindex]
     Registrationfullname      =`${dataarray[8]}`
-    Registrationgender        =farmersgender[regenderindex]
-    Registrationagerange      =farmersagerange[regageindex]
+    Registrationgender        =farmersgender[lastregenderindex]
+    Registrationagerange      =farmersagerange[lastregageindex]
     Registrationgroupname     =`${dataarray[111]}`
-    Registrationfarmerpositon =farmerposition[regpostionindex]
+    Registrationfarmerpositon =farmerposition[lastregpostionindex]
     Registrationphonenumber   =phoneNumber
   
   
