@@ -377,6 +377,10 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
 else if(text=='1*1*0' && language =="English"){
 
+  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
+    ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
+  'karonga','chitipa','mulanje','thyolo']
+
   response=`CON Sankhani Boma
   10. Machinga
   11. Rumphi
@@ -395,6 +399,11 @@ else if(text=='1*1*0' && language =="English"){
 }
 
 else if(text=='1*1*0*0' && language =="English"){
+
+  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
+    ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
+  'karonga','chitipa','mulanje','thyolo']
+
   response=`CON Sankhani Boma
   20. Karonga
   21. Chitipa
@@ -783,6 +792,10 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 else if(text=='1*1*0' && language == "Chichewa"){
 
+  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
+    ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
+  'karonga','chitipa','mulanje','thyolo']
+
   response=`CON Sankhani Boma
   10. Machinga
   11. Rumphi
@@ -801,6 +814,11 @@ else if(text=='1*1*0' && language == "Chichewa"){
 }
 
 else if(text=='1*1*0*0' && language == "Chichewa"){
+
+  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
+    ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
+  'karonga','chitipa','mulanje','thyolo']
+
   response=`CON Sankhani Boma
   20. Karonga
   21. Chitipa
@@ -1155,9 +1173,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
 
 
-  
-
-
+    
 
 //.........................................main menu in english.........................................................
   else if (text == "2" && language =="English") {
@@ -1449,7 +1465,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='1' && dataarraysize==4 && language =
   actionstosting = districtactionarray.toString()
   actionsjoin = actionstosting.replace(/,/g , '\n')
 
-  response = `CON select actions for ${districtname}
+  response = `END select actions for ${districtname}
   ${actionsjoin}
   `
 
@@ -1470,7 +1486,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarraysize==4 && language =
   expectedtostring = districtexpectionsarray.toString()
   expectedsjoin = expectedtostring.replace(/,/g , '\n')
 
-  response = `CON  expected for ${districtname}
+  response = `END  expected for ${districtname}
   ${expectedsjoin}
   `
 }
@@ -1552,7 +1568,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='1' && dataarraysize==4 && language =
   actionstosting = districtactionarray.toString()
   actionsjoin = actionstosting.replace(/,/g , '\n')
   
-  response = `CON sankhani zomwe mkuyenera kuchita mu Boma la ${districtname}
+  response = `END sankhani zomwe mkuyenera kuchita mu Boma la ${districtname}
   ${actionsjoin}
   `
 
@@ -1573,7 +1589,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='2' && dataarraysize==4 && language =
   expectedtostring = districtexpectionsarray.toString()
   expectedsjoin = expectedtostring.replace(/,/g , '\n')
 
-  response = `CON  zomwe mkuyenera kuyembekezera mu  ${districtname}
+  response = `END zomwe mkuyenera kuyembekezera mu  ${districtname}
   ${expectedsjoin}
   `
 }
@@ -1644,6 +1660,8 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   
   else if (text == "2*3*2" && language =="English") {
 
+  marketproductarray = ['Maize','Soya bean','Rice','Beans']
+
   response = `CON choose product to sell
   1.Maize
   2.Soya bean
@@ -1651,11 +1669,27 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   4.Beans`;
 
   }
+   
   
-  
-  else if (text == "2*3*2*1" && language =="English") {
+  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[3]!='' && language =="English") {
+   
+    marketproductindex = `${--dataarray[3]}`
+    marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
 
-    response = `CON enter quantity(kg) of farm product`;
+    response = `CON choose quantity(kg) of ${marketproductarray[marketproductindex]}
+    1.1-20kg
+    2.21-40kg
+    3.41-80kg
+    4.81-100kg
+    5.100kg above
+    `;
+
+  }
+
+
+  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[4]!='' && language =="English") {
+    marketproducttyquatiindex = `${--dataarray[4]}`
+    response = `END congratulations ${phoneNumber} farm radio trust will be processing market for ${marketproductquatityarray[marketproducttyquatiindex]} of your ${marketproductarray[marketproductindex]}`;
 
   }
 
@@ -1687,6 +1721,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   }
   
   
+  //................................seller  in chichewa.....................................................................
   else if (text == "2*3*2" && language == "Chichewa") {
 
     response = `CON sankhani chomwe mkufuna kugulisa
@@ -1698,12 +1733,102 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   }
   
   
-  else if (text == "2*3*2*1" && language == "Chichewa") {
+  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[3]!='' && language == "Chichewa") {
+   
+    marketproductindex = `${--dataarray[3]}`
+    marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
 
-    response = `CON enter quantity(kg) of farm product`;
+    response = `CON choose quantity(kg) of ${marketproductarray[marketproductindex]}
+    1.1-20kg
+    2.21-40kg
+    3.41-80kg
+    4.81-100kg
+    5.100kg above
+    `;
 
   }
 
+
+  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[4]!='' && language == "Chichewa") {
+    marketproducttyquatiindex = `${--dataarray[4]}`
+    response = `END congratulations ${phoneNumber} farm radio trust will be processing market for ${marketproductquatityarray[marketproducttyquatiindex]} of your ${marketproductarray[marketproductindex]}`;
+
+  }
+
+//.....................................buyer in english.......................................................
+else if (text == "2*3*3" && language == "English") {
+
+
+  buyerproductarray = ['Maize','Soya bean','Rice','Beans']
+
+  response = `CON choose product to buy
+  1.Maize
+  2.Soya bean
+  3.Rice
+  4.Beans`;
+
+  }
+   
+  
+  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[3]!='' && language =="English") {
+   
+    buyerproductindex = `${--dataarray[3]}`
+    buyerproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
+
+    response = `CON choose quantity(kg) of ${buyerproductarray[buyerproductindex]}
+    1.1-20kg
+    2.21-40kg
+    3.41-80kg
+    4.81-100kg
+    5.100kg above
+    `;
+
+  }
+
+
+  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[4]!='' && language =="English") {
+    buyerproducttyquatiindex = `${--dataarray[4]}`
+    response = `END congratulations ${phoneNumber} farm radio trust will be processing market for ${buyerproductquatityarray[marketproducttyquatiindex]} of your ${marketproductarray[marketproductindex]}`;
+
+  }
+
+
+  //...............................buyer in chichewa............................................................
+  else if (text == "2*3*3" &&  language == "Chichewa") {
+
+
+    buyerproductarray = ['Maize','Soya bean','Rice','Beans']
+  
+    response = `CON choose product to buy
+    1.Maize
+    2.Soya bean
+    3.Rice
+    4.Beans`;
+  
+    }
+     
+    
+    else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[3]!='' && language == "Chichewa") {
+     
+      buyerproductindex = `${--dataarray[3]}`
+      buyerproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
+  
+      response = `CON choose quantity(kg) of ${buyerproductarray[buyerproductindex]}
+      1.1-20kg
+      2.21-40kg
+      3.41-80kg
+      4.81-100kg
+      5.100kg above
+      `;
+  
+    }
+  
+  
+    else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[4]!='' && language == "Chichewa") {
+      buyerproducttyquatiindex = `${--dataarray[4]}`
+      response = `END congratulations ${phoneNumber} farm radio trust will be processing market for ${buyerproductquatityarray[marketproducttyquatiindex]} of your ${marketproductarray[marketproductindex]}`;
+  
+    }
 
   //.............................. ......my account menu.............................................................
   else if(text=='2*4' && language =="English"){
@@ -1725,39 +1850,23 @@ else if(text=='2*4' && language == "Chichewa"){
 
 }
 
-  //...................................working on help menu.............................................
-  else if (text == "3" && language =="English") {
 
-    response = `CON choose options below for help
-		1.call center`;
+//...................................our groups in english............................................
+else if(text=='2*4*1' && language=='English'){
 
-  } 
-  
-  
-  else if (text == "3*1" && language =="English") {
+  response = `END registered groups will be dsplayed here`
 
-    response = `END contact for free on *8111# AIRTEL or *7111# TNM `;
+}
 
-  }
+//...................................our groups in chichewa............................................
+else if(text=='2*4*1' && language=='Chichewa'){
 
+  response = `END registered groups will be dsplayed here`
 
-  //................................................help menu in chichewa......................................
-  else if (text == "3" && language == "Chichewa") {
+}
 
-    response = `CON sankhani njira yomwe mungathandizikire
-		1.call center`;
-
-  }
-  
-  
-  else if (text == "3*1"&& language == "Chichewa") {
-
-    response = `END Imbani mwaulere pa *8111# AIRTEL kapena *7111# TNM `;
-
-  }
-
-  //.....................................changing language....................................
-  else if (text == "2*4*2" && language =="English") {
+//.....................................changing language....................................
+else if (text == "2*4*2" && language =="English") {
 
     response = `CON Choose your preffered language
     1.English
@@ -1896,6 +2005,61 @@ else if(text=='2*4' && language == "Chichewa"){
   }
   
 
+
+  //.......................................what we buy in English......................................
+  else if(text=='2*4*3' && language=='English'){
+
+    response = `END this is the list of farm product farm radio trust buy
+    1.Maize
+    2.Soya beans
+    3.Beans
+    `
+
+  }
+
+
+   //.......................................what we buy in English......................................
+   else if(text=='2*4*3' && language=='Chichewa'){
+
+    response = `END iyi ndi list ya zinthu zomwe farm radio trust timagura
+    1.chimanga
+    2.Soya 
+    3.Nyemba
+    `
+
+  }
+
+
+  //...................................working on help menu.............................................
+  else if (text == "3" && language =="English") {
+
+    response = `CON choose options below for help
+		1.call center`;
+
+  } 
+  
+  
+  else if (text == "3*1" && language =="English") {
+
+    response = `END contact for free on *8111# AIRTEL or *7111# TNM `;
+
+  }
+
+
+  //................................................help menu in chichewa......................................
+  else if (text == "3" && language == "Chichewa") {
+
+    response = `CON sankhani njira yomwe mungathandizikire
+		1.call center`;
+
+  }
+  
+  
+  else if (text == "3*1"&& language == "Chichewa") {
+
+    response = `END Imbani mwaulere pa *8111# AIRTEL kapena *7111# TNM `;
+
+  }
   //......................................send the response back.................................
   res.set("Content-Type: text/plain");
   res.send(response);
