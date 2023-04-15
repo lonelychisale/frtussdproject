@@ -357,7 +357,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
   else if(text=='1*1' && language =="English"){
     
     registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
-    ,'0','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','0',
+    ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
   'karonga','chitipa','mulanje','thyolo']
 
     response=`CON Select your District
@@ -763,7 +763,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   else if(text=='1*1' && language == "Chichewa"){
 
     chichewaregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
-    ,'0','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','0',
+    ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
   'karonga','chitipa','mulanje','thyolo']
 
     response=`CON Sankhani Boma
