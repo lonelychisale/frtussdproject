@@ -355,6 +355,10 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
   
   else if(text=='1*1' && language =="English"){
+    
+    registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','balaka','machinga'
+    ,'mangochi','chirazuru','tchisi','lilongwe','kasungu','rumphi','chitipa','karonga','nsanje','neno',
+  'nkhatabay','thylo','mulanje','nkhotakota','dwangwa']
 
     response=`CON Select your District
     1. Salima
@@ -362,6 +366,36 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
     3. Mulanje
     4. Nchinji
     5. Mzimba`
+
+}
+
+
+else if(text=='1*1*0' && language =="English"){
+
+  response=`CON Sankhani Boma
+  10. Machinga
+  11. Rumphi
+  12. Nkhatabay
+  13. Dwangwa
+  14. nkhotakota
+  15. chirazulu
+  16. Ntchitsi
+  17. Mangochi
+  18. Nsanje
+  19. Neno
+  0. Next
+  
+  `
+
+}
+
+else if(text=='1*1*0*0' && language =="English"){
+  response=`CON Sankhani Boma
+  20. Karonga
+  21. Chitipa
+  22. Mulanje
+
+  `
 
 }
 
@@ -381,6 +415,8 @@ else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 
 else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[4]!='' && language =="English"){
+  
+  farmersvariety = ['chimanga','nyemba','soya']
 
   response= `CON Enter the Crop Variate of Your Farming 
   1. Maize
@@ -397,6 +433,8 @@ else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1'  && dataarray
 }
 
 else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[6]!='' && language =="English"){
+  
+  farmersgender = ['Male','Female']
 
   response = `CON choose your gender
   1.Male
@@ -406,6 +444,8 @@ else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[6]
 
 
 else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[7]!=='' && language =="English"){
+
+  farmersagerange = ['0-18','19-25','26-40','41-60','60 above']
 
   response = `CON choose your age range
   1. 0-18
@@ -425,6 +465,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 
 else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[9]!='' && language =="English"){
+  
+  farmerposition = ['chairman/chairlady','secretary','tresurer','member']
 
   response= `CON choose your postion
   1. chairman/chairlady 
@@ -441,6 +483,178 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
   } 
 
 
+  //....................if clicked first next on districts...................................................
+    
+else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[3]!='' &&  language =="English"){
+
+  response= `CON Enter Name Of a T/A(Traditional Authority)
+  `
+}
+
+
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[4]!='' && language =="English"){
+
+  response= `CON Enter the NAme of Group Village Head  `
+
+}
+
+
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[5]!='' && language =="English"){
+  
+  farmersvariety = ['chimanga','nyemba','soya']
+
+  response= `CON Enter the Crop Variate of Your Farming 
+  1. Maize
+  2. Beans
+  3. Soya Beans `
+
+}
+
+
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0'  && dataarray[6]!='' && language =="English"){
+
+  response= `CON Enter Your Full Name `
+  
+}
+
+else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[7]!='' && language =="English"){
+  
+  farmersgender = ['Male','Female']
+
+  response = `CON choose your gender
+  1.Male
+  2.Female`
+
+}
+
+
+else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[8]!=='' && language =="English"){
+
+  farmersagerange = ['0-18','19-25','26-40','41-60','60 above']
+
+  response = `CON choose your age range
+  1. 0-18
+  2. 19-25
+  3. 26-40
+  4. 41-60
+  5. 61 above
+  `
+}
+
+
+else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[9]!='' && language =="English"){
+
+  response= `CON Enter Your GroupName `
+  
+}
+
+
+else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[10]!='' && language =="English"){
+  
+  farmerposition = ['chairman/chairlady','secretary','tresurer','member']
+
+  response= `CON choose your postion
+  1. chairman/chairlady 
+  2. secretary
+  3. tresurer
+  4. member`
+  
+}
+  
+else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
+
+    response = `END you have successfully registered`;
+
+  } 
+
+  //.........................if the second next is clicked............................................
+   
+  else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[4]!='' &&  language =="English"){
+
+    response= `CON Enter Name Of a T/A(Traditional Authority)
+    `
+  }
+  
+  
+  else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[5]!='' && language =="English"){
+  
+    response= `CON Enter the NAme of Group Village Head  `
+  
+  }
+  
+  
+  else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[6]!='' && language =="English"){
+    
+    farmersvariety = ['chimanga','nyemba','soya']
+  
+    response= `CON Enter the Crop Variate of Your Farming 
+    1. Maize
+    2. Beans
+    3. Soya Beans `
+  
+  }
+  
+  
+  else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[7]!='' && language =="English"){
+  
+    response= `CON Enter Your Full Name `
+    
+  }
+  
+  else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[8]!='' && language =="English"){
+    
+    farmersgender = ['Male','Female']
+  
+    response = `CON choose your gender
+    1.Male
+    2.Female`
+  
+  }
+  
+  
+  else if(dataarraysize==10 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[9]!=='' && language =="English"){
+  
+    farmersagerange = ['0-18','19-25','26-40','41-60','60 above']
+  
+    response = `CON choose your age range
+    1. 0-18
+    2. 19-25
+    3. 26-40
+    4. 41-60
+    5. 61 above
+    `
+  }
+  
+  
+  else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[10]!='' && language =="English"){
+  
+    response= `CON Enter Your GroupName `
+    
+  }
+  
+  
+  else if(dataarraysize==12 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[11]!='' && language =="English"){
+    
+    farmerposition = ['chairman/chairlady','secretary','tresurer','member']
+  
+    response= `CON choose your postion
+    1. chairman/chairlady 
+    2. secretary
+    3. tresurer
+    4. member`
+    
+  }
+    
+  else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
+  
+      response = `END you have successfully registered`;
+  
+    } 
+  
+   
+
+
+
   //..................................chichewa registration............................................
    else if (text == "1" && language == "Chichewa") {
     response = `CON Takulandilani ku ntchito za Kulembetsa ku Mlimi. 
@@ -454,12 +668,51 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
   
   else if(text=='1*1' && language == "Chichewa"){
 
+    chichewaregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','balaka','machinga'
+  ,'mangochi','chirazuru','tchisi','lilongwe','kasungu','rumphi','chitipa','karonga','nsanje','neno',
+'nkhatabay','thylo','mulanje','nkhotakota','dwangwa']
+
     response=`CON Sankhani Boma
     1. Salima
     2. Zomba
     3. Mulanje
     4. Nchinji
-    5. Mzimba`
+    5. Mzimba
+    6. Blantyre
+    7. Lilongwe
+    8. kasungu
+    9. Balaka
+    0. Next`
+
+}
+
+
+else if(text=='1*1*0' && language == "Chichewa"){
+
+  response=`CON Sankhani Boma
+  10. Machinga
+  11. Rumphi
+  12. Nkhatabay
+  13. Dwangwa
+  14. nkhotakota
+  15. chirazulu
+  16. Ntchitsi
+  17. Mangochi
+  18. Nsanje
+  19. Neno
+  0. Next
+
+  `
+
+}
+
+else if(text=='1*1*0*0' && language == "Chichewa"){
+  response=`CON Sankhani Boma
+  20. Karonga
+  21. Chitipa
+  22. Mulanje
+
+  `
 
 }
 
@@ -480,6 +733,8 @@ else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[4]!='' && language == "Chichewa"){
 
+  chichewafarmersvariety = ['chimanga','nyemba','soya']
+
   response= `CON sankhani zomwe mumalima
   1. chimanga
   2. nyemba
@@ -495,6 +750,8 @@ else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1'  && dataarray
 }
 
 else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[6]!='' && language == "Chichewa"){
+  
+  chichewafarmersgender = ['Male','Female']
 
   response = `CON sankhani jenda
   1.Male
@@ -504,6 +761,8 @@ else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[6]
 
 
 else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[7]!=='' && language == "Chichewa"){
+  
+  chichewafarmersagerange = ['0-18','19-25','26-40','41-60','60 above']
 
   response = `CON sankhani zaka zanu
   1. 0-18
@@ -513,7 +772,7 @@ else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[7]
   5. 61 above
   `
 }
-
+   
 
 else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[8]!='' && language == "Chichewa"){
 
@@ -523,6 +782,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 
 else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[9]!='' && language == "Chichewa"){
+  
+  chichewafarmerposition = ['chairman/chairlady','secretary','tresurer','member']
 
   response= `CON sankhani udindo wanu
   1. chairman/chairlady 
@@ -537,7 +798,182 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
     response = `END mwalembetsa bwino`;
     
   }
+
+  //....................if clicked first next on districts...................................................
+    
+else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[3]!='' && language == "Chichewa"){
+
+  response= `CON lembani zina la a T/A(Traditional Authority)
+  `
+}
+
+
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[4]!='' && language == "Chichewa"){
+
+  response= `CON lembani zina la a  Group Village Head anu  `
+
+}
+
+
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[5]!='' && language == "Chichewa"){
   
+  farmersvariety = ['chimanga','nyemba','soya']
+
+  response= `CON sankhani zomwe mumalima 
+  1. Maize
+  2. Beans
+  3. Soya Beans `
+
+}
+
+
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0'  && dataarray[6]!='' && language == "Chichewa"){
+
+  response= `CON lembani zina lanu lonse `
+  
+}
+
+else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[7]!='' && language == "Chichewa"){
+  
+  farmersgender = ['Male','Female']
+
+  response = `CON sankhani jenda
+  1.Male
+  2.Female`
+
+}
+
+
+else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[8]!=='' && language == "Chichewa"){
+
+  farmersagerange = ['0-18','19-25','26-40','41-60','60 above']
+
+  response = `CON sankhani zaka zanu
+  1. 0-18
+  2. 19-25
+  3. 26-40
+  4. 41-60
+  5. 61 above
+  `
+}
+
+
+else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[9]!='' && language == "Chichewa"){
+
+  response= `CON Lembani zina la group yanu `
+  
+}
+
+
+else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[10]!='' && language == "Chichewa"){
+  
+  farmerposition = ['chairman/chairlady','secretary','tresurer','member']
+
+  response= `CON sankhani udindo wanu
+  1. chairman/chairlady 
+  2. secretary
+  3. tresurer
+  4. member`
+  
+}
+  
+else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language == "Chichewa") {
+
+    response = `END mwalembetsa bwino`;
+
+  } 
+
+  //.........................if the second next is clicked............................................
+   
+  else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[4]!=''  && language == "Chichewa"){
+
+    response= `CON lembani zina la a T/A(Traditional Authority)
+    `
+  }
+  
+  
+  else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[5]!='' && language == "Chichewa"){
+  
+    response= `CON lembani zina la a  Group Village Head anu  `
+  
+  }
+  
+  
+  else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[6]!='' && language == "Chichewa"){
+    
+    farmersvariety = ['chimanga','nyemba','soya']
+  
+    response= `CON sankhani zomwe mumalima
+    1. Maize
+    2. Beans
+    3. Soya Beans `
+  
+  }
+  
+  
+  else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[7]!='' && language == "Chichewa"){
+  
+    response= `CON lembani zina lanu lonse `
+    
+  }
+  
+  else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[8]!='' && language == "Chichewa"){
+    
+    farmersgender = ['Male','Female']
+  
+    response = `CON sankhani jenda
+    1.Male
+    2.Female`
+  
+  }
+  
+  
+  else if(dataarraysize==10 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[9]!==''&& language == "Chichewa"){
+  
+    farmersagerange = ['0-18','19-25','26-40','41-60','60 above']
+  
+    response = `CON sankhani zaka zanu
+    1. 0-18
+    2. 19-25
+    3. 26-40
+    4. 41-60
+    5. 61 above
+    `
+  }
+  
+  
+  else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[10]!='' && language == "Chichewa"){
+  
+    response= `CON Lembani zina la group yanu`
+    
+  }
+  
+  
+  else if(dataarraysize==12 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[11]!='' && language == "Chichewa"){
+    
+    farmerposition = ['chairman/chairlady','secretary','tresurer','member']
+  
+    response= `CON sankhani udindo wanu
+    1. chairman/chairlady 
+    2. secretary
+    3. tresurer
+    4. member`
+    
+  }
+    
+  else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language == "Chichewa") {
+  
+      response = `END mwalembetsa bwino`;
+  
+    } 
+  
+
+
+  
+
+
+
+//.........................................main menu in english.........................................................
   else if (text == "2" && language =="English") {
     response = `CON Mlimi Main Manu
 		1. Advesories
@@ -547,7 +983,7 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
 		5. help`;
   }
 
-  //chichewa main menu
+  //...........................................chichewa main menu..............................................
   else if (text == "2" && language == "Chichewa") {
     response = `CON Mlimi Menu yaikulu
 		1. Malangizo
