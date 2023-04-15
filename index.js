@@ -1690,11 +1690,11 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   }
 
 
- else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[4]!='' && language =="English") {
-    marketproducttyquatiindex = `${--dataarray[4]}`
-    response = `END congratulations ${phoneNumber} farm radio trust will be processing market for  your ${marketproductarray[marketproductindex]}`;
+ else if(dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[4]!=='' && language=='English'){
 
-  }
+  response = `END you have successfully requested markerting services for ${marketproductarray[marketproductindex]}`
+
+ }
 
 
   //..........................working on market menu in chichewa......................................
@@ -1752,11 +1752,11 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   }
 
 
-  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[4]!='' && language == "Chichewa") {
-    marketproducttyquatiindex = `${--dataarray[4]}`
-    response = `END congratulations ${phoneNumber} farm radio trust will be processing market for ${marketproductquatityarray[marketproducttyquatiindex]} of your ${marketproductarray[marketproductindex]}`;
+  else if(dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[4]!=='' && language=='Chichewa'){
 
-  }
+    response = `END you have successfully requested markerting services for ${marketproductarray[marketproductindex]}`
+  
+   }
 
 //.....................................buyer in english.......................................................
 else if (text == "2*3*3" && language == "English") {
