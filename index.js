@@ -607,7 +607,7 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
   
 else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
-  secregdstrictindex          =`${--dataarray[3]}`
+  secregdstrictindex          =`${--dataarray[4]}`
   secregvarietyindex          =`${--dataarray[6]}`
   secregenderindex            =`${--dataarray[8]}`
   secregageindex              =`${--dataarray[9]}`
@@ -721,7 +721,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     
   else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
 
-    lastregdstrictindex          =`${--dataarray[4]}`
+    lastregdstrictindex          =`${--dataarray[5]}`
     lastregvarietyindex          =`${--dataarray[7]}`
     lastregenderindex            =`${--dataarray[9]}`
     lastregageindex              =`${--dataarray[10]}`
@@ -1770,7 +1770,7 @@ else if (text == "2*3*3" && language == "English") {
   }
    
   
-  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[3]!='' && language =="English") {
+  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && language =="English") {
    
     buyerproductindex = `${--dataarray[3]}`
     buyerproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
@@ -1786,7 +1786,7 @@ else if (text == "2*3*3" && language == "English") {
   }
 
 
-  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[4]!='' && language =="English") {
+  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && language =="English") {
     buyerproducttyquatiindex = `${--dataarray[4]}`
     response = `END congratulations ${phoneNumber} farm radio trust will be processing market for ${buyerproductquatityarray[marketproducttyquatiindex]} of your ${marketproductarray[marketproductindex]}`;
 
