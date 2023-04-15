@@ -614,7 +614,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   secregpostionindex          =`${--dataarray[11]}`
 
 
-  Registratindisrictsec        = registrationdistricts[secregdstrictindex]
+  Registratindisrict        = registrationdistricts[secregdstrictindex]
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
   Registratinfarnvariety    =farmersvariety[secregvarietyindex]
@@ -627,7 +627,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
-  1.${Registratindisrictsec}
+  1.${Registratindisrict }
   2.${RegistrationTA}
   3.${RegistratinGVH }
   4.${Registratinfarnvariety}
@@ -728,7 +728,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     lastregpostionindex          =`${--dataarray[12]}`
   
   
-    Registratindisrictlast       = registrationdistricts[lastregdstrictindex]
+    Registratindisrict        = registrationdistricts[secregdstrictindex]
     RegistrationTA            = `${dataarray[5]}`
     RegistratinGVH            = `${dataarray[6]}`
     Registratinfarnvariety    =farmersvariety[lastregvarietyindex]
@@ -740,7 +740,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     Registrationphonenumber   =phoneNumber
   
       response = `END END your number ${phoneNumber} have been successfully registered
-      1.${Registratindisrictlast}
+      1.${Registratindisrict}
       2.${RegistrationTA}
       3.${RegistratinGVH }
       4.${Registratinfarnvariety}
