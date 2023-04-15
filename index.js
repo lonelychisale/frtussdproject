@@ -356,9 +356,9 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
   
   else if(text=='1*1' && language =="English"){
     
-    registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','balaka','machinga'
-    ,'mangochi','chirazuru','tchisi','lilongwe','kasungu','rumphi','chitipa','karonga','nsanje','neno',
-  'nkhatabay','thylo','mulanje','nkhotakota','dwangwa']
+    registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
+    ,'0','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','0',
+  'karonga','chitipa','mulanje','thyolo']
 
     response=`CON Select your District
     1. Salima
@@ -399,6 +399,7 @@ else if(text=='1*1*0*0' && language =="English"){
   20. Karonga
   21. Chitipa
   22. Mulanje
+  23. thyolo
 
   `
 
@@ -483,7 +484,37 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && language =="English") {
 
-    response = `END you have successfully registered`;
+  regdstrictindex          =`${--dataarray[2]}`
+  regvarietyindex          =`${--dataarray[5]}`
+  regenderindex            =`${--dataarray[7]}`
+  regageindex              =`${--dataarray[8]}`
+  regpostionindex          =`${--dataarray[10]}`
+
+
+  Registratindisrict        = registrationdistricts[regdstrictindex]
+  RegistrationTA            = `${dataarray[3]}`
+  RegistratinGVH            = `${dataarray[4]}`
+  Registratinfarnvariety    =farmersvariety[regvarietyindex]
+  Registrationfullname      =`${dataarray[6]}`
+  Registrationgender        =farmersgender[regenderindex]
+  Registrationagerange      =farmersagerange[regageindex]
+  Registrationgroupname     =`${dataarray[9]}`
+  Registrationfarmerpositon =farmerposition[regpostionindex]
+  Registrationphonenumber   =phoneNumber
+ 
+
+  response = `END END your number ${phoneNumber} have been successfully registered
+  1.${Registratindisrict}
+  2.${RegistrationTA}
+  3.${RegistratinGVH }
+  4.${Registratinfarnvariety}
+  5.${Registrationfullname}
+  6.${Registrationgender }
+  7.${Registrationagerange}
+  8.${Registrationgroupname}
+  9.${Registrationfarmerpositon}
+  10.${Registrationphonenumber}
+  `;
 
   } 
 
@@ -567,8 +598,37 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
   
 else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
+  secregdstrictindex          =`${--dataarray[3]}`
+  secregvarietyindex          =`${--dataarray[6]}`
+  secregenderindex            =`${--dataarray[8]}`
+  secregageindex              =`${--dataarray[9]}`
+  secregpostionindex          =`${--dataarray[11]}`
 
-    response = `END you have successfully registered`;
+
+  Registratindisrict        = registrationdistricts[regdstrictindex]
+  RegistrationTA            = `${dataarray[4]}`
+  RegistratinGVH            = `${dataarray[5]}`
+  Registratinfarnvariety    =farmersvariety[regvarietyindex]
+  Registrationfullname      =`${dataarray[7]}`
+  Registrationgender        =farmersgender[regenderindex]
+  Registrationagerange      =farmersagerange[regageindex]
+  Registrationgroupname     =`${dataarray[10]}`
+  Registrationfarmerpositon =farmerposition[regpostionindex]
+  Registrationphonenumber   =phoneNumber
+
+
+  response = `END END your number ${phoneNumber} have been successfully registered
+  1.${Registratindisrict}
+  2.${RegistrationTA}
+  3.${RegistratinGVH }
+  4.${Registratinfarnvariety}
+  5.${Registrationfullname}
+  6.${Registrationgender }
+  7.${Registrationagerange}
+  8.${Registrationgroupname}
+  9.${Registrationfarmerpositon}
+  10.${Registrationphonenumber}
+  `;
 
   } 
 
@@ -651,8 +711,37 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   }
     
   else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
+
+    lastregdstrictindex          =`${--dataarray[4]}`
+    lastregvarietyindex          =`${--dataarray[7]}`
+    lastregenderindex            =`${--dataarray[9]}`
+    lastregageindex              =`${--dataarray[10]}`
+    lastregpostionindex          =`${--dataarray[12]}`
   
-      response = `END you have successfully registered`;
+  
+    Registratindisrict        = registrationdistricts[regdstrictindex]
+    RegistrationTA            = `${dataarray[5]}`
+    RegistratinGVH            = `${dataarray[6]}`
+    Registratinfarnvariety    =farmersvariety[regvarietyindex]
+    Registrationfullname      =`${dataarray[8]}`
+    Registrationgender        =farmersgender[regenderindex]
+    Registrationagerange      =farmersagerange[regageindex]
+    Registrationgroupname     =`${dataarray[111]}`
+    Registrationfarmerpositon =farmerposition[regpostionindex]
+    Registrationphonenumber   =phoneNumber
+  
+      response = `END END your number ${phoneNumber} have been successfully registered
+      1.${Registratindisrict}
+      2.${RegistrationTA}
+      3.${RegistratinGVH }
+      4.${Registratinfarnvariety}
+      5.${Registrationfullname}
+      6.${Registrationgender }
+      7.${Registrationagerange}
+      8.${Registrationgroupname}
+      9.${Registrationfarmerpositon}
+      10.${Registrationphonenumber}
+      `;
   
     } 
   
@@ -673,9 +762,9 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
   else if(text=='1*1' && language == "Chichewa"){
 
-    chichewaregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','balaka','machinga'
-  ,'mangochi','chirazuru','tchisi','lilongwe','kasungu','rumphi','chitipa','karonga','nsanje','neno',
-'nkhatabay','thylo','mulanje','nkhotakota','dwangwa']
+    chichewaregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
+    ,'0','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','0',
+  'karonga','chitipa','mulanje','thyolo']
 
     response=`CON Sankhani Boma
     1. Salima
@@ -716,6 +805,7 @@ else if(text=='1*1*0*0' && language == "Chichewa"){
   20. Karonga
   21. Chitipa
   22. Mulanje
+  23. thyolo
 
   `
 
@@ -800,7 +890,37 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && language == "Chichewa") {
 
-    response = `END mwalembetsa bwino`;
+ 
+  regdstrictindex          =`${--dataarray[2]}`
+  regvarietyindex          =`${--dataarray[5]}`
+  regenderindex            =`${--dataarray[7]}`
+  regageindex              =`${--dataarray[8]}`
+  regpostionindex          =`${--dataarray[10]}`
+
+
+  Registratindisrict        = registrationdistricts[regdstrictindex]
+  RegistrationTA            = `${dataarray[3]}`
+  RegistratinGVH            = `${dataarray[4]}`
+  Registratinfarnvariety    =farmersvariety[regvarietyindex]
+  Registrationfullname      =`${dataarray[6]}`
+  Registrationgender        =farmersgender[regenderindex]
+  Registrationagerange      =farmersagerange[regageindex]
+  Registrationgroupname     =`${dataarray[9]}`
+  Registrationfarmerpositon =farmerposition[regpostionindex]
+  Registrationphonenumber   =phoneNumber
+
+
+    response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
+    1.${Registratindisrict}
+    2.${RegistrationTA}
+    3.${RegistratinGVH }
+    4.${Registratinfarnvariety}
+    5.${Registrationfullname}
+    6.${Registrationgender }
+    7.${Registrationagerange}
+    8.${Registrationgroupname}
+    9.${Registrationfarmerpositon}
+    10.${Registrationphonenumber}`;
     
   }
 
@@ -884,7 +1004,37 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language == "Chichewa") {
 
-    response = `END mwalembetsa bwino`;
+  secregdstrictindex          =`${--dataarray[3]}`
+  secregvarietyindex          =`${--dataarray[6]}`
+  secregenderindex            =`${--dataarray[8]}`
+  secregageindex              =`${--dataarray[9]}`
+  secregpostionindex          =`${--dataarray[11]}`
+
+
+  Registratindisrict        = registrationdistricts[regdstrictindex]
+  RegistrationTA            = `${dataarray[4]}`
+  RegistratinGVH            = `${dataarray[5]}`
+  Registratinfarnvariety    =farmersvariety[regvarietyindex]
+  Registrationfullname      =`${dataarray[7]}`
+  Registrationgender        =farmersgender[regenderindex]
+  Registrationagerange      =farmersagerange[regageindex]
+  Registrationgroupname     =`${dataarray[10]}`
+  Registrationfarmerpositon =farmerposition[regpostionindex]
+  Registrationphonenumber   =phoneNumber
+
+
+    response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
+    1.${Registratindisrict}
+    2.${RegistrationTA}
+    3.${RegistratinGVH }
+    4.${Registratinfarnvariety}
+    5.${Registrationfullname}
+    6.${Registrationgender }
+    7.${Registrationagerange}
+    8.${Registrationgroupname}
+    9.${Registrationfarmerpositon}
+    10.${Registrationphonenumber}
+    `;
 
   } 
 
@@ -967,8 +1117,39 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   }
     
   else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language == "Chichewa") {
+
+    lastregdstrictindex          =`${--dataarray[4]}`
+    lastregvarietyindex          =`${--dataarray[7]}`
+    lastregenderindex            =`${--dataarray[9]}`
+    lastregageindex              =`${--dataarray[10]}`
+    lastregpostionindex          =`${--dataarray[12]}`
   
-      response = `END mwalembetsa bwino`;
+  
+    Registratindisrict        = registrationdistricts[regdstrictindex]
+    RegistrationTA            = `${dataarray[5]}`
+    RegistratinGVH            = `${dataarray[6]}`
+    Registratinfarnvariety    =farmersvariety[regvarietyindex]
+    Registrationfullname      =`${dataarray[8]}`
+    Registrationgender        =farmersgender[regenderindex]
+    Registrationagerange      =farmersagerange[regageindex]
+    Registrationgroupname     =`${dataarray[111]}`
+    Registrationfarmerpositon =farmerposition[regpostionindex]
+    Registrationphonenumber   =phoneNumber
+  
+  
+  
+      response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
+      1.${Registratindisrict}
+      2.${RegistrationTA}
+      3.${RegistratinGVH }
+      4.${Registratinfarnvariety}
+      5.${Registrationfullname}
+      6.${Registrationgender }
+      7.${Registrationagerange}
+      8.${Registrationgroupname}
+      9.${Registrationfarmerpositon}
+      10.${Registrationphonenumber}
+      `;
   
     } 
   
