@@ -365,7 +365,12 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
     2. Zomba
     3. Mulanje
     4. Nchinji
-    5. Mzimba`
+    5. Mzimba
+    6. Blantyre
+    7. Lilongwe
+    8. kasungu
+    9. Balaka
+    0. Next`
 
 }
 
