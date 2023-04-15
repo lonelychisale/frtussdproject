@@ -613,8 +613,11 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   secregageindex              =`${--dataarray[9]}`
   secregpostionindex          =`${--dataarray[11]}`
 
+  console.log(secregdstrictindex)
+  
 
   Registratindisrict        = registrationdistricts[secregdstrictindex]
+  console.log(Registratindisrict)
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
   Registratinfarnvariety    =farmersvariety[secregvarietyindex]
