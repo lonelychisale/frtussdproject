@@ -485,7 +485,7 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 }
   
-else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && language =="English") {
+else if (dataarraysize==11 && dataarray[0] == "1" && dataarray[10]!='' && language =="English") {
 
   regdstrictindex          =`${--dataarray[2]}`
   regvarietyindex          =`${--dataarray[5]}`
@@ -600,7 +600,7 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 }
   
-else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
+else if (dataarraysize==12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
   secregdstrictindex          =`${--dataarray[3]}`
   secregvarietyindex          =`${--dataarray[6]}`
   secregenderindex            =`${--dataarray[8]}`
@@ -716,7 +716,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     
   }
     
-  else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
+  else if (dataarraysize==13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
 
     lastregdstrictindex          =`${--dataarray[4]}`
     lastregvarietyindex          =`${--dataarray[7]}`
