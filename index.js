@@ -356,9 +356,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
   
   else if(text=='1*1' && language =="English"){
     
-    registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
-    ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
-  'karonga','chitipa','mulanje','thyolo']
+    registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
     response=`CON Select your District
     1. Salima
@@ -377,9 +375,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
 else if(text=='1*1*0' && language =="English"){
 
-  secregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
-    ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
-  'karonga','chitipa','mulanje','thyolo']
+  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
   response=`CON Sankhani Boma
   10. Machinga
@@ -400,9 +396,7 @@ else if(text=='1*1*0' && language =="English"){
 
 else if(text=='1*1*0*0' && language =="English"){
 
-  lastregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
-    ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
-  'karonga','chitipa','mulanje','thyolo']
+  lastregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
   response=`CON Sankhani Boma
   20. Karonga
@@ -774,9 +768,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
   else if(text=='1*1' && language == "Chichewa"){
 
-    chichewaregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
-    ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
-  'karonga','chitipa','mulanje','thyolo']
+    chichewaregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
     response=`CON Sankhani Boma
     1. Salima
@@ -795,9 +787,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 else if(text=='1*1*0' && language == "Chichewa"){
 
-  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
-    ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
-  'karonga','chitipa','mulanje','thyolo']
+  chichewaregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
   response=`CON Sankhani Boma
   10. Machinga
@@ -818,9 +808,7 @@ else if(text=='1*1*0' && language == "Chichewa"){
 
 else if(text=='1*1*0*0' && language == "Chichewa"){
 
-  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga'
-    ,'machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno',
-  'karonga','chitipa','mulanje','thyolo']
+  chichewaregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
   response=`CON Sankhani Boma
   20. Karonga
@@ -919,7 +907,7 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
   regpostionindex          =`${--dataarray[10]}`
 
 
-  Registratindisrict        = registrationdistricts[regdstrictindex]
+  Registratindisrict        = chichewaregistrationdistricts[regdstrictindex]
   RegistrationTA            = `${dataarray[3]}`
   RegistratinGVH            = `${dataarray[4]}`
   Registratinfarnvariety    =farmersvariety[regvarietyindex]
@@ -1032,7 +1020,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   secregpostionindex          =`${--dataarray[11]}`
 
 
-  Registratindisrict        = registrationdistricts[secregdstrictindex]
+  Registratindisrict        = chichewaregistrationdistricts[secregdstrictindex]
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
   Registratinfarnvariety    =farmersvariety[secregvarietyindex]
@@ -1146,7 +1134,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     lastregpostionindex          =`${--dataarray[12]}`
   
   
-    Registratindisrict        = registrationdistricts[lastregdstrictindex]
+    Registratindisrict        = chichewaregistrationdistricts[lastregdstrictindex]
     RegistrationTA            = `${dataarray[5]}`
     RegistratinGVH            = `${dataarray[6]}`
     Registratinfarnvariety    =farmersvariety[lastregvarietyindex]
@@ -1643,6 +1631,16 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   3. Buy Available Products `;
 
   }
+
+     //..........................working on market menu in chichewa......................................
+  else if (text == "2*3" && language == "Chichewa") {
+
+    response = `CON MLIMI Market
+  1. Mitengo Yochepera Yapafamu
+  2. kugulitsa malonda
+  3. Gulani Zogulitsa Zomwe Zikupezeka`;
+
+  }
   
  
   else if (text == "2*3*1" && language =="English") {
@@ -1659,53 +1657,8 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   0.exit`;
 
   }
-  
-  
-  else if (text == "2*3*2" && language =="English") {
 
-  marketproductarray = ['Maize','Soya bean','Rice','Beans']
-
-  response = `CON choose product to sell
-  1.Maize
-  2.Soya bean
-  3.Rice
-  4.Beans`;
-
-  }
-   
-  
-  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[3]!='' && language =="English") {
-   
-    marketproductindex = `${--dataarray[3]}`
-    marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
-
-    response = `CON choose quantity(kg) of ${marketproductarray[marketproductindex]}
-    1.1-20kg
-    2.21-40kg
-    3.41-80kg
-    4.81-100kg
-    5.100kg above
-    `;
-
-  }
-
-
- else if(dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[4]!=='' && language=='English'){
-
-  response = `END you have successfully requested markerting services for ${marketproductarray[marketproductindex]}`
-
- }
-
-
-  //..........................working on market menu in chichewa......................................
-  else if (text == "2*3" && language == "Chichewa") {
-
-    response = `CON MLIMI Market
-  1. Mitengo Yochepera Yapafamu
-  2. kugulitsa malonda
-  3. Gulani Zogulitsa Zomwe Zikupezeka`;
-
-  }
+ 
   
   
   else if (text == "2*3*1" && language == "Chichewa") {
@@ -1722,6 +1675,45 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   0.exit`;
 
   }
+  
+  
+  else if (text == "2*3*2" && language =="English") {
+
+  marketproductarray = ['Maize','Soya bean','Rice','Beans']
+
+  response = `CON choose product to sell
+  1. Maize
+  2. Soya bean
+  3. Rice
+  4. Beans`;
+
+  }
+   
+  
+  else if (dataarraysize==4 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[3]!='' && language =="English") {
+   
+    marketproductindex = `${--dataarray[3]}`
+    marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
+
+    response = `CON choose quantity(kg) of ${marketproductarray[marketproductindex]}
+    1. 1-20kg
+    2. 21-40kg
+    3. 41-80kg
+    4. 81-100kg
+    5. 100kg above
+    `;
+
+  }
+
+
+
+  else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[4]!='' && language=='English'){
+   
+    quatityindix = `${--dataarray[4]}`
+
+    response = `END you have successfully  sent marketing processing request for ${marketproductquatityarray[quatityindix]} of ${marketproductarray[marketproductindex]} to farm radio trust`
+  }
+
   
   
   //................................seller  in chichewa.....................................................................
@@ -1752,11 +1744,16 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   }
 
 
-  else if(dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[4]!=='' && language=='Chichewa'){
+  else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[4]!='' && language=='Chichewa'){
+   
+    quatityindix = `${--dataarray[4]}`
 
-    response = `END you have successfully requested markerting services for ${marketproductarray[marketproductindex]}`
-  
-   }
+    response = `END you have successfully  sent marketing processing request for ${marketproductquatityarray[quatityindix]} of ${marketproductarray[marketproductindex]} to farm radio trust`
+  }
+
+
+
+
 
 //.....................................buyer in english.......................................................
 else if (text == "2*3*3" && language == "English") {
@@ -1789,10 +1786,11 @@ else if (text == "2*3*3" && language == "English") {
   }
 
 
-  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[4]!='' && language =="English") {
-    buyerproducttyquatiindex = `${--dataarray[4]}`
-    response = `END congratulations ${phoneNumber} farm radio trust will be processing market for ${buyerproductquatityarray[marketproducttyquatiindex]} of your ${marketproductarray[marketproductindex]}`;
+  else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[4]!='' && language=='English'){
+   
+    quatityindix = `${--dataarray[4]}`
 
+    response = `END you have successfully  sent marketing processing request for ${marketproductquatityarray[quatityindix]} of ${marketproductarray[marketproductindex]} to farm radio trust`
   }
 
 
@@ -1827,11 +1825,14 @@ else if (text == "2*3*3" && language == "English") {
     }
   
   
-    else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[4]!='' && language == "Chichewa") {
-      buyerproducttyquatiindex = `${--dataarray[4]}`
-      response = `END congratulations ${phoneNumber} farm radio trust will be processing market for ${buyerproductquatityarray[marketproducttyquatiindex]} of your ${marketproductarray[marketproductindex]}`;
-  
-    }
+     else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[4]!='' && language=='Chichewa'){
+   
+    quatityindix = `${--dataarray[4]}`
+
+    response = `END you have successfully  sent marketing processing request for ${marketproductquatityarray[quatityindix]} of ${marketproductarray[marketproductindex]} to farm radio trust`
+  }
+
+
 
   //.............................. ......my account menu.............................................................
   else if(text=='2*4' && language =="English"){
