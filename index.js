@@ -344,6 +344,14 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
       3.Help
       `
   }
+  else if(text == "" && language == "English") {
+    mainmenuselector = ['1','2','3']
+    response = `CON Welcome to Farm Radio Trust
+      1.Register
+      2.Main Menu
+      3.Help`
+
+  }
   
   
   else if( text=="" && language == "Chichewa"){
