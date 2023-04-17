@@ -325,11 +325,22 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
   //...........first menu...........................................
   if (text == "" && language == "English") {
+    mainmenuselector = ['1','2','3']
     response = `CON Welcome to Farm Radio Trust
       1.Register
       2.Main Menu
       3.Help`
 
+  }
+
+  else if(dataarraysize==1 && mainmenuselector.indexOf(dataarray[0])==-1 && language=='English'){
+    mainmenuselector = ['1','2','3']
+    dataarray = []
+    response = `CON Welcome to Farm Radio Trust
+      1.Register
+      2.Main Menu
+      3.Help
+      `
   }
   
   
@@ -485,7 +496,7 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 }
   
-else if (dataarraysize==11 && dataarray[0] == "1" && dataarray[10]!='' && language =="English") {
+else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && language =="English") {
 
   regdstrictindex          =`${--dataarray[2]}`
   regvarietyindex          =`${--dataarray[5]}`
@@ -600,7 +611,7 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 }
   
-else if (dataarraysize==12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
+else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
   secregdstrictindex          =`${--dataarray[3]}`
   secregvarietyindex          =`${--dataarray[6]}`
   secregenderindex            =`${--dataarray[8]}`
@@ -716,7 +727,7 @@ else if (dataarraysize==12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataa
     
   }
     
-  else if (dataarraysize==13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
+  else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
 
     lastregdstrictindex          =`${--dataarray[4]}`
     lastregvarietyindex          =`${--dataarray[7]}`
@@ -1734,11 +1745,11 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
 
     response = `CON choose quantity(kg) of ${marketproductarray[marketproductindex]}
-    1.1-20kg
-    2.21-40kg
-    3.41-80kg
-    4.81-100kg
-    5.100kg above
+    1. 1-20kg
+    2. 21-40kg
+    3. 41-80kg
+    4. 81-100kg
+    5. 100kg above
     `;
 
   }
@@ -1762,10 +1773,10 @@ else if (text == "2*3*3" && language == "English") {
   buyerproductarray = ['Maize','Soya bean','Rice','Beans']
 
   response = `CON choose product to buy
-  1.Maize
-  2.Soya bean
-  3.Rice
-  4.Beans`;
+  1. Maize
+  2. Soya bean
+  3. Rice
+  4. Beans`;
 
   }
    
@@ -1776,11 +1787,11 @@ else if (text == "2*3*3" && language == "English") {
     buyerproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
 
     response = `CON choose quantity(kg) of ${buyerproductarray[buyerproductindex]}
-    1.1-20kg
-    2.21-40kg
-    3.41-80kg
-    4.81-100kg
-    5.100kg above
+    1. 1-20kg
+    2. 21-40kg
+    3. 41-80kg
+    4. 81-100kg
+    5. 100kg above
     `;
 
   }
@@ -1801,10 +1812,10 @@ else if (text == "2*3*3" && language == "English") {
     buyerproductarray = ['Maize','Soya bean','Rice','Beans']
   
     response = `CON choose product to buy
-    1.Maize
-    2.Soya bean
-    3.Rice
-    4.Beans`;
+    1. Maize
+    2. Soya bean
+    3. Rice
+    4. Beans`;
   
     }
      
@@ -1815,11 +1826,11 @@ else if (text == "2*3*3" && language == "English") {
       buyerproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
   
       response = `CON choose quantity(kg) of ${buyerproductarray[buyerproductindex]}
-      1.1-20kg
-      2.21-40kg
-      3.41-80kg
-      4.81-100kg
-      5.100kg above
+      1. 1-20kg
+      2. 21-40kg
+      3. 41-80kg
+      4. 81-100kg
+      5. 100kg above
       `;
   
     }
@@ -1862,12 +1873,16 @@ else if(text=='2*4*1' && language=='English'){
 
 }
 
-//...................................our groups in chichewa............................................
+
+
+//.................. .................our groups in chichewa............................................
 else if(text=='2*4*1' && language=='Chichewa'){
 
   response = `END registered groups will be dsplayed here`
 
 }
+
+
 
 //.....................................changing language....................................
 else if (text == "2*4*2" && language =="English") {
