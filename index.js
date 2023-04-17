@@ -62,10 +62,6 @@ const newregref = regdb.ref("users");
 let mylanguage ='chichewa'
 
 
-newregref.child(phone).on("value",(snapshot)=>{
-  mylanguage = snapshot.val().translated_languge
-})
-
 
 //inintilizing the app
 firebase.initializeApp(firebaseConfig);
@@ -73,6 +69,7 @@ firebase.initializeApp(firebaseConfig);
 //getting database
 var db = firebase.database();
 const ref = db.ref("weather/districts");
+phone ='0993347204'
 
 
 
@@ -336,23 +333,14 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
   else if(dataarraysize==1 && mainmenuselector.indexOf(`${dataarray[0]}`)==-1 && language=='English' ){
     mainmenuselector = ['1','2','3']
     dataarray = []
-    dataarraysize =0
-    text =""
+    dataarraysize = 0
+    text = ""
     response = `CON Welcome to Farm Radio Trust
       1.Register
       2.Main Menu
       3.Help
       `
-  }
-  else if(text == "" && language == "English") {
-    mainmenuselector = ['1','2','3']
-    response = `CON Welcome to Farm Radio Trust
-      1.Register
-      2.Main Menu
-      3.Help`
-
-  }
-  
+  }  
   
   else if( text=="" && language == "Chichewa"){
     response = `CON Takulandirani ku Farm Radio Trust
@@ -374,7 +362,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
   }
 
-  
+   
   else if(text=='1*1' && language =="English"){
     
     registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
@@ -526,6 +514,19 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
   Registrationfarmerpositon =farmerposition[regpostionindex]
   Registrationphonenumber   =phoneNumber
  
+  newregref.child(phoneNumber).set({
+    userdistrict:Registratindisrict  ,
+    userTA:RegistrationTA,
+    userGVH:RegistratinGVH ,
+    userfarmvariety:Registratinfarnvariety ,
+    userfullname:Registrationfullname ,
+    usergender:Registrationgender ,
+    useragerange:Registrationagerange,
+    usergroupname:Registrationgroupname ,
+    userpostion:Registrationfarmerpositon,
+    userPhonenumber:phoneNumber
+
+  })
 
   response = `END END your number ${phoneNumber} have been successfully registered
   1.${Registratindisrict}
@@ -644,6 +645,21 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   Registrationphonenumber   =phoneNumber
 
 
+  newregref.child(phoneNumber).set({
+    userdistrict:Registratindisrict  ,
+    userTA:RegistrationTA,
+    userGVH:RegistratinGVH ,
+    userfarmvariety:Registratinfarnvariety ,
+    userfullname:Registrationfullname ,
+    usergender:Registrationgender ,
+    useragerange:Registrationagerange,
+    usergroupname:Registrationgroupname ,
+    userpostion:Registrationfarmerpositon,
+    userPhonenumber:phoneNumber
+
+  })
+
+
   response = `END END your number ${phoneNumber} have been successfully registered
   1.${Registratindisrict }
   2.${RegistrationTA}
@@ -756,6 +772,22 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     Registrationgroupname     =`${dataarray[111]}`
     Registrationfarmerpositon =farmerposition[lastregpostionindex]
     Registrationphonenumber   =phoneNumber
+
+
+
+    newregref.child(phoneNumber).set({
+      userdistrict:Registratindisrict  ,
+      userTA:RegistrationTA,
+      userGVH:RegistratinGVH ,
+      userfarmvariety:Registratinfarnvariety ,
+      userfullname:Registrationfullname ,
+      usergender:Registrationgender ,
+      useragerange:Registrationagerange,
+      usergroupname:Registrationgroupname ,
+      userpostion:Registrationfarmerpositon,
+      userPhonenumber:phoneNumber
+  
+    })
   
       response = `END END your number ${phoneNumber} have been successfully registered
       1.${Registratindisrict}
@@ -940,6 +972,20 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
   Registrationphonenumber   =phoneNumber
 
 
+  newregref.child(phoneNumber).set({
+    userdistrict:Registratindisrict  ,
+    userTA:RegistrationTA,
+    userGVH:RegistratinGVH ,
+    userfarmvariety:Registratinfarnvariety ,
+    userfullname:Registrationfullname ,
+    usergender:Registrationgender ,
+    useragerange:Registrationagerange,
+    usergroupname:Registrationgroupname ,
+    userpostion:Registrationfarmerpositon,
+    userPhonenumber:phoneNumber
+
+  })
+
     response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
     1.${Registratindisrict}
     2.${RegistrationTA}
@@ -1052,6 +1098,20 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   Registrationfarmerpositon =farmerposition[secregpostionindex]
   Registrationphonenumber   =phoneNumber
 
+
+  newregref.child(phoneNumber).set({
+    userdistrict:Registratindisrict  ,
+    userTA:RegistrationTA,
+    userGVH:RegistratinGVH ,
+    userfarmvariety:Registratinfarnvariety ,
+    userfullname:Registrationfullname ,
+    usergender:Registrationgender ,
+    useragerange:Registrationagerange,
+    usergroupname:Registrationgroupname ,
+    userpostion:Registrationfarmerpositon,
+    userPhonenumber:phoneNumber
+
+  })
 
     response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
     1.${Registratindisrict}
@@ -1167,7 +1227,20 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     Registrationphonenumber   =phoneNumber
   
   
+    newregref.child(phoneNumber).set({
+      userdistrict:Registratindisrict  ,
+      userTA:RegistrationTA,
+      userGVH:RegistratinGVH ,
+      userfarmvariety:Registratinfarnvariety ,
+      userfullname:Registrationfullname ,
+      usergender:Registrationgender ,
+      useragerange:Registrationagerange,
+      usergroupname:Registrationgroupname ,
+      userpostion:Registrationfarmerpositon,
+      userPhonenumber:phoneNumber
   
+    })
+
       response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
       1.${Registratindisrict}
       2.${RegistrationTA}
