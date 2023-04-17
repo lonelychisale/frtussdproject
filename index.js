@@ -322,10 +322,9 @@ for (let i = 0; i < obj.languages.length; i++) {
 
 console.log(`Language for phone number ${phoneNumber} is ${language}`);
  
-
+mainmenuselector = ['1','2','3']
   //...........first menu...........................................
-  if (text == "" && language == "English") {
-    mainmenuselector = ['1','2','3']
+  if ((text == "" || mainmenuselector.indexOf(`${dataarray[0]}`)==1) && language == "English") {
     response = `CON Welcome to Farm Radio Trust
       1.Register
       2.Main Menu
@@ -333,7 +332,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
   }
 
-  else if(dataarraysize==1 && mainmenuselector.indexOf(`${dataarray[0]}`)==-1 && language=='English' && text!=''){
+  else if(dataarraysize==1 && mainmenuselector.indexOf(`${dataarray[0]}`)==-1 && language=='English' ){
     mainmenuselector = ['1','2','3']
     dataarray = []
     response = `CON Welcome to Farm Radio Trust
