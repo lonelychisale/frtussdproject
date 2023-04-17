@@ -333,7 +333,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
   }
 
-  else if(dataarraysize==1 && mainmenuselector.indexOf(dataarray[0])==-1 && language=='English'){
+  else if(dataarraysize==1 && mainmenuselector.indexOf(`${dataarray[0]}`)==-1 && language=='English' && text!=''){
     mainmenuselector = ['1','2','3']
     dataarray = []
     response = `CON Welcome to Farm Radio Trust
