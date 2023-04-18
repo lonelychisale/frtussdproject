@@ -529,16 +529,6 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
   })
 
   response = `END END your number ${phoneNumber} have been successfully registered
-  1.${Registratindisrict}
-  2.${RegistrationTA}
-  3.${RegistratinGVH }
-  4.${Registratinfarnvariety}
-  5.${Registrationfullname}
-  6.${Registrationgender }
-  7.${Registrationagerange}
-  8.${Registrationgroupname}
-  9.${Registrationfarmerpositon}
-  10.${Registrationphonenumber}
   `;
 
   } 
@@ -790,16 +780,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     })
   
       response = `END END your number ${phoneNumber} have been successfully registered
-      1.${Registratindisrict}
-      2.${RegistrationTA}
-      3.${RegistratinGVH }
-      4.${Registratinfarnvariety}
-      5.${Registrationfullname}
-      6.${Registrationgender }
-      7.${Registrationagerange}
-      8.${Registrationgroupname}
-      9.${Registrationfarmerpositon}
-      10.${Registrationphonenumber}
+      
       `;
   
     } 
@@ -987,16 +968,7 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
   })
 
     response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
-    1.${Registratindisrict}
-    2.${RegistrationTA}
-    3.${RegistratinGVH }
-    4.${Registratinfarnvariety}
-    5.${Registrationfullname}
-    6.${Registrationgender }
-    7.${Registrationagerange}
-    8.${Registrationgroupname}
-    9.${Registrationfarmerpositon}
-    10.${Registrationphonenumber}`;
+   `;
     
   }
 
@@ -1241,6 +1213,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
     })
 
+
       response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
       1.${Registratindisrict}
       2.${RegistrationTA}
@@ -1257,8 +1230,8 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     } 
   
 
-
     
+ 
 
 //.........................................main menu in english.........................................................
   else if (text == "2" && language =="English") {
