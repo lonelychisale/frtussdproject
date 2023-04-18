@@ -605,7 +605,7 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 
   secregdstrictindex          =`${--dataarray[3]}`
   secregvarietyindex          =`${--dataarray[6]}`
-  console.log(secregdstrictindex)
+  console.log(` the index of second district is ${secregdstrictindex}`)
   console.log(secregvarietyindex)
 
   response= `CON Enter Your GroupName `
