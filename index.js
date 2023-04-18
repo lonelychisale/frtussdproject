@@ -633,11 +633,14 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   secregageindex              =`${--dataarray[9]}`
   secregpostionindex          =`${--dataarray[11]}`
 
+  regdstrictindex          =`${--dataarray[4]}`
+ 
+
   console.log(secregdstrictindex)
   
 
 
-  Registratindistrict       = registrationdistricts[secregdstrictindex]
+  Registratindistrict       = registrationdistricts[regdstrictindex]
   console.log(Registratindisrict)
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
