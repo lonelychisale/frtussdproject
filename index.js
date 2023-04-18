@@ -394,21 +394,21 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
 else if(text=='1*1*0' && language =="English"){
 
-  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
+  registrationdistricts = ['machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
   console.log(registrationdistricts[9])
 
   response=`CON Sankhani Boma
-  10. Machinga
-  11. Rumphi
-  12. Nkhatabay
-  13. Dwangwa
-  14. nkhotakota
-  15. chirazulu
-  16. Ntchitsi
-  17. Mangochi
-  18. Nsanje
-  19. Neno
+  1. Machinga
+  2. Rumphi
+  3. Nkhatabay
+  4. Dwangwa
+  5. nkhotakota
+  6. chirazulu
+  7. Ntchitsi
+  8. Mangochi
+  9. Nsanje
+  10. Neno
   0. Next
   
   `
