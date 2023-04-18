@@ -394,21 +394,21 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
 else if(text=='1*1*0' && language =="English"){
 
-  registrationdistricts = ['machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
+  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
   console.log(registrationdistricts[9])
 
   response=`CON Sankhani Boma
-  1. Machinga
-  2. Rumphi
-  3. Nkhatabay
-  4. Dwangwa
-  5. nkhotakota
-  6. chirazulu
-  7. Ntchitsi
-  8. Mangochi
-  9. Nsanje
-  10. Neno
+  10. Machinga
+  11. Rumphi
+  12. Nkhatabay
+  13. Dwangwa
+  14. nkhotakota
+  15. chirazulu
+  16. Ntchitsi
+  17. Mangochi
+  18. Nsanje
+  19. Neno
   0. Next
   
   `
@@ -627,7 +627,7 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
   
 else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
-  secregdstrictindex          =`${--dataarray[3]}`
+  secregdstrictindex          =`${--dataarray[4]}`
   secregvarietyindex          =`${--dataarray[6]}`
   secregenderindex            =`${--dataarray[8]}`
   secregageindex              =`${--dataarray[9]}`
@@ -636,7 +636,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   console.log(secregdstrictindex)
   
 
-  Registratindisrict        = registrationdistricts[secregdstrictindex]
+  Registratindistrict        = registrationdistricts[secregdstrictindex]
   console.log(Registratindisrict)
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
@@ -648,11 +648,11 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   Registrationfarmerpositon =farmerposition[secregpostionindex]
   Registrationphonenumber   =phoneNumber
 
-  console.log(Registratindisrict)
+  console.log(Registratindistrict)
 
-/*
+
   newregref.child(phoneNumber).set({
-    userdistrict:Registratindisrict  ,
+    userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
     userfarmvariety:Registratinfarnvariety ,
@@ -664,7 +664,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     userPhonenumber:phoneNumber
 
   })
-  */
+  
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
