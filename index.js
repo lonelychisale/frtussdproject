@@ -603,6 +603,11 @@ else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]
 
 else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[9]!='' && language =="English"){
 
+  secregdstrictindex          =`${--dataarray[3]}`
+  secregvarietyindex          =`${--dataarray[6]}`
+  console.log(secregdstrictindex)
+  console.log(secregvarietyindex)
+
   response= `CON Enter Your GroupName `
   
 }
@@ -612,8 +617,6 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
   farmerposition = ['chairman/chairlady','secretary','tresurer','member']
 
-  secregdstrictindex          =`${--dataarray[3]}`
-  console.log(secregdstrictindex)
 
   response= `CON choose your postion
   1. chairman/chairlady 
