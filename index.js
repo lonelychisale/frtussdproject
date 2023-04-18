@@ -516,7 +516,7 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
   regpostionindex          =`${--dataarray[10]}`
 
 
-  Registratindisrict        = registrationdistricts[regdstrictindex]
+  Registratindistrict        = registrationdistricts[regdstrictindex]
   RegistrationTA            = `${dataarray[3]}`
   RegistratinGVH            = `${dataarray[4]}`
   Registratinfarnvariety    =farmersvariety[regvarietyindex]
@@ -650,7 +650,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
   console.log(Registratindistrict)
 
-
+/*
   newregref.child(phoneNumber).set({
     userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
@@ -664,6 +664,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     userPhonenumber:phoneNumber
 
   })
+  */
   
 
 
@@ -781,7 +782,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     Registrationphonenumber   =phoneNumber
 
 
-
+/*
     newregref.child(phoneNumber).set({
       userdistrict:Registratindisrict  ,
       userTA:RegistrationTA,
@@ -795,6 +796,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
       userPhonenumber:phoneNumber
   
     })
+    */
   
       response = `END END your number ${phoneNumber} have been successfully registered
       1.${Registratindisrict}
