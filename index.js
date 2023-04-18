@@ -417,7 +417,7 @@ else if(text=='1*1*0' && language =="English"){
 
 else if(text=='1*1*0*0' && language =="English"){
 
-  lastregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
+  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
   console.log(registrationdistricts[19])
 
   response=`CON Sankhani Boma
@@ -636,7 +636,8 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   console.log(secregdstrictindex)
   
 
-  Registratindistrict        = registrationdistricts[secregdstrictindex]
+
+  Registratindistrict       = registrationdistricts[secregdstrictindex]
   console.log(Registratindisrict)
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
@@ -770,7 +771,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     lastregpostionindex          =`${--dataarray[12]}`
   
   
-    Registratindisrict        = lastregistrationdistricts[secregdstrictindex]
+    Registratindisrict        = registrationdistricts[secregdstrictindex]
     RegistrationTA            = `${dataarray[5]}`
     RegistratinGVH            = `${dataarray[6]}`
     Registratinfarnvariety    =farmersvariety[lastregvarietyindex]
@@ -799,7 +800,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     */
   
       response = `END END your number ${phoneNumber} have been successfully registered
-      1.${Registratindisrict}
+      1.${Registratindistrict}
       2.${RegistrationTA}
       3.${RegistratinGVH }
       4.${Registratinfarnvariety}
