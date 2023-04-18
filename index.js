@@ -132,6 +132,11 @@ const weatherdistrictsjoin = waetherdstrictstostring.replace(/,/g , '\n')
 const temperature = weatherdistricts[0].weeklyTemps[0]
 
 
+//districts for registration
+districtsarray =['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota',
+'chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
+
+console.log(districtsarray[19])
   /*Read the contents of the JSON file
   const data = fs.readFileSync('language.json');
   const obj = JSON.parse(data);
@@ -634,7 +639,9 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   Registrationfarmerpositon =farmerposition[secregpostionindex]
   Registrationphonenumber   =phoneNumber
 
+  console.log(Registratindisrict)
 
+/*
   newregref.child(phoneNumber).set({
     userdistrict:Registratindisrict  ,
     userTA:RegistrationTA,
@@ -648,6 +655,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     userPhonenumber:phoneNumber
 
   })
+  */
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
@@ -780,7 +788,16 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     })
   
       response = `END END your number ${phoneNumber} have been successfully registered
-      
+      1.${Registratindisrict}
+      2.${RegistrationTA}
+      3.${RegistratinGVH }
+      4.${Registratinfarnvariety}
+      5.${Registrationfullname}
+      6.${Registrationgender }
+      7.${Registrationagerange}
+      8.${Registrationgroupname}
+      9.${Registrationfarmerpositon}
+      10.${Registrationphonenumber}
       `;
   
     } 
