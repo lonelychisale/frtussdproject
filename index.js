@@ -391,6 +391,8 @@ else if(text=='1*1*0' && language =="English"){
 
   registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
+  console.log(registrationdistricts[9])
+
   response=`CON Sankhani Boma
   10. Machinga
   11. Rumphi
@@ -411,6 +413,7 @@ else if(text=='1*1*0' && language =="English"){
 else if(text=='1*1*0*0' && language =="English"){
 
   lastregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
+  console.log(registrationdistricts[19])
 
   response=`CON Sankhani Boma
   20. Karonga
