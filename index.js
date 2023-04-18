@@ -345,6 +345,11 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
       2.Main Menu
       3.Help
       `
+
+      console.log("Resetting dataarray, dataarraysize, and text");
+      console.log(`dataarray: ${dataarray}`);
+      console.log(`dataarraysize: ${dataarraysize}`);
+      console.log(`text: ${text}`);
   }  
   
   else if( text=="" && language == "Chichewa"){
@@ -602,11 +607,6 @@ else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]
 
 
 else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[9]!='' && language =="English"){
-
-  secregdstrictindex          =`${--dataarray[3]}`
-  secregvarietyindex          =`${--dataarray[6]}`
-  console.log(' the index of second district i' + secregdstrictindex)
-  console.log('variety index is ' + secregvarietyindex)
 
   response= `CON Enter Your GroupName `
   
