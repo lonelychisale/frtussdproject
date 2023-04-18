@@ -612,6 +612,9 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
   farmerposition = ['chairman/chairlady','secretary','tresurer','member']
 
+  secregdstrictindex          =`${--dataarray[3]}`
+  console.log(secregdstrictindex)
+
   response= `CON choose your postion
   1. chairman/chairlady 
   2. secretary
@@ -630,7 +633,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   console.log(secregdstrictindex)
   
 
-  Registratindisrict        = secregistrationdistricts[secregdstrictindex]
+  Registratindisrict        = registrationdistricts[secregdstrictindex]
   console.log(Registratindisrict)
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
