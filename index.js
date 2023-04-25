@@ -527,7 +527,7 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
   Registrationphonenumber   =phoneNumber
  
   newregref.child(phoneNumber).set({
-    userdistrict:Registratindisrict  ,
+    userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
     userfarmvariety:Registratinfarnvariety ,
