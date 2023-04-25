@@ -73,7 +73,7 @@ phone ='0993347204'
 
 
 var num = '10'
-console.log(`${num}`-10)
+console.log(`${num}`-1)
 
 //.............................declaring global advisory variables for english..................................
 namesss = advesoryjson.sectors[0].categories[0].products
@@ -111,7 +111,7 @@ chichewaadvisoryproductnamesjoin = chichewaadvisoryproductnamestostring.replace(
 
 //working on subcatigory category of specic product name
 var specificproduct = chichewasectors[0].categories[0].products
-console.log(specificproduct)
+//console.log(specificproduct)
 
 
 
@@ -624,7 +624,7 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
   
 else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
-  secregdstrictindex          =`${--dataarray[3]}`
+  secregdstrictindex          =`${dataarray[3]}`-1
   secregvarietyindex          =`${--dataarray[6]}`
   secregenderindex            =`${--dataarray[8]}`
   secregageindex              =`${--dataarray[9]}`
@@ -635,7 +635,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
 
 
-  nextRegistratindistrict       = registrationdistricts[secregdstrictindex ]
+  Registratindistrict       = registrationdistricts[secregdstrictindex ]
   
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
@@ -651,7 +651,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 
   newregref.child(phoneNumber).set({
-    userdistrict:nextRegistratindistrict   ,
+    userdistrict:Registratindistrict,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
     userfarmvariety:Registratinfarnvariety ,
@@ -762,7 +762,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     
   else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
 
-    lastregdstrictindex          =`${--dataarray[4]}`
+    lastregdstrictindex          =`${dataarray[4]}`-1
     lastregvarietyindex          =`${--dataarray[7]}`
     lastregenderindex            =`${--dataarray[9]}`
     lastregageindex              =`${--dataarray[10]}`
