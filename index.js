@@ -135,10 +135,12 @@ const temperature = weatherdistricts[0].weeklyTemps[0]
 
 
 //districts for registration
-districtsarray =['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota',
-'chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
+registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu',
+'balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi',
+'nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
-console.log(districtsarray[19])
+
+//console.log(districtsarray[19])
   /*Read the contents of the JSON file
   const data = fs.readFileSync('language.json');
   const obj = JSON.parse(data);
@@ -262,7 +264,7 @@ for (let i = 0; i < obj.languages.length; i++) {
   }
 }
 
-console.log(`Language for phone number ${phoneNumber} is ${language}`);
+//console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
 
 
@@ -376,8 +378,6 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
    
   else if(text=='1*1' && language =="English"){
-    
-    registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
     response=`CON Select your District
     1. Salima
@@ -395,9 +395,6 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
 
 else if(text=='1*1*0' && language =="English"){
-
-  nextregistrationdistricts = ['machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
-
 
   response=`CON Sankhani Boma
   10. Machinga
@@ -418,8 +415,7 @@ else if(text=='1*1*0' && language =="English"){
 
 else if(text=='1*1*0*0' && language =="English"){
 
-  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
-  console.log(registrationdistricts[19])
+  
 
   response=`CON Sankhani Boma
   20. Karonga
@@ -628,7 +624,7 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
   
 else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
-  secregdstrictindex          =`${dataarray[4]}`-10
+  secregdstrictindex          =`${--dataarray[3]}`
   secregvarietyindex          =`${--dataarray[6]}`
   secregenderindex            =`${--dataarray[8]}`
   secregageindex              =`${--dataarray[9]}`
@@ -639,7 +635,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
 
 
-  nextRegistratindistrict       = nextregistrationdistricts[secregdstrictindex ]
+  nextRegistratindistrict       = registrationdistricts[secregdstrictindex ]
   
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
