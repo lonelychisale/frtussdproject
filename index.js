@@ -637,7 +637,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
 
 
-  Registratindistrict       = nextregistrationdistricts[secregdstrictindex ]
+  nextRegistratindistrict       = nextregistrationdistricts[secregdstrictindex ]
   console.log(Registratindisrict)
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
@@ -653,7 +653,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 /*
   newregref.child(phoneNumber).set({
-    userdistrict:Registratindistrict   ,
+    userdistrict:nextRegistratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
     userfarmvariety:Registratinfarnvariety ,
@@ -670,7 +670,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
-  1.${Registratindistrict}
+  1.${nextRegistratindistrict}
   2.${RegistrationTA}
   3.${RegistratinGVH }
   4.${Registratinfarnvariety}
