@@ -638,7 +638,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 
   nextRegistratindistrict       = nextregistrationdistricts[secregdstrictindex ]
-  console.log(Registratindisrict)
+  
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
   Registratinfarnvariety    =farmersvariety[secregvarietyindex]
@@ -649,7 +649,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   Registrationfarmerpositon =farmerposition[secregpostionindex]
   Registrationphonenumber   =phoneNumber
 
-  console.log(Registratindistrict)
+  
 
 /*
   newregref.child(phoneNumber).set({
