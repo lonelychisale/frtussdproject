@@ -624,7 +624,7 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
   
 else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
-  secregdstrictindex          =`${dataarray[3]}`-1
+  secregdstrictindex          =`${--dataarray[3]}`
   secregvarietyindex          =`${--dataarray[6]}`
   secregenderindex            =`${--dataarray[8]}`
   secregageindex              =`${--dataarray[9]}`
@@ -635,7 +635,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
 
 
-  Registratindistrict       = registrationdistricts[secregdstrictindex ]
+  nextRegistratindistrict       = registrationdistricts[secregdstrictindex ]
   
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
@@ -651,7 +651,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 
   newregref.child(phoneNumber).set({
-    userdistrict:Registratindistrict,
+    userdistrict:'',
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
     userfarmvariety:Registratinfarnvariety ,
