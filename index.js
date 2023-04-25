@@ -394,9 +394,8 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
 else if(text=='1*1*0' && language =="English"){
 
-  registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
+  nextregistrationdistricts = ['machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
-  console.log(registrationdistricts[9])
 
   response=`CON Sankhani Boma
   10. Machinga
@@ -627,7 +626,7 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
   
 else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
-  secregdstrictindex          =`${--dataarray[4]}`
+  secregdstrictindex          =`${dataarray[4]-10}`
   secregvarietyindex          =`${--dataarray[6]}`
   secregenderindex            =`${--dataarray[8]}`
   secregageindex              =`${--dataarray[9]}`
@@ -640,7 +639,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
 
 
-  Registratindistrict       = registrationdistricts[regdstrictindex]
+  Registratindistrict       = nextregistrationdistricts[regdstrictindex]
   console.log(Registratindisrict)
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
