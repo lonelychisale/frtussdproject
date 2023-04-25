@@ -631,15 +631,13 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   secregenderindex            =`${--dataarray[8]}`
   secregageindex              =`${--dataarray[9]}`
   secregpostionindex          =`${--dataarray[11]}`
-
-  regdstrictindex          =`${--dataarray[4]}`
  
 
   console.log(secregdstrictindex)
   
 
 
-  Registratindistrict       = nextregistrationdistricts[regdstrictindex]
+  Registratindistrict       = nextregistrationdistricts[secregdstrictindex ]
   console.log(Registratindisrict)
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
@@ -672,7 +670,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
-
+  1.${Registratindistrict}
   2.${RegistrationTA}
   3.${RegistratinGVH }
   4.${Registratinfarnvariety}
