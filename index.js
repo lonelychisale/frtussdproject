@@ -338,23 +338,6 @@ mainmenuselector = ['1','2','3']
       3.Help`
 
   }
-
-  else if(dataarraysize==1 && mainmenuselector.indexOf(`${dataarray[0]}`)==-1 && language=='English' ){
-    dataarray.pop()
-    dataarraysize = 0
-    text = ""
-    response = `CON Welcome to Farm Radio Trust
-      1.Register
-      2.Main Menu
-      3.Help
-      `
-
-      console.log("Resetting dataarray, dataarraysize, and text");
-      console.log(`dataarray: ${dataarray}`);
-      console.log(`dataarraysize: ${dataarraysize}`);
-      console.log(`text: ${text}`);
-  }  
-  
  
   else if( text=="" && language == "Chichewa"){
     response = `CON Takulandirani ku Farm Radio Trust
@@ -2161,6 +2144,11 @@ else if (text == "2*4*2" && language =="English") {
 
     response = `END Imbani mwaulere pa *8111# AIRTEL kapena *7111# TNM `;
 
+  }
+
+  else{
+
+    response = `END invalid input`
   }
    text = dataarray.join('*')
   //......................................send the response back.................................
