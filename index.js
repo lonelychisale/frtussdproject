@@ -326,12 +326,12 @@ for (let i = 0; i < obj.languages.length; i++) {
   }
 }
 
-console.log(`Language for phone number ${phoneNumber} is ${language}`);
+//console.log(`Language for phone number ${phoneNumber} is ${language}`);
  
-
+mainmenuselector = ['1','2','3']
   //...........first menu...........................................
   if (text == "" && language == "English") {
-    mainmenuselector = ['1','2','3']
+    
     response = `CON Welcome to Farm Radio Trust
       1.Register
       2.Main Menu
@@ -340,8 +340,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
   }
 
   else if(dataarraysize==1 && mainmenuselector.indexOf(`${dataarray[0]}`)==-1 && language=='English' ){
-    mainmenuselector = ['1','2','3']
-    dataarray = []
+    dataarray.pop()
     dataarraysize = 0
     text = ""
     response = `CON Welcome to Farm Radio Trust
@@ -356,6 +355,7 @@ console.log(`Language for phone number ${phoneNumber} is ${language}`);
       console.log(`text: ${text}`);
   }  
   
+ 
   else if( text=="" && language == "Chichewa"){
     response = `CON Takulandirani ku Farm Radio Trust
     1.Lembetsani
@@ -2162,6 +2162,7 @@ else if (text == "2*4*2" && language =="English") {
     response = `END Imbani mwaulere pa *8111# AIRTEL kapena *7111# TNM `;
 
   }
+   text = dataarray.join('*')
   //......................................send the response back.................................
   res.set("Content-Type: text/plain");
   res.send(response);
