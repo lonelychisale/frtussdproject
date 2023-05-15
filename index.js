@@ -630,11 +630,26 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   Registrationphonenumber   =phoneNumber
 
   
+
+  newregref.child(phoneNumber).set({
+    userdistrict:Registratindistrict,
+    userTA:RegistrationTA,
+    userGVH:RegistratinGVH ,
+    userfarmvariety:Registratinfarnvariety ,
+    userfullname:Registrationfullname ,
+    usergender:Registrationgender ,
+    useragerange:Registrationagerange,
+    usergroupname:Registrationgroupname ,
+    userpostion:Registrationfarmerpositon,
+    userPhonenumber:phoneNumber
+
+  })
+  
   
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
-  1.mzimba
+  1.${Registratindistrict}
   2.${RegistrationTA}
   3.${RegistratinGVH }
   4.${Registratinfarnvariety}
@@ -648,7 +663,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
   } 
 
-  /*.........................if the second next is clicked............................................
+  //.........................if the second next is clicked............................................
    
   else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[4]!='' &&  language =="English"){
 
@@ -1223,7 +1238,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     } 
   
 
-  /*/  
+    
  
 
 //.........................................main menu in english.........................................................
