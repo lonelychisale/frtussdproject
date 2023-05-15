@@ -648,7 +648,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
   } 
 
-  //.........................if the second next is clicked............................................
+  /*.........................if the second next is clicked............................................
    
   else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[4]!='' &&  language =="English"){
 
@@ -1223,7 +1223,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     } 
   
 
-    
+  /*/  
  
 
 //.........................................main menu in english.........................................................
