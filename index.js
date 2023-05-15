@@ -372,6 +372,7 @@ mainmenuselector = ['1','2','3']
     7. Lilongwe
     8. kasungu
     9. Balaka
+    10. Machinga
     0. Next`
 
 }
@@ -380,7 +381,6 @@ mainmenuselector = ['1','2','3']
 else if(text=='1*1*0' && language =="English"){
 
   response=`CON Sankhani Boma
-  10. Machinga
   11. Rumphi
   12. Nkhatabay
   13. Dwangwa
