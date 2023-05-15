@@ -1067,7 +1067,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   secregpostionindex          =`${--dataarray[11]}`
 
 
-  Registratindisrict        = chichewaregistrationdistricts[secregdstrictindex]
+  Registratindisrict        = registrationdistricts[secregdstrictindex]
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
   Registratinfarnvariety    =farmersvariety[secregvarietyindex]
@@ -1195,14 +1195,14 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     lastregpostionindex          =`${--dataarray[12]}`
   
   
-    Registratindisrict        = chichewaregistrationdistricts[lastregdstrictindex]
+    Registratindisrict        = gistrationdistricts[lastregdstrictindex]
     RegistrationTA            = `${dataarray[5]}`
     RegistratinGVH            = `${dataarray[6]}`
     Registratinfarnvariety    =farmersvariety[lastregvarietyindex]
     Registrationfullname      =`${dataarray[8]}`
     Registrationgender        =farmersgender[lastregenderindex]
     Registrationagerange      =farmersagerange[lastregageindex]
-    Registrationgroupname     =`${dataarray[111]}`
+    Registrationgroupname     =`${dataarray[11]}`
     Registrationfarmerpositon =farmerposition[lastregpostionindex]
     Registrationphonenumber   =phoneNumber
   
