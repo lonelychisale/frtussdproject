@@ -631,7 +631,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
   
 
-
+/*
   newregref.child(phoneNumber).set({
     userdistrict:nextRegistratindistrict,
     userTA:RegistrationTA,
@@ -645,12 +645,14 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     userPhonenumber:phoneNumber
 
   })
+
+  */
   
   
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
-  1.${nextRegistratindistrict}
+  1.mzimba
   2.${RegistrationTA}
   3.${RegistratinGVH }
   4.${Registratinfarnvariety}
