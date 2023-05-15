@@ -630,21 +630,6 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   Registrationphonenumber   =phoneNumber
 
   
-
-  newregref.child(phoneNumber).set({
-    userdistrict:'mzimba',
-    userTA:RegistrationTA,
-    userGVH:RegistratinGVH ,
-    userfarmvariety:Registratinfarnvariety ,
-    userfullname:Registrationfullname ,
-    usergender:Registrationgender ,
-    useragerange:Registrationagerange,
-    usergroupname:Registrationgroupname ,
-    userpostion:Registrationfarmerpositon,
-    userPhonenumber:phoneNumber
-
-  })
-  
   
 
 
