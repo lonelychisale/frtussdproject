@@ -618,7 +618,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
 
 
-  nextRegistratindistrict  = registrationdistricts[secregdstrictindex]
+  Registratindistrict  = registrationdistricts[secregdstrictindex]
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
   Registratinfarnvariety    =farmersvariety[secregvarietyindex]
@@ -631,9 +631,8 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
   
 
-/*
   newregref.child(phoneNumber).set({
-    userdistrict:nextRegistratindistrict,
+    userdistrict:Registratindistrict,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
     userfarmvariety:Registratinfarnvariety ,
@@ -645,14 +644,12 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     userPhonenumber:phoneNumber
 
   })
-
-  */
   
   
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
-  1.mzimba
+  1.${Registratindistrict}
   2.${RegistrationTA}
   3.${RegistratinGVH }
   4.${Registratinfarnvariety}
@@ -746,26 +743,26 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     
   else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
 
-    lastregdstrictindex          =`${dataarray[4]}`-1
+    lastregdstrictindex          =`${--dataarray[4]}`
     lastregvarietyindex          =`${--dataarray[7]}`
     lastregenderindex            =`${--dataarray[9]}`
     lastregageindex              =`${--dataarray[10]}`
     lastregpostionindex          =`${--dataarray[12]}`
   
   
-    Registratindisrict        = registrationdistricts[secregdstrictindex]
+    Registratindisrict        = registrationdistricts[lastregdstrictindex]
     RegistrationTA            = `${dataarray[5]}`
     RegistratinGVH            = `${dataarray[6]}`
     Registratinfarnvariety    =farmersvariety[lastregvarietyindex]
     Registrationfullname      =`${dataarray[8]}`
     Registrationgender        =farmersgender[lastregenderindex]
     Registrationagerange      =farmersagerange[lastregageindex]
-    Registrationgroupname     =`${dataarray[111]}`
+    Registrationgroupname     =`${dataarray[11]}`
     Registrationfarmerpositon =farmerposition[lastregpostionindex]
     Registrationphonenumber   =phoneNumber
 
 
-/*
+
     newregref.child(phoneNumber).set({
       userdistrict:Registratindisrict  ,
       userTA:RegistrationTA,
@@ -779,7 +776,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
       userPhonenumber:phoneNumber
   
     })
-    */
+
   
       response = `END END your number ${phoneNumber} have been successfully registered
       1.${Registratindistrict}
