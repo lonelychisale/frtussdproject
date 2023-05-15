@@ -614,7 +614,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   secregpostionindex          =`${--dataarray[11]}`
  
 
-  console.log(secregdstrictindex)
+  console.log(` this is under second level of ditricts ${secregdstrictindex}`)
   
 
 
