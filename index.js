@@ -372,7 +372,6 @@ mainmenuselector = ['1','2','3']
     7. Lilongwe
     8. kasungu
     9. Balaka
-    10. Machinga
     0. Next`
 
 }
@@ -381,6 +380,7 @@ mainmenuselector = ['1','2','3']
 else if(text=='1*1*0' && language =="English"){
 
   response=`CON Sankhani Boma
+  10. Machinga
   11. Rumphi
   12. Nkhatabay
   13. Dwangwa
@@ -618,8 +618,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
 
 
-  nextRegistratindistrict       = registrationdistricts[secregdstrictindex ]
-  
+  nextRegistratindistrict  = registrationdistricts[secregdstrictindex]
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
   Registratinfarnvariety    =farmersvariety[secregvarietyindex]
@@ -634,7 +633,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 
   newregref.child(phoneNumber).set({
-    userdistrict:'',
+    userdistrict:nextRegistratindistrict,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
     userfarmvariety:Registratinfarnvariety ,
