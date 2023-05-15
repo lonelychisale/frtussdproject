@@ -632,7 +632,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
   
 
   newregref.child(phoneNumber).set({
-    userdistrict:Registratindistrict,
+    userdistrict:'mzimba',
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
     userfarmvariety:Registratinfarnvariety ,
@@ -649,7 +649,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
-  1.${Registratindistrict}
+  1.mzimba
   2.${RegistrationTA}
   3.${RegistratinGVH }
   4.${Registratinfarnvariety}
@@ -727,7 +727,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
     response= `CON Enter Your GroupName `
     
   }
-  
+    
   
   else if(dataarraysize==12 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[11]!='' && language =="English"){
     
