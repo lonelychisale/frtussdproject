@@ -1306,8 +1306,8 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
   else if (text === "2" && language === "English") {
     const processRegistration = async () => {
       try {
-        const snapshot = newregref.child(phoneNumber).once('value');
-        const numbers = await snapshot.val();
+        const snapshot = await newregref.child(phoneNumber).once('value');
+        const numbers =  snapshot.val();
   
         if (numbers === null) {
           response = await `END your number ${phoneNumber} is not yet registered`;
