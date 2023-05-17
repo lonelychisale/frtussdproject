@@ -615,7 +615,7 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
   
 else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
-  secregdstrictindex          =`${--dataarray[2]}`
+  secregdstrictindex          =`${--dataarray[3]}`
   secregvarietyindex          =`${--dataarray[6]}`
   secregenderindex            =`${--dataarray[8]}`
   secregageindex              =`${--dataarray[9]}`
@@ -657,7 +657,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
-  1.${Registratindistrict}
+  1.${secregdstrictindex}
   2.${RegistrationTA}
   3.${RegistratinGVH }
   4.${Registratinfarnvariety}
