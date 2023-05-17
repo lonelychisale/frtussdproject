@@ -267,6 +267,24 @@ for (let i = 0; i < obj.languages.length; i++) {
 //console.log(`Language for phone number ${phoneNumber} is ${language}`);
 
 
+// checking if numbers exist in the database of users
+
+var checknum ='+265995434579'
+
+newregref.child('+265995434579').once('value')
+  .then((snapshot) => {
+    var numbers = snapshot.val();
+   if(numbers===null){
+    console.log('you have not registered')
+   }
+   else{
+    console.log('you are registered')
+   }
+
+  });
+
+
+
 
 
 const port = process.env.PORT || 3030;
@@ -1263,12 +1281,25 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
 
 //.........................................main menu in english.........................................................
   else if (text == "2" && language =="English") {
+
+    //checking if the number is registered to display the menu
+    newregref.child(phoneNumber).once('value')
+  .then((snapshot) => {
+    var numbers = snapshot.val();
+   if(numbers===null){
+    response = `END your number ${phoneNumber} is not yet registered`
+   }
+   else{
     response = `CON Mlimi Main Manu
 		1. Advesories
 		2. Weather reports
 		3. Marketing
 		4. Account
 		5. help`;
+   }
+
+  });
+    
   }
 
   //...........................................chichewa main menu..............................................
