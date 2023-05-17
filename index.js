@@ -970,7 +970,7 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[2]!='0' && data
   Registrationfarmerpositon =farmerposition[regpostionindex]
   Registrationphonenumber   =phoneNumber
 
-/*
+
   newregref.child(phoneNumber).set({
     userdistrict:Registratindisrict  ,
     userTA:RegistrationTA,
@@ -983,7 +983,7 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[2]!='0' && data
     userpostion:Registrationfarmerpositon,
     userPhonenumber:phoneNumber
 
-  })*/
+  })
 
     response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
     1.${Registratindisrict}
@@ -1098,7 +1098,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
   Registrationfarmerpositon =farmerposition[secregpostionindex]
   Registrationphonenumber   =phoneNumber
 
-/*
+
   newregref.child(phoneNumber).set({
     userdistrict:Registratindisrict  ,
     userTA:RegistrationTA,
@@ -1112,7 +1112,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
     userPhonenumber:phoneNumber
 
   })
-*/
+
     response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
     1.${Registratindisrict}
     2.${RegistrationTA}
@@ -1226,7 +1226,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
     Registrationfarmerpositon =farmerposition[lastregpostionindex]
     Registrationphonenumber   =phoneNumber
   
-  /*
+  
     newregref.child(phoneNumber).set({
       userdistrict:Registratindisrict  ,
       userTA:RegistrationTA,
@@ -1241,7 +1241,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
   
     })
 
-*/
+
       response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
       1.${Registratindisrict}
       2.${RegistrationTA}
