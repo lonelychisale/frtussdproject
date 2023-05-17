@@ -1215,7 +1215,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
     lastregpostionindex          =`${--dataarray[12]}`
   
   
-    Registratindisrict        = gistrationdistricts[lastregdstrictindex]
+    Registratindisrict        = registrationdistricts[lastregdstrictindex]
     RegistrationTA            = `${dataarray[5]}`
     RegistratinGVH            = `${dataarray[6]}`
     Registratinfarnvariety    =farmersvariety[lastregvarietyindex]
