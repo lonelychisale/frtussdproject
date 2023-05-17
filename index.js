@@ -1279,11 +1279,11 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
     
  
 
-//.........................................main menu in english.........................................................
+/*.........................................main menu in english.........................................................
   else if (text == "2" && language =="English") {
 
-    //checking if the number is registered to display the menu
-    newregref.child(phoneNumber).once('value')
+//checking if the number is registered to display the menu
+  newregref.child(phoneNumber).once('value')
   .then((snapshot) => {
     var numbers = snapshot.val();
    if(numbers===null){
@@ -1301,6 +1301,34 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
   });
     
   }
+  */
+
+  else if (text === "2" && language === "English") {
+    const processRegistration = async () => {
+      try {
+        const snapshot = await newregref.child(phoneNumber).once('value');
+        const numbers = snapshot.val();
+  
+        if (numbers === null) {
+          response = `END your number ${phoneNumber} is not yet registered`;
+        } else {
+          response = `CON Mlimi Main Manu
+            1. Advesories
+            2. Weather reports
+            3. Marketing
+            4. Account
+            5. help`;
+        }
+      } catch (error) {
+        console.error('Error occurred:', error);
+      }
+    };
+  
+    // Call the async function
+    processRegistration();
+  }
+  
+  
 
   //...........................................chichewa main menu..............................................
   else if (text == "2" && language == "Chichewa") {
