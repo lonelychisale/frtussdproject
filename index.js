@@ -454,7 +454,7 @@ else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[6]
 }
 
 
-else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[7]!=='' && language =="English"){
+else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[7]!=='' && dataarray[2]!='0' && language =="English"){
 
   farmersagerange = ['0-18','19-25','26-40','41-60','60 above']
 
@@ -657,7 +657,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dat
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
-  1.${secregdstrictindex}
+  1.${Registratindistrict}
   2.${RegistrationTA}
   3.${RegistratinGVH }
   4.${Registratinfarnvariety}
