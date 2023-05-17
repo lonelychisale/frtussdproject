@@ -789,7 +789,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
 */
   
       response = `END END your number ${phoneNumber} have been successfully registered
-      1.${Registratindistrict}
+      1.${Registratindisrict}
       2.${RegistrationTA}
       3.${RegistratinGVH }
       4.${Registratinfarnvariety}
