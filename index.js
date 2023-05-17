@@ -487,7 +487,7 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 }
   
-else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && language =="English") {
+else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && dataarray[2]!='0' && language =="English") {
 
   regdstrictindex          =`${dataarray[2]}`
   regvarietyindex          =`${--dataarray[5]}`
