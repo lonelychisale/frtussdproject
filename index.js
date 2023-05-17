@@ -889,7 +889,7 @@ else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[4]!='' && language == "Chichewa"){
 
-  chichewafarmersvariety = ['Maize','Beans','soya Beans']
+  farmersvariety = ['Maize','Beans','soya Beans']
 
   response= `CON sankhani zomwe mumalima
   1. chimanga
@@ -907,7 +907,7 @@ else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1'   && dataarra
 
 else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[6]!='' && language == "Chichewa"){
   
-  chichewafarmersgender = ['Male','Female']
+  farmersgender = ['Male','Female']
 
   response = `CON sankhani jenda
   1.Male
@@ -918,7 +918,7 @@ else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]
 
 else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[7]!=='' && language == "Chichewa"){
   
-  chichewafarmersagerange = ['0-18','19-25','26-40','41-60','60 above']
+  farmersagerange = ['0-18','19-25','26-40','41-60','60 above']
 
   response = `CON sankhani zaka zanu
   1. 0-18
@@ -939,7 +939,7 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[9]!='' && language == "Chichewa"){
   
-  chichewafarmerposition = ['chairman/chairlady','secretary','tresurer','member']
+  farmerposition = ['chairman/chairlady','secretary','tresurer','member']
 
   response= `CON sankhani udindo wanu
   1. chairman/chairlady 
@@ -959,7 +959,7 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[2]!='0' && data
   regpostionindex          =`${--dataarray[10]}`
 
 
-  Registratindisrict        = chichewaregistrationdistricts[regdstrictindex]
+  Registratindisrict        = registrationdistricts[regdstrictindex]
   RegistrationTA            = `${dataarray[3]}`
   RegistratinGVH            = `${dataarray[4]}`
   Registratinfarnvariety    =farmersvariety[regvarietyindex]
