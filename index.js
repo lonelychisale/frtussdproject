@@ -691,7 +691,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
   
   else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[6]!='' && language =="English"){
     
-    farmersvariety = ['chimanga','nyemba','soya']
+    farmersvariety = ['Maize','Beans','soya Beans']
   
     response= `CON Enter the Crop Variate of Your Farming 
     1. Maize
