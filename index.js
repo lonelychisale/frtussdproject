@@ -506,7 +506,7 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && data
   Registrationgroupname     =`${dataarray[9]}`
   Registrationfarmerpositon =farmerposition[regpostionindex]
   Registrationphonenumber   =phoneNumber
- /*
+ 
   newregref.child(phoneNumber).set({
     userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
@@ -519,7 +519,7 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && data
     userpostion:Registrationfarmerpositon,
     userPhonenumber:phoneNumber
 
-  })*/
+  })
 
   response = `END END your number ${phoneNumber} have been successfully registered
   1.${Registratindistrict}
@@ -640,7 +640,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
   Registrationphonenumber   =phoneNumber
 
   
-/*
+
   newregref.child(phoneNumber).set({
     userdistrict:Registratindistrict,
     userTA:RegistrationTA,
@@ -655,7 +655,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
 
   })
   
-  */
+  
 
 
   response = `END END your number ${phoneNumber} have been successfully registered
@@ -772,7 +772,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
     Registrationphonenumber   =phoneNumber
 
 
-/*
+
     newregref.child(phoneNumber).set({
       userdistrict:Registratindisrict  ,
       userTA:RegistrationTA,
@@ -786,7 +786,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
       userPhonenumber:phoneNumber
   
     })
-*/
+
   
       response = `END END your number ${phoneNumber} have been successfully registered
       1.${Registratindisrict}
