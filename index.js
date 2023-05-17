@@ -530,6 +530,8 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && data
   6.${Registrationfarmerpositon}
   7.${phoneNumber}
   8.${Registrationgender}
+  9.${Registrationagerange }
+  
   `;
 
   } 
