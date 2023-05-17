@@ -539,21 +539,21 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && data
 
   //....................if clicked first next on districts...................................................
     
-else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[3]!='' &&  language =="English"){
+else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[3]!='0' && dataarray[3]!='' &&  language =="English"){
 
   response= `CON Enter Name Of a T/A(Traditional Authority)
   `
 }
 
 
-else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[4]!='' && language =="English"){
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[3]!='0' && dataarray[4]!='' && language =="English"){
 
   response= `CON Enter the NAme of Group Village Head  `
 
 }
 
 
-else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[5]!='' && language =="English"){
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[3]!='0' && dataarray[5]!='' && language =="English"){
   
   farmersvariety = ['Maize','Beans','soya Beans']
 
@@ -565,13 +565,13 @@ else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 }
 
 
-else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0'  && dataarray[6]!='' && language =="English"){
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[3]!='0'  && dataarray[6]!='' && language =="English"){
 
   response= `CON Enter Your Full Name `
   
 }
 
-else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[7]!='' && language =="English"){
+else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[3]!='0' && dataarray[7]!='' && language =="English"){
   
   farmersgender = ['Male','Female']
 
@@ -582,7 +582,7 @@ else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]
 }
 
 
-else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[8]!=='' && language =="English"){
+else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[3]!='0' && dataarray[8]!=='' && language =="English"){
 
   farmersagerange = ['0-18','19-25','26-40','41-60','60 above']
 
@@ -596,14 +596,14 @@ else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]
 }
 
 
-else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[9]!='' && language =="English"){
+else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[3]!='0' && dataarray[9]!='' && language =="English"){
 
   response= `CON Enter Your GroupName `
   
 }
 
 
-else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[10]!='' && language =="English"){
+else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='0' && dataarray[3]!='0' && dataarray[10]!='' && language =="English"){
   
   farmerposition = ['chairman/chairlady','secretary','tresurer','member']
 
@@ -616,7 +616,7 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 }
   
-else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' &&  dataarray[11]!='' && language =="English") {
+else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && dataarray[3]!='0' &&  dataarray[11]!='' && language =="English") {
   secregdstrictindex          =`${--dataarray[3]}`
   secregvarietyindex          =`${--dataarray[6]}`
   secregenderindex            =`${--dataarray[8]}`
