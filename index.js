@@ -873,21 +873,21 @@ else if(text=='1*1*0*0' && language == "Chichewa"){
 }
 
   
-else if(dataarraysize==3 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='' && language == "Chichewa"){
+else if(dataarraysize==3 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='0'  && language == "Chichewa"){
 
   response= `CON lembani zina la a T/A(Traditional Authority)
   `
 }
 
 
-else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]!='' && language == "Chichewa"){
+else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[3]!='' && language == "Chichewa"){
 
   response= `CON lembani zina la a  Group Village Head anu  `
 
 }
 
 
-else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[4]!='' && language == "Chichewa"){
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[4]!='' && language == "Chichewa"){
 
   chichewafarmersvariety = ['Maize','Beans','soya Beans']
 
@@ -899,13 +899,13 @@ else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 }
 
 
-else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1'  && dataarray[5]!='' && language == "Chichewa"){
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1'   && dataarray[2]!='0'  && dataarray[5]!='' && language == "Chichewa"){
 
   response= `CON lembani zina lanu lonse `
   
 }
 
-else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[6]!='' && language == "Chichewa"){
+else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[6]!='' && language == "Chichewa"){
   
   chichewafarmersgender = ['Male','Female']
 
@@ -916,7 +916,7 @@ else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[6]
 }
 
 
-else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[7]!=='' && language == "Chichewa"){
+else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[7]!=='' && language == "Chichewa"){
   
   chichewafarmersagerange = ['0-18','19-25','26-40','41-60','60 above']
 
@@ -930,14 +930,14 @@ else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[7]
 }
    
 
-else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[8]!='' && language == "Chichewa"){
+else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[8]!='' && language == "Chichewa"){
 
   response= `CON Lembani zina la group yanu `
   
 }
 
 
-else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[9]!='' && language == "Chichewa"){
+else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[9]!='' && language == "Chichewa"){
   
   chichewafarmerposition = ['chairman/chairlady','secretary','tresurer','member']
 
@@ -949,7 +949,7 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 }
   
-else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && language == "Chichewa") {
+else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[2]!='0' && dataarray[10]!='' && language == "Chichewa") {
 
  
   regdstrictindex          =`${--dataarray[2]}`
@@ -970,7 +970,7 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
   Registrationfarmerpositon =farmerposition[regpostionindex]
   Registrationphonenumber   =phoneNumber
 
-/*
+
   newregref.child(phoneNumber).set({
     userdistrict:Registratindisrict  ,
     userTA:RegistrationTA,
@@ -985,7 +985,6 @@ else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && lang
 
   })
 
-  */
     response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
    `;
     
