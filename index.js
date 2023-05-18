@@ -1324,9 +1324,6 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
           4. Account
           5. Help`;
         }
-  
-        // Send the USSD response back to the user
-        res.send(response);
       })
       .catch((error) => {
         // Handle any errors that occurred during the database query
@@ -1334,7 +1331,6 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
   
         // Send an error response to the user
         response = 'END An error occurred. Please try again later.';
-        res.send(response);
       });
   }
   
