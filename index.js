@@ -1281,12 +1281,31 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
 
 //.........................................main menu in english.........................................................
   else if (text == "2" && language =="English") {
+
+
+ newregref.child('+265995434579').once('value')
+  .then((snapshot) => {
+
+    var numbers = snapshot.val();
+
+   if(numbers===null){
+
+    response = `END your number is not yet registered`
+
+   }
+   else{
+
     response = `CON Mlimi Main Manu
 		1. Advesories
 		2. Weather reports
 		3. Marketing
 		4. Account
 		5. help`;
+    
+   }
+
+  });
+   
   }
 
   //...........................................chichewa main menu..............................................
