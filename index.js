@@ -1317,28 +1317,14 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
   */
 
   if (text == "2" && language == "English") {
-    newregref.child('+265995434579').once('value')
-      .then((snapshot) => {
-        var numbers = snapshot.val();
-  
-        if (numbers === null) {
-          response = 'END Your number is not yet registered';
-        } else {
+   
           response = `CON Mlimi Main Menu
           1. Advisories
           2. Weather reports
           3. Marketing
           4. Account
           5. Help`;
-        }
-      })
-      .catch((error) => {
-        // Handle any errors that occurred during the database query
-        console.error(error);
-  
-        // Send an error response to the user
-        response = 'END An error occurred. Please try again later.';
-      });
+       
   }
   
 
