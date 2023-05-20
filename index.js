@@ -420,7 +420,7 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
 
 
-else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='' && dataarray[10]!='' && language =="English"){
+else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='0' && dataarray[10]!='' && language =="English"){
   
   farmerposition = ['chairman/chairlady','secretary','tresurer','member']
 
@@ -576,7 +576,7 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
   Registratindistrict  = registrationdistricts[secregdstrictindex]
   RegistrationTA            = `${dataarray[5]}`
   RegistratinGVH            = `${dataarray[6]}`
-  Registratinfarnvariety    =farmersvariety[secregvarietyindex]
+  Registratinfarnvariety    = farmersvariety [secregvarietyindex]
   Registrationfullname      =`${dataarray[8]}`
   Registrationgender        =farmersgender[secregenderindex]
   Registrationagerange      =farmersagerange[secregageindex]
