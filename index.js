@@ -379,7 +379,14 @@ mainmenuselector = ['1','2','3']
 
    
   else if(text=='1*1' && language =="English"){
+    
 
+    response = `CON choose registration category
+    1.farmer
+    2.farm products buyer`
+  }
+
+  else if(text == '1*1*1'){
     response=`CON Select your District
     1. Salima
     2. Zomba
@@ -395,7 +402,7 @@ mainmenuselector = ['1','2','3']
 }
 
 
-else if(text=='1*1*0' && language =="English"){
+else if(text=='1*1*1*0' && language =="English"){
 
   response=`CON Sankhani Boma
   10. Machinga
@@ -414,7 +421,7 @@ else if(text=='1*1*0' && language =="English"){
 
 }
 
-else if(text=='1*1*0*0' && language =="English"){
+else if(text=='1*1*1*0*0' && language =="English"){
 
   
 
@@ -429,21 +436,21 @@ else if(text=='1*1*0*0' && language =="English"){
 }
 
   
-else if(dataarraysize==3 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='0' &&  language =="English"){
+else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='' &&  language =="English"){
 
   response= `CON Enter Name Of a T/A(Traditional Authority)
   `
 }
 
 
-else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[3]!='' && language =="English"){
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='' && dataarray[4]!='' && language =="English"){
 
   response= `CON Enter the NAme of Group Village Head  `
 
 }
 
 
-else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[4]!='' && language =="English"){
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1'&& dataarray[2]=='1' && dataarray[3]!='' && dataarray[5]!='' && language =="English"){
   
   farmersvariety = ['Maize','Beans','soya Beans']
 
@@ -455,13 +462,13 @@ else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 }
 
 
-else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1'   && dataarray[2]!='0'  && dataarray[5]!='' && language =="English"){
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1'   && dataarray[2]=='1' && dataarray[3]!=''  && dataarray[6]!='' && language =="English"){
 
   response= `CON Enter Your Full Name `
   
 }
 
-else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1'   && dataarray[2]!='0' && dataarray[6]!='' && language =="English"){
+else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1'  && dataarray[2]=='1' && dataarray[3]!='' && dataarray[7]!='' && language =="English"){
   
   farmersgender = ['Male','Female']
 
@@ -472,7 +479,7 @@ else if(dataarraysize==7 && dataarray[0]==1 && dataarray[1]=='1'   && dataarray[
 }
 
 
-else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[7]!=='' && dataarray[2]!='0' && language =="English"){
+else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='' && dataarray[8]!=='' && dataarray[2]!='0' && language =="English"){
 
   farmersagerange = ['0-18','19-25','26-40','41-60','60 above']
 
@@ -486,14 +493,14 @@ else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]
 }
 
 
-else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[8]!='' && language =="English"){
+else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='' && dataarray[9]!='' && language =="English"){
 
   response= `CON Enter Your GroupName `
   
 }
 
 
-else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]!='0' && dataarray[9]!='' && language =="English"){
+else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='' && dataarray[10]!='' && language =="English"){
   
   farmerposition = ['chairman/chairlady','secretary','tresurer','member']
 
@@ -505,23 +512,23 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 }
   
-else if (dataarraysize == 11 && dataarray[0] == "1" && dataarray[10]!='' && dataarray[2]!='0' && language =="English") {
+else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && dataarray[2]=='1' && dataarray[3]!='' && language =="English") {
 
-  regdstrictindex          =`${dataarray[2]}`
-  regvarietyindex          =`${--dataarray[5]}`
-  regenderindex            =`${--dataarray[7]}`
-  regageindex              =`${--dataarray[8]}`
-  regpostionindex          =`${--dataarray[10]}`
+  regdstrictindex          =`${dataarray[3]}`
+  regvarietyindex          =`${--dataarray[6]}`
+  regenderindex            =`${--dataarray[8]}`
+  regageindex              =`${--dataarray[9]}`
+  regpostionindex          =`${--dataarray[11]}`
 
 
   Registratindistrict        = registrationdistricts[regdstrictindex]
-  RegistrationTA            = `${dataarray[3]}`
-  RegistratinGVH            = `${dataarray[4]}`
+  RegistrationTA            = `${dataarray[4]}`
+  RegistratinGVH            = `${dataarray[5]}`
   Registratinfarnvariety    =farmersvariety[regvarietyindex]
-  Registrationfullname      =`${dataarray[6]}`
+  Registrationfullname      =`${dataarray[7]}`
   Registrationgender        =farmersgender[regenderindex]
   Registrationagerange      =farmersagerange[regageindex]
-  Registrationgroupname     =`${dataarray[9]}`
+  Registrationgroupname     =`${dataarray[10]}`
   Registrationfarmerpositon =farmerposition[regpostionindex]
   Registrationphonenumber   =phoneNumber
  
