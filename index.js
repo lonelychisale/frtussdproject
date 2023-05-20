@@ -139,34 +139,6 @@ registrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre
 'balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi',
 'nsanje','neno','karonga','chitipa','mulanje','thyolo']
 
-
-//console.log(districtsarray[19])
-  /*Read the contents of the JSON file
-  const data = fs.readFileSync('language.json');
-  const obj = JSON.parse(data);
-
-  const newLanguage = {
-    name: 'english',
-    phonenumber: '0996641385'
-  };
- //obj.languages.push(newLanguage);
-
-  // Update the object based on the user's input
-  const languageToUpdate = obj.languages.find(language => language.phonenumber === '08839578452')
-  if (languageToUpdate) {
-    languageToUpdate.name = languagename;
-
-    // Convert the modified object back to JSON format
-    const json = JSON.stringify(obj);
-
-    // Write the updated JSON data back to the file
-    fs.writeFile('language.json', json);
-  console.log('data updated')
-  } else {
-   console.log('data not upadated')
-  }
-
-*/
 // Read the existing JSON data from the file
 const languagejsonfile = fs.readFileSync('language.json');
 const obj = JSON.parse(languagejsonfile);
@@ -195,61 +167,9 @@ if (!existingLanguage) {
 }
 
 
- /*putting data to a json file
- function insertinglanguagejsn(){
-
-  // Read the existing JSON data from the file
-  const languagejsonfile = fs.readFileSync('language.json');
-  const obj = JSON.parse(languagejsonfile);
-  
-  // Check if the phonenumber already exists in the "languages" array
-  const existingLanguage = obj.languages.find(language => language.phonenumber === '08839578452');
-  
-  if (!existingLanguage) {
-    // Add a new object to the "languages" array
-    const newLanguage = {
-      name: 'english',
-      phonenumber: '08839578452'
-    };
-    obj.languages.push(newLanguage);
-  
-    // Convert the modified object back to JSON format
-    const json = JSON.stringify(obj);
-  
-    // Write the updated JSON data back to the file
-    fs.writeFileSync('language.json', json);
-    console.log('data inserted')
-  } 
-  
-}
-insertinglanguagejsn()
 
 
 
-const fs = require('fs');
-
-// Read the existing JSON data from the file
-const rawData = fs.readFileSync('data.json');
-const obj = JSON.parse(rawData);
-
-// Find the language object with phonenumber "0996691384"
-const languageToUpdate = obj.languages.find(language => language.phonenumber === '0996691384');
-
-// Update the "name" property for the found language object
-if (languageToUpdate) {
-  languageToUpdate.name = 'french-updated';
-}
-
-// Convert the modified object back to JSON format
-const json = JSON.stringify(obj);
-
-// Write the updated JSON data back to the file
-fs.writeFileSync('data.json', json);
-
-
-
-
-*/
 
 
 const phoneNumber = "0996691384";
@@ -1287,20 +1207,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
  
 
 //.........................................main menu in english.........................................................
- /* else if (text == "2" && language =="English") {
-
-
- newregref.child('+265995434579').once('value')
-  .then((snapshot) => {
-
-    var numbers = snapshot.val();
-
-   if(numbers===null){
-
-    response = `END your number is not yet registered`
-
-   }
-   else{
+  else if (text == "2" && language =="English") {
 
     response = `CON Mlimi Main Manu
 		1. Advesories
@@ -1310,22 +1217,6 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='0' && data
 		5. help`;
     
    }
-
-  });
-   
-  }
-  */
-
-  if (text == "2" && language == "English") {
-   
-          response = `CON Mlimi Main Menu
-          1. Advisories
-          2. Weather reports
-          3. Marketing
-          4. Account
-          5. Help`;
-       
-  }
   
 
   //...........................................chichewa main menu..............................................
