@@ -432,7 +432,7 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 }
   
-else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && dataarray[2]=='1' && dataarray[3]!='' && language =="English") {
+else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && dataarray[2]=='1' && dataarray[3]!='0' && language =="English") {
 
   regdstrictindex          =`${dataarray[3]}`
   regvarietyindex          =`${--dataarray[6]}`
@@ -466,7 +466,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
 
   })
 
-  response = `END END your number ${phoneNumber} have been successfully registered
+  response = `END Your number ${phoneNumber} have been successfully registered
   1.${Registratindistrict}
   2.${RegistrationTA}
   3.${RegistratinGVH}
@@ -603,7 +603,7 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
   
 
 
-  response = `END END your number ${phoneNumber} have been successfully registered
+  response = `END  Your number ${phoneNumber} have been successfully registered
   1.${Registratindistrict}
   2.${RegistrationTA}
   3.${RegistratinGVH }
@@ -620,21 +620,21 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
 
   //.........................if the second next is clicked............................................
    
-  else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[4]!='' &&  language =="English"){
+  else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[4]=='0' && dataarray[5]!='' &&  language =="English"){
 
     response= `CON Enter Name Of a T/A(Traditional Authority)
     `
   }
   
   
-  else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[5]!='' && language =="English"){
+  else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[4]=='0' && dataarray[6]!='' && language =="English"){
   
     response= `CON Enter the NAme of Group Village Head  `
   
   }
   
   
-  else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[6]!='' && language =="English"){
+  else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[4]=='0' && dataarray[7]!='' && language =="English"){
     
     farmersvariety = ['Maize','Beans','soya Beans']
   
@@ -646,13 +646,13 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
   }
   
   
-  else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[7]!='' && language =="English"){
+  else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[4]=='0' && dataarray[8]!='' && language =="English"){
   
     response= `CON Enter Your Full Name `
     
   }
   
-  else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[8]!='' && language =="English"){
+  else if(dataarraysize==10 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[4]=='0' && dataarray[9]!='' && language =="English"){
     
     farmersgender = ['Male','Female']
   
@@ -663,7 +663,7 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
   }
   
   
-  else if(dataarraysize==10 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[9]!=='' && language =="English"){
+  else if(dataarraysize==11 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[4]=='0' && dataarray[10]!=='' && language =="English"){
   
     farmersagerange = ['0-18','19-25','26-40','41-60','60 above']
   
@@ -677,14 +677,14 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
   }
   
   
-  else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[10]!='' && language =="English"){
+  else if(dataarraysize==12 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[4]=='0' && dataarray[11]!='' && language =="English"){
   
     response= `CON Enter Your GroupName `
     
   }
     
   
-  else if(dataarraysize==12 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[3]=='0' && dataarray[11]!='' && language =="English"){
+  else if(dataarraysize==13 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[4]=='0' && dataarray[12]!='' && language =="English"){
     
     farmerposition = ['chairman/chairlady','secretary','tresurer','member']
   
@@ -696,23 +696,23 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
     
   }
     
-  else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
+  else if (dataarraysize == 14 && dataarray[0] == "1" && dataarray[2]=='1' && dataarray[4]=='0' &&  dataarray[13]!='' && language =="English") {
 
-    lastregdstrictindex          =`${--dataarray[4]}`
-    lastregvarietyindex          =`${--dataarray[7]}`
-    lastregenderindex            =`${--dataarray[9]}`
-    lastregageindex              =`${--dataarray[10]}`
-    lastregpostionindex          =`${--dataarray[12]}`
+    lastregdstrictindex          =`${--dataarray[5]}`
+    lastregvarietyindex          =`${--dataarray[8]}`
+    lastregenderindex            =`${--dataarray[10]}`
+    lastregageindex              =`${--dataarray[11]}`
+    lastregpostionindex          =`${--dataarray[13]}`
   
   
     Registratindisrict        = registrationdistricts[lastregdstrictindex]
-    RegistrationTA            = `${dataarray[5]}`
-    RegistratinGVH            = `${dataarray[6]}`
+    RegistrationTA            = `${dataarray[6]}`
+    RegistratinGVH            = `${dataarray[7]}`
     Registratinfarnvariety    =farmersvariety[lastregvarietyindex]
-    Registrationfullname      =`${dataarray[8]}`
+    Registrationfullname      =`${dataarray[9]}`
     Registrationgender        =farmersgender[lastregenderindex]
     Registrationagerange      =farmersagerange[lastregageindex]
-    Registrationgroupname     =`${dataarray[11]}`
+    Registrationgroupname     =`${dataarray[12]}`
     Registrationfarmerpositon =farmerposition[lastregpostionindex]
     Registrationphonenumber   =phoneNumber
 
