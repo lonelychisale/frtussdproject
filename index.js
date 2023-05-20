@@ -562,11 +562,11 @@ else if(dataarraysize==12 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
   
 else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]!='0' &&  dataarray[12]!='' && language =="English") {
-  secregdstrictindex          =`${--dataarray[3]}`
-  secregvarietyindex          =`${--dataarray[6]}`
-  secregenderindex            =`${--dataarray[8]}`
-  secregageindex              =`${--dataarray[9]}`
-  secregpostionindex          =`${--dataarray[11]}`
+  secregdstrictindex          =`${--dataarray[4]}`
+  secregvarietyindex          =`${--dataarray[7]}`
+  secregenderindex            =`${--dataarray[9]}`
+  secregageindex              =`${--dataarray[10]}`
+  secregpostionindex          =`${--dataarray[12]}`
  
 
   console.log(` this is under second level of ditricts ${secregdstrictindex}`)
@@ -574,13 +574,13 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
 
 
   Registratindistrict  = registrationdistricts[secregdstrictindex]
-  RegistrationTA            = `${dataarray[4]}`
-  RegistratinGVH            = `${dataarray[5]}`
+  RegistrationTA            = `${dataarray[5]}`
+  RegistratinGVH            = `${dataarray[6]}`
   Registratinfarnvariety    =farmersvariety[secregvarietyindex]
-  Registrationfullname      =`${dataarray[7]}`
+  Registrationfullname      =`${dataarray[8]}`
   Registrationgender        =farmersgender[secregenderindex]
   Registrationagerange      =farmersagerange[secregageindex]
-  Registrationgroupname     =`${dataarray[10]}`
+  Registrationgroupname     =`${dataarray[11]}`
   Registrationfarmerpositon =farmerposition[secregpostionindex]
   Registrationphonenumber   =phoneNumber
 
