@@ -306,7 +306,7 @@ mainmenuselector = ['1','2','3']
     2.buyer`
   }
 
-  else if(text == '1*1*1'){
+  else if(text == '1*1*1' && language =="English"){
     response=`CON Select your District
     1. Salima
     2. Zomba
