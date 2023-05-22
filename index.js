@@ -488,7 +488,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
 
   //....................if clicked first next on districts...................................................
     
-else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0'  && dataarray[4]!='' &&  language =="English"){
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0'  && dataarray[4]!='0' &&  language =="English"){
 
   response= `CON Enter Name Of a T/A(Traditional Authority)
   `
@@ -565,7 +565,7 @@ else if(dataarraysize==12 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 }
   
-else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
+else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[2]=='1' && dataarray[3]=='0'  && dataarray[4]!='0' && dataarray[12]!='' && language =="English") {
  
   secregcategory              =`${--dataarray[2]}`
   secregdstrictindex          =`${--dataarray[4]}`
