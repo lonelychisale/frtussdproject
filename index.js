@@ -1430,6 +1430,50 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 }
 
 
+// .................seller if dataarray[4]=='0'...................................
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && language=="English"){
+
+  sellercategory = ['individual','organisation']
+
+  response =`CON select buyer category
+  1.individual
+  2.organisation
+  `
+}
+
+//......                 if the seller is an individual................................
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0'  && dataarray[5]!='0' & dataarray[6]=="1" && language=='English'){
+ 
+  response = `CON Enter your name`
+
+}
+
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0'  && dataarray[5]!='0' & dataarray[6]=="1" && dataarray[7]!='' && language=='English'){
+  
+  response = `END you have successfully registered as a buyer`
+
+}
+
+
+
+//..........if the seller is an organisation........................................
+else if (dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0'  && dataarray[5]!='0' & dataarray[6]=="2" && language=="English"){
+
+  response = ` CON Enter the name of the organisation`
+
+}
+
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0'  && dataarray[5]!='0' & dataarray[6]=="2" && dataarray[7]!='' && language=="English"){
+
+  response = ` CON Enter your full name
+  `
+}
+
+else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' &&  dataarray[4]=='0'  && dataarray[5]!='0' & dataarray[6]=="2" && dataarray[8]!='' && language=="English"){
+
+  response = ` END your organisation have sucessfully registered as a buyer
+  `
+}
 
 //........................Markerting registration in chichewa
 
@@ -1442,6 +1486,8 @@ else if(text == '1*1*2' && language == "Chichewa"){
   `
 
 }
+
+
 
 //................seller chichewa registration...................................................
 else if(text == '1*1*2*1' && language == "Chichewa"){
@@ -1601,6 +1647,7 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   response = `END you have successfully registered as a buyer`
 
 }
+
 
 
 
