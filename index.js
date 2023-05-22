@@ -303,7 +303,7 @@ mainmenuselector = ['1','2','3']
    registrationcategory = ['farmer','buyer']
     response = `CON choose registration category
     1.farmer
-    2.buyer`
+    2.Marketing`
   }
 
   else if(text == '1*1*1' && language =="English"){
@@ -777,7 +777,7 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
     registrationcategory = ['farmer','buyer']
      response = `CON sankhani mtundu lolembetsa
      1.Mlimi
-     2.Ogula zokolora`
+     2.Msika`
    }
 
   else if(text=='1*1*1' && language == "Chichewa"){
@@ -1181,7 +1181,7 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
     
   }
     
-  else if (dataarraysize == 14 && dataarray[0] == "1" && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]=='0' &&  dataarray[13]!='' && language == "Chichewa") {
+  else if (dataarraysize == 14 && dataarray[0] == "1" && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]=='0' &&  dataarray[13]!='' && language == "Chichewa") {
 
     lastregcategory              =`${--dataarray[2]}`
     lastregdstrictindex          =`${--dataarray[5]}`
@@ -1238,9 +1238,392 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
   
    
 
+//..............................Marketing registration in english............................
+else if(text == '1*1*2' && language =="English"){
+
+  response = `CON select Marketing user category
+  1. Products Seller
+  2. Products Buyer
+              
+  `
+
+}
+
+//................seller english registration...................................................
+else if(text == '1*1*2*1' && language =="English"){
+
+  response = ` CON select District
+  1. Salima
+  2. Zomba
+  3. Mulanje
+  4. Nchinji
+  5. Mzimba
+  6. Blantyre
+  7. Lilongwe
+  8. kasungu
+  9. Balaka
+  0. Next
+  `
+}
+
+
+else if(text == '1*1*2*1*0' && language =="English"){
+
+ response = ` CON select District
+  10. Machinga
+  11. Rumphi
+  12. Nkhatabay
+  13. Dwangwa
+  14. nkhotakota
+  15. chirazulu
+  16. Ntchitsi
+  17. Mangochi
+  18. Nsanje
+  19. Neno
+  0. Next
+ `
+ 
+}
+
+else if(text == '1*1*2*1*0*0' && language =="English"){
+
+  response = ` CON select District
+  20. Karonga
+  21. Chitipa
+  22. Mulanje
+  23. thyolo
+  `
+}
+
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && language=="English"){
+
+  sellercategory = ['individual','organisation']
+
+  response =`CON select seller category
+  1.individual
+  2.organisation
+  `
+}
+
+//......                 if the seller is an individual................................
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='1' && language=='English'){
+ 
+  response = `CON Enter your name`
+
+}
+
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='1' && dataarray[6]!='' && language=='English'){
   
-     
+  response = `END you have successfully register`
+
+}
+
+
+
+//..........if the seller is an organisation........................................
+else if (dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='2' && language=="English"){
+
+  response = ` CON Enter the name of the organisation`
+
+}
+
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[6]!='' && language=="English"){
+
+  response = ` CON Enter your full name
+  `
+}
+
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[7]!='' && language=="English"){
+
+  response = ` END you have sucessfully registered
+  `
+}
+
+//..................................product buyer registration.......................
+else if(text == '1*1*2*2' && language =="English"){
+
+  response = ` CON select District
+  1. Salima
+  2. Zomba
+  3. Mulanje
+  4. Nchinji
+  5. Mzimba
+  6. Blantyre
+  7. Lilongwe
+  8. kasungu
+  9. Balaka
+  0. Next
+  `
+}
+
+
+else if(text == '1*1*2*2*0' && language =="English"){
+
+ response = ` CON select District
+  10. Machinga
+  11. Rumphi
+  12. Nkhatabay
+  13. Dwangwa
+  14. nkhotakota
+  15. chirazulu
+  16. Ntchitsi
+  17. Mangochi
+  18. Nsanje
+  19. Neno
+  0. Next
+ `
+ 
+}
+
+else if(text == '1*1*2*2*0*0' && language =="English"){
+
+  response = ` CON select District
+  20. Karonga
+  21. Chitipa
+  22. Mulanje
+  23. thyolo
+  `
+}
+
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && language=="English"){
+
+  sellercategory = ['individual','organisation']
+
+  response =`CON select buyer category
+  1.individual
+  2.organisation
+  `
+}
+
+//......                 if the seller is an individual................................
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='1' && language=='English'){
+ 
+  response = `CON Enter your name`
+
+}
+
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='1' && dataarray[6]!='' && language=='English'){
   
+  response = `END you have successfully registered as a buyer`
+
+}
+
+
+
+//..........if the seller is an organisation........................................
+else if (dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='2' && language=="English"){
+
+  response = ` CON Enter the name of the organisation`
+
+}
+
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[6]!='' && language=="English"){
+
+  response = ` CON Enter your full name
+  `
+}
+
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[7]!='' && language=="English"){
+
+  response = ` END your organisation have sucessfully registered as a buyer
+  `
+}
+
+
+
+//........................Markerting registration in chichewa
+
+else if(text == '1*1*2' && language == "Chichewa"){
+
+  response = `CON select Marketing user category
+  1. Products Seller
+  2. Products Buyer
+              
+  `
+
+}
+
+//................seller chichewa registration...................................................
+else if(text == '1*1*2*1' && language == "Chichewa"){
+
+  response = ` CON select District
+  1. Salima
+  2. Zomba
+  3. Mulanje
+  4. Nchinji
+  5. Mzimba
+  6. Blantyre
+  7. Lilongwe
+  8. kasungu
+  9. Balaka
+  0. Next
+  `
+}
+
+
+else if(text == '1*1*2*1*0' && language == "Chichewa"){
+
+ response = ` CON select District
+  10. Machinga
+  11. Rumphi
+  12. Nkhatabay
+  13. Dwangwa
+  14. nkhotakota
+  15. chirazulu
+  16. Ntchitsi
+  17. Mangochi
+  18. Nsanje
+  19. Neno
+  0. Next
+ `
+ 
+}
+
+else if(text == '1*1*2*1*0*0' && language == "Chichewa"){
+
+  response = ` CON select District
+  20. Karonga
+  21. Chitipa
+  22. Mulanje
+  23. thyolo
+  `
+}
+
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && language == "Chichewa"){
+
+  sellercategory = ['individual','organisation']
+
+  response =`CON select seller category
+  1.individual
+  2.organisation
+  `
+}
+
+//......                 if the seller is an individual................................
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='1' && language == "Chichewa"){
+ 
+  response = `CON Enter your name`
+
+}
+
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='1' && dataarray[6]!='' && language == "Chichewa"){
+  
+  response = `END you have successfully register`
+
+}
+
+
+
+//..........if the seller is an organisation........................................
+else if (dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='2' && language == "Chichewa"){
+
+  response = ` CON Enter the name of the organisation`
+
+}
+
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[6]!='' && language == "Chichewa"){
+
+  response = ` CON Enter your full name
+  `
+}
+
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[7]!='' && language == "Chichewa"){
+
+  response = ` END you have sucessfully registered
+  `
+}
+
+//..................................product buyer registration.......................
+else if(text == '1*1*2*2' && language == "Chichewa"){
+
+  response = ` CON select District
+  1. Salima
+  2. Zomba
+  3. Mulanje
+  4. Nchinji
+  5. Mzimba
+  6. Blantyre
+  7. Lilongwe
+  8. kasungu
+  9. Balaka
+  0. Next
+  `
+}
+
+
+else if(text == '1*1*2*2*0' && language == "Chichewa"){
+
+ response = ` CON select District
+  10. Machinga
+  11. Rumphi
+  12. Nkhatabay
+  13. Dwangwa
+  14. nkhotakota
+  15. chirazulu
+  16. Ntchitsi
+  17. Mangochi
+  18. Nsanje
+  19. Neno
+  0. Next
+ `
+ 
+}
+
+else if(text == '1*1*2*2*0*0' && language == "Chichewa"){
+
+  response = ` CON select District
+  20. Karonga
+  21. Chitipa
+  22. Mulanje
+  23. thyolo
+  `
+}
+
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && language == "Chichewa"){
+
+  sellercategory = ['individual','organisation']
+
+  response =`CON select buyer category
+  1.individual
+  2.organisation
+  `
+}
+
+//......                 if the seller is an individual................................
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='1' && language == "Chichewa"){
+ 
+  response = `CON Enter your name`
+
+}
+
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='1' && dataarray[6]!='' && language == "Chichewa"){
+  
+  response = `END you have successfully registered as a buyer`
+
+}
+
+
+
+//..........if the seller is an organisation........................................
+else if (dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='2' && language == "Chichewa"){
+
+  response = ` CON Enter the name of the organisation`
+
+}
+
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[6]!='' && language == "Chichewa"){
+
+  response = ` CON Enter your full name
+  `
+}
+
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[7]!='' && language == "Chichewa"){
+
+  response = ` END your organisation have sucessfully registered as a buyer
+  `
+}
+
+
   
 //.........................................main menu in english.........................................................
   else if (text == "2" && language =="English") {
