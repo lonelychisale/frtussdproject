@@ -324,7 +324,7 @@ mainmenuselector = ['1','2','3']
 
 else if(text=='1*1*1*0' && language =="English"){
 
-  response=`CON Sankhani Boma
+  response=`CON Select your District
   10. Machinga
   11. Rumphi
   12. Nkhatabay
@@ -345,7 +345,7 @@ else if(text=='1*1*1*0*0' && language =="English"){
 
   
 
-  response=`CON Sankhani Boma
+  response=`CON Select your District
   20. Karonga
   21. Chitipa
   22. Mulanje
@@ -433,15 +433,15 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
   
 else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && dataarray[2]=='1' && dataarray[3]!='0' && language =="English") {
+  regcategory              =`${--dataarray[2]}`
+  regdstrictindex           =`${dataarray[3]}`
+  regvarietyindex           =`${--dataarray[6]}`
+  regenderindex             =`${--dataarray[8]}`
+  regageindex               =`${--dataarray[9]}`
+  regpostionindex           =`${--dataarray[11]}`
 
-  regdstrictindex          =`${dataarray[3]}`
-  regvarietyindex          =`${--dataarray[6]}`
-  regenderindex            =`${--dataarray[8]}`
-  regageindex              =`${--dataarray[9]}`
-  regpostionindex          =`${--dataarray[11]}`
-
-
-  Registratindistrict        = registrationdistricts[regdstrictindex]
+  Registrationcategory      =registrationcategory[regcategory]
+  Registratindistrict       = registrationdistricts[regdstrictindex]
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
   Registratinfarnvariety    =farmersvariety[regvarietyindex]
@@ -478,6 +478,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
   7.${phoneNumber}
   8.${Registrationgender}
   9.${Registrationagerange }
+  10.${Registrationcategory }
   
   `;
 
@@ -564,6 +565,8 @@ else if(dataarraysize==12 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 }
   
 else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && dataarray[3]=='0' &&  dataarray[12]!='' && language =="English") {
+ 
+  secregcategory              =`${--dataarray[2]}`
   secregdstrictindex          =`${--dataarray[4]}`
   secregvarietyindex          =`${--dataarray[7]}`
   secregenderindex            =`${--dataarray[9]}`
@@ -571,20 +574,19 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
   secregpostionindex          =`${--dataarray[12]}`
  
 
-  console.log(` this is under second level of ditricts ${secregdstrictindex}`)
   
 
-
-  Registratindistrict  = registrationdistricts[secregdstrictindex]
-  RegistrationTA            = `${dataarray[5]}`
-  RegistratinGVH            = `${dataarray[6]}`
-  Registratinfarnvariety    = farmersvariety [secregvarietyindex]
-  Registrationfullname      =`${dataarray[8]}`
-  Registrationgender        =farmersgender[secregenderindex]
-  Registrationagerange      =farmersagerange[secregageindex]
-  Registrationgroupname     =`${dataarray[11]}`
-  Registrationfarmerpositon =farmerposition[secregpostionindex]
-  Registrationphonenumber   =phoneNumber
+  Registrationcategory         =registrationcategory[secregcategory]
+  Registratindistrict          = registrationdistricts[secregdstrictindex]
+  RegistrationTA               = `${dataarray[5]}`
+  RegistratinGVH               = `${dataarray[6]}`
+  Registratinfarnvariety       = farmersvariety [secregvarietyindex]
+  Registrationfullname         =`${dataarray[8]}`
+  Registrationgender           =farmersgender[secregenderindex]
+  Registrationagerange         =farmersagerange[secregageindex]
+  Registrationgroupname        =`${dataarray[11]}`
+  Registrationfarmerpositon    =farmerposition[secregpostionindex]
+  Registrationphonenumber      =phoneNumber
 
   
 /*
