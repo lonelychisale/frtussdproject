@@ -912,7 +912,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='1' && data
 
   regcategory               =`${--dataarray[2]}`
   regdstrictindex           =`${--dataarray[3]}`
-  regvarietyindex           =`${--dataarray[4]}`
+  regvarietyindex           =`${--dataarray[6]}`
   regenderindex             =`${--dataarray[8]}`
   regageindex               =`${--dataarray[9]}`
   regpostionindex           =`${--dataarray[11]}`
