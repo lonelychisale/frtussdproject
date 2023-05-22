@@ -703,7 +703,7 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
     
   }
     
-  else if (dataarraysize == 14 && dataarray[0] == "1" && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]=='0' && dataarray[5]!='0' &&  dataarray[13]!='' && language =="English") {
+  else if (dataarraysize == 14 && dataarray[0] == "1" && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]=='0' &&  dataarray[13]!='' && language =="English") {
 
     lastregcategory              =`${--dataarray[2]}`
     lastregdstrictindex          =`${--dataarray[5]}`
