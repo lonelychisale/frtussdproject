@@ -966,21 +966,21 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
 
  //....................if clicked first next on districts...................................................
     
-  else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0'  && dataarray[4]!='' && language == "Chichewa"){
+  else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0'  && dataarray[4]!='0' && language == "Chichewa"){
 
     response= `CON lembani zina la a T/A(Traditional Authority)
     `
   }
   
   
-  else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0'  && dataarray[5]!='' && language == "Chichewa"){
+  else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]!='0'  && dataarray[5]!='' && language == "Chichewa"){
   
     response= `CON lembani zina la a  Group Village Head anu  `
   
   }
   
   
-  else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[6]!='' && language == "Chichewa"){
+  else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]!='0' && dataarray[6]!='' && language == "Chichewa"){
     
     farmersvariety = ['Maize','Beans','soya Beans']
   
@@ -992,13 +992,13 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
   }
   
   
-  else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0'  && dataarray[7]!='' && language == "Chichewa"){
+  else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]!='0' && dataarray[7]!='' && language == "Chichewa"){
   
     response= `CON lembani zina lanu lonse `
     
   }
   
-  else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[8]!='' && language == "Chichewa"){
+  else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]!='0' && dataarray[8]!='' && language == "Chichewa"){
     
     farmersgender = ['Male','Female']
   
@@ -1009,7 +1009,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
   }
   
   
-  else if(dataarraysize==10 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[9]!=='' && language == "Chichewa"){
+  else if(dataarraysize==10 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]!='0' && dataarray[9]!=='' && language == "Chichewa"){
   
     farmersagerange = ['0-18','19-25','26-40','41-60','60 above']
   
@@ -1023,14 +1023,14 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
   }
   
   
-  else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1'  && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[10]!='' && language == "Chichewa"){
+  else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1'  && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]!='0' && dataarray[10]!='' && language == "Chichewa"){
   
     response= `CON Lembani zina la group yanu `
     
   }
   
   
-  else if(dataarraysize==12 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[11]!='' && language == "Chichewa"){
+  else if(dataarraysize==12 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]!='0' && dataarray[11]!='' && language == "Chichewa"){
     
     farmerposition = ['chairman/chairlady','secretary','tresurer','member']
   
@@ -1043,7 +1043,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
     
   }
     
-  else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && dataarray[3]=='0' &&  dataarray[12]!='' && language == "Chichewa") {
+  else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]!='0' &&  dataarray[12]!='' && language == "Chichewa") {
    
     secregcategory              =`${--dataarray[2]}`
     secregdstrictindex          =`${--dataarray[4]}`
