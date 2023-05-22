@@ -300,10 +300,10 @@ mainmenuselector = ['1','2','3']
    
   else if(text=='1*1' && language =="English"){
     
-
+   registrationcategory = ['farmer','buyer']
     response = `CON choose registration category
     1.farmer
-    2.farm products buyer`
+    2.buyer`
   }
 
   else if(text == '1*1*1'){
@@ -700,13 +700,14 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
     
   else if (dataarraysize == 14 && dataarray[0] == "1" && dataarray[2]=='1' && dataarray[3]=='0' && dataarray[4]=='0' && dataarray[5]!='0' &&  dataarray[13]!='' && language =="English") {
 
+    lastregcategory              =`${--dataarray[2]}`
     lastregdstrictindex          =`${--dataarray[5]}`
     lastregvarietyindex          =`${--dataarray[8]}`
     lastregenderindex            =`${--dataarray[10]}`
     lastregageindex              =`${--dataarray[11]}`
     lastregpostionindex          =`${--dataarray[13]}`
   
-  
+    Registrationcategory      =registrationcategory[lastregcategory]
     Registratindisrict        = registrationdistricts[lastregdstrictindex]
     RegistrationTA            = `${dataarray[6]}`
     RegistratinGVH            = `${dataarray[7]}`
@@ -746,6 +747,7 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
       8.${Registrationgroupname}
       9.${Registrationfarmerpositon}
       10.${Registrationphonenumber}
+      11.${Registrationcategory}
       `;
   
     } 
