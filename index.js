@@ -759,7 +759,7 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
 
 
 
-  //..................................chichewa registration............................................
+  //..................................farmer chichewa registration............................................
    else if (text == "1" && language == "Chichewa") {
     response = `CON Takulandilani ku ntchito za Kulembetsa ku Mlimi. 
         
@@ -777,7 +777,6 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
      2.Ogula zokolora`
    }
 
-  
   else if(text=='1*1*1' && language == "Chichewa"){
 
     chichewaregistrationdistricts = ['salima','zomba','mulanje','mchinji','mzimba','blantyre','lilongwe','kasungu','balaka','machinga','rumphi','nkhatabay','dwangwa','nkhotakota','chirazulu','ntchitsi','mangochi','nsanje','neno','karonga','chitipa','mulanje','thyolo']
