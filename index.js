@@ -618,6 +618,7 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
   8.${Registrationgroupname}
   9.${Registrationfarmerpositon}
   10.${Registrationphonenumber}
+  11.${Registrationcategory}
   `;
 
   } 
