@@ -454,6 +454,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
  
   /*
   newregref.child(phoneNumber).set({
+    usercategry:Registrationcategory ,
     userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
@@ -591,7 +592,8 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
   
 /*
   newregref.child(phoneNumber).set({
-    userdistrict:Registratindistrict,
+    usercategry:Registrationcategory ,
+    userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
     userfarmvariety:Registratinfarnvariety ,
@@ -625,7 +627,7 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
 
   //.........................if the second next is clicked............................................
    
-  else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[4]=='0' && dataarray[5]!='' &&  language =="English"){
+  else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[4]=='0' && dataarray[3]=='0' && dataarray[5]!='' &&  language =="English"){
 
     response= `CON Enter Name Of a T/A(Traditional Authority)
     `
@@ -725,18 +727,19 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
 
 /*
     newregref.child(phoneNumber).set({
-      userdistrict:Registratindisrict  ,
-      userTA:RegistrationTA,
-      userGVH:RegistratinGVH ,
-      userfarmvariety:Registratinfarnvariety ,
-      userfullname:Registrationfullname ,
-      usergender:Registrationgender ,
-      useragerange:Registrationagerange,
-      usergroupname:Registrationgroupname ,
-      userpostion:Registrationfarmerpositon,
-      userPhonenumber:phoneNumber
-  
-    })
+    usercategry:Registrationcategory ,
+    userdistrict:Registratindistrict   ,
+    userTA:RegistrationTA,
+    userGVH:RegistratinGVH ,
+    userfarmvariety:Registratinfarnvariety ,
+    userfullname:Registrationfullname ,
+    usergender:Registrationgender ,
+    useragerange:Registrationagerange,
+    usergroupname:Registrationgroupname ,
+    userpostion:Registrationfarmerpositon,
+    userPhonenumber:phoneNumber
+
+  })
 */
   
       response = `END END your number ${phoneNumber} have been successfully registered
@@ -930,6 +933,7 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
  
   /*
   newregref.child(phoneNumber).set({
+    usercategry:Registrationcategory ,
     userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
@@ -1065,19 +1069,20 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
   
     
   /*
-    newregref.child(phoneNumber).set({
-      userdistrict:Registratindistrict,
-      userTA:RegistrationTA,
-      userGVH:RegistratinGVH ,
-      userfarmvariety:Registratinfarnvariety ,
-      userfullname:Registrationfullname ,
-      usergender:Registrationgender ,
-      useragerange:Registrationagerange,
-      usergroupname:Registrationgroupname ,
-      userpostion:Registrationfarmerpositon,
-      userPhonenumber:phoneNumber
-  
-    })
+     newregref.child(phoneNumber).set({
+    usercategry:Registrationcategory ,
+    userdistrict:Registratindistrict   ,
+    userTA:RegistrationTA,
+    userGVH:RegistratinGVH ,
+    userfarmvariety:Registratinfarnvariety ,
+    userfullname:Registrationfullname ,
+    usergender:Registrationgender ,
+    useragerange:Registrationagerange,
+    usergroupname:Registrationgroupname ,
+    userpostion:Registrationfarmerpositon,
+    userPhonenumber:phoneNumber
+
+  })
    */ 
     
   
@@ -1199,19 +1204,20 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
   
   
   /*
-      newregref.child(phoneNumber).set({
-        userdistrict:Registratindisrict  ,
-        userTA:RegistrationTA,
-        userGVH:RegistratinGVH ,
-        userfarmvariety:Registratinfarnvariety ,
-        userfullname:Registrationfullname ,
-        usergender:Registrationgender ,
-        useragerange:Registrationagerange,
-        usergroupname:Registrationgroupname ,
-        userpostion:Registrationfarmerpositon,
-        userPhonenumber:phoneNumber
-    
-      })
+  newregref.child(phoneNumber).set({
+    usercategry:Registrationcategory ,
+    userdistrict:Registratindistrict   ,
+    userTA:RegistrationTA,
+    userGVH:RegistratinGVH ,
+    userfarmvariety:Registratinfarnvariety ,
+    userfullname:Registrationfullname ,
+    usergender:Registrationgender ,
+    useragerange:Registrationagerange,
+    usergroupname:Registrationgroupname ,
+    userpostion:Registrationfarmerpositon,
+    userPhonenumber:phoneNumber
+
+  })
   */
     
         response = `END  mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
