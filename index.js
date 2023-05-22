@@ -831,40 +831,40 @@ else if(text=='1*1*1*0*0' && language == "Chichewa"){
 
 }
 
-  
-else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='0'  && language == "Chichewa"){
+   
+else if(dataarraysize==4 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='0' && language == "Chichewa"){
 
   response= `CON lembani zina la a T/A(Traditional Authority)
   `
 }
 
 
-else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='' && dataarray[4]!='' && language == "Chichewa"){
+else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='0' && dataarray[4]!='' && language == "Chichewa"){
 
   response= `CON lembani zina la a  Group Village Head anu  `
 
 }
 
 
-else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1'  && dataarray[5]!='' && language == "Chichewa"){
-
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1'&& dataarray[2]=='1' && dataarray[3]!='0' && dataarray[5]!='' && language == "Chichewa"){
+  
   farmersvariety = ['Maize','Beans','soya Beans']
 
-  response= `CON sankhani zomwe mumalima
-  1. chimanga
-  2. nyemba
+  response= `CON CON sankhani zomwe mumalima
+  1. Chimanga
+  2. Nyemba
   3. Soya `
 
 }
 
 
-else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1'   && dataarray[2]=='1' && dataarray[6]!='' && language == "Chichewa"){
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1'   && dataarray[2]=='1' && dataarray[3]!='0'  && dataarray[6]!='' && language == "Chichewa"){
 
   response= `CON lembani zina lanu lonse `
   
 }
 
-else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[7]!='' && language == "Chichewa"){
+else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1'  && dataarray[2]=='1' && dataarray[3]!='0' && dataarray[7]!='' && language == "Chichewa"){
   
   farmersgender = ['Male','Female']
 
@@ -875,8 +875,8 @@ else if(dataarraysize==8 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]
 }
 
 
-else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[8]!=='' && language == "Chichewa"){
-  
+else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='0' && dataarray[8]!=='' && dataarray[2]!='0' && language == "Chichewa"){
+
   farmersagerange = ['0-18','19-25','26-40','41-60','60 above']
 
   response = `CON sankhani zaka zanu
@@ -887,16 +887,16 @@ else if(dataarraysize==9 && dataarray[0]==1 && dataarray[1]=='1' && dataarray[2]
   5. 61 above
   `
 }
-   
 
-else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[9]!='' && language == "Chichewa"){
+
+else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='0' && dataarray[9]!='' && language == "Chichewa"){
 
   response= `CON Lembani zina la group yanu `
   
 }
 
 
-else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[10]!='' && language == "Chichewa"){
+else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]!='0' && dataarray[10]!='' && language == "Chichewa"){
   
   farmerposition = ['chairman/chairlady','secretary','tresurer','member']
 
@@ -908,18 +908,16 @@ else if(dataarraysize==11 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 }
   
-else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='1' && dataarray[3]!='0' && dataarray[11]!='' && language == "Chichewa") {
-
-  regcategory               =`${--dataarray[2]}`
-  regdstrictindex           =`${--dataarray[3]}`
+else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && dataarray[2]=='1' && dataarray[3]!='0' && language == "Chichewa") {
+  regcategory              =`${--dataarray[2]}`
+  regdstrictindex           =`${dataarray[3]}`
   regvarietyindex           =`${--dataarray[6]}`
   regenderindex             =`${--dataarray[8]}`
   regageindex               =`${--dataarray[9]}`
   regpostionindex           =`${--dataarray[11]}`
 
-
   Registrationcategory      =registrationcategory[regcategory]
-  Registratindisrict        = registrationdistricts[regdstrictindex]
+  Registratindistrict       = registrationdistricts[regdstrictindex]
   RegistrationTA            = `${dataarray[4]}`
   RegistratinGVH            = `${dataarray[5]}`
   Registratinfarnvariety    =farmersvariety[regvarietyindex]
@@ -929,10 +927,10 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='1' && data
   Registrationgroupname     =`${dataarray[10]}`
   Registrationfarmerpositon =farmerposition[regpostionindex]
   Registrationphonenumber   =phoneNumber
-
-/*
+ 
+  /*
   newregref.child(phoneNumber).set({
-    userdistrict:Registratindisrict  ,
+    userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
     userfarmvariety:Registratinfarnvariety ,
@@ -944,24 +942,25 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='1' && data
     userPhonenumber:phoneNumber
 
   })
-*/
-    response = `END mwalembetsa bwino pa nambala yanu ya ${phoneNumber}
-    1.${Registratindisrict}
-    2.${RegistrationTA}
-    3.${RegistratinGVH }
-    4.${Registratinfarnvariety}
-    5.${Registrationfullname}
-    6.${Registrationgender }
-    7.${Registrationagerange}
-    8.${Registrationgroupname}
-    9.${Registrationfarmerpositon}
-    10.${Registrationphonenumber}
-    11.${Registrationcategory}
-   `;
-    
-  }
+  */
 
-  //....................if clicked first next on districts...................................................
+  response = `END Your number ${phoneNumber} have been successfully registered
+  1.${Registratindistrict}
+  2.${RegistrationTA}
+  3.${RegistratinGVH}
+  4.${Registratinfarnvariety}
+  5.${Registrationfullname}
+  6.${Registrationfarmerpositon}
+  7.${phoneNumber}
+  8.${Registrationgender}
+  9.${Registrationagerange }
+  10.${Registrationcategory }
+  
+  `;
+
+  } 
+
+ //....................if clicked first next on districts...................................................
     
   else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='1' && dataarray[3]=='0'  && dataarray[4]!='' && language == "Chichewa"){
 
@@ -982,9 +981,9 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[2]=='1' && data
     farmersvariety = ['Maize','Beans','soya Beans']
   
     response= `CON sankhani zomwe mumalima 
-    1. Maize
-    2. Beans
-    3. Soya Beans `
+    1. Chimanga
+    2. Nyemba
+    3. Soya  `
   
   }
   
