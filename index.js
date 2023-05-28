@@ -1352,7 +1352,25 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[7]!='' && language=="English"){
 
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[4]}`
+  marketingregsellercategoryindex = `${--dataarray[5]}`
+
+  Selleregfullname                = `${dataarray[7]}`
+  Marketingorganisationname       = `${dataarray[6]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
   response = ` END you have sucessfully registered
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Marketingorganisationname }
+  5.${Selleregfullname}
+
   `
 }
 
