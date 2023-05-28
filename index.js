@@ -1583,7 +1583,7 @@ else if(text == '1*1*2*2*0*0' && language =="English"){
 
 else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && language=="English"){
 
-  sellercategory = ['individual','organisation']
+  buyercategory = ['individual','organisation']
 
   response =`CON select buyer category
   1.individual
@@ -1591,7 +1591,7 @@ else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   `
 }
 
-//......                 if the seller is an individual................................
+//......                 if the buyer is an individual................................
 else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='1' && language=='English'){
  
   response = `CON Enter your name`
@@ -1600,13 +1600,30 @@ else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='1' && dataarray[6]!='' && language=='English'){
   
-  response = `END you have successfully registered as a buyer`
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[4]}`
+  marketingregbuyercategoryindex = `${--dataarray[5]}`
+
+  Buyeregfullname                = `${dataarray[6]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+  
+  response = `END you have successfully registered as a buyer
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Buyeregfullname}
+  `
 
 }
 
 
 
-//..........if the seller is an organisation........................................
+//..........if the buyer is an organisation........................................
 else if (dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='2' && language=="English"){
 
   response = ` CON Enter the name of the organisation`
@@ -1621,7 +1638,26 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
 else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[7]!='' && language=="English"){
 
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[4]}`
+  marketingregbuyercategoryindex = `${--dataarray[5]}`
+
+  Buyeregfullname                = `${dataarray[7]}`
+  Marketingorganisationname       = `${dataarray[6]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+
+  
   response = ` END your organisation have sucessfully registered as a buyer
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Marketingorganisationname }
+  5.${Buyeregfullname }
   `
 }
 
@@ -1789,7 +1825,7 @@ else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   `
 }
 
-//......                 if the seller is an individual................................
+//......                 if the buyer is an individual................................
 else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='1' && language == "Chichewa"){
  
   response = `CON Enter your name`
