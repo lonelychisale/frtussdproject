@@ -1834,19 +1834,18 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 else if(text == '1*1*2' && language == "Chichewa"){
 
   response = `CON select Marketing user category
-  1. Products Seller
-  2. Products Buyer
+  1. Ogulitsa Malonda
+  2. Ogula malonda
               
   `
 
 }
 
 
-
 //................seller chichewa registration...................................................
 else if(text == '1*1*2*1' && language == "Chichewa"){
 
-  response = ` CON select District
+  response = ` CON Sakhani Boma
   1. Salima
   2. Zomba
   3. Mulanje
@@ -1863,7 +1862,7 @@ else if(text == '1*1*2*1' && language == "Chichewa"){
 
 else if(text == '1*1*2*1*0' && language == "Chichewa"){
 
- response = ` CON select District
+ response = ` CON Sakhani Boma
   10. Machinga
   11. Rumphi
   12. Nkhatabay
@@ -1881,7 +1880,7 @@ else if(text == '1*1*2*1*0' && language == "Chichewa"){
 
 else if(text == '1*1*2*1*0*0' && language == "Chichewa"){
 
-  response = ` CON select District
+  response = ` CON Sakhani Boma
   20. Karonga
   21. Chitipa
   22. Mulanje
@@ -1893,7 +1892,7 @@ else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 
   sellercategory = ['individual','organisation']
 
-  response =`CON select seller category
+  response =`CON sakhani seller category
   1.individual
   2.organisation
   `
@@ -1902,13 +1901,28 @@ else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 //......                 if the seller is an individual................................
 else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='1' && language == "Chichewa"){
  
-  response = `CON Enter your name`
+  response = `CON Lembani zina lanu lose`
 
 }
 
 else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='1' && dataarray[6]!='' && language == "Chichewa"){
-  
-  response = `END you have successfully register`
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[4]}`
+  marketingregsellercategoryindex = `${--dataarray[5]}`
+
+  Selleregfullname                = `${dataarray[6]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+  response = `END Mwakwanilisa kulembesa ngati Ogulitsa malonda
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Selleregfullname}
+  `
 
 }
 
@@ -1917,26 +1931,204 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 //..........if the seller is an organisation........................................
 else if (dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='2' && language == "Chichewa"){
 
-  response = ` CON Enter the name of the organisation`
+  response = ` CON Lembani zina la organisation yanu`
 
 }
 
 else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[6]!='' && language == "Chichewa"){
 
-  response = ` CON Enter your full name
+  response = ` CON Lembani zina lanu lose
   `
 }
 
 else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[7]!='' && language == "Chichewa"){
 
-  response = ` END you have sucessfully registered
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[4]}`
+  marketingregsellercategoryindex = `${--dataarray[5]}`
+
+  Selleregfullname                = `${dataarray[7]}`
+  Marketingorganisationname       = `${dataarray[6]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+  response = ` END Mwakwanilisa kulembesa ngati Ogulitsa malonda
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Marketingorganisationname }
+  5.${Selleregfullname}
+
   `
 }
 
-//..................................product buyer registration.......................
-else if(text == '1*1*2*2' && language == "Chichewa"){
 
-  response = ` CON select District
+//........seller registration if the first next on districts is clcked.......................
+
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]=='0' && dataarray[5]!=='0' && language == "Chichewa"){
+
+  sellercategory = ['individual','organisation']
+
+  response =`CON sankhani seller category
+  1.individual
+  2.organisation
+  `
+}
+
+//......                 if the seller is an individual................................
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]=='0' && dataarray[5]!=='0'  && dataarray[6]=='1' && language == "Chichewa"){
+ 
+  response = `CON Lembani zina lanu lose`
+
+}
+
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]=='0' && dataarray[5]!=='0'  && dataarray[6]=='1' && dataarray[7]!='' && language == "Chichewa"){
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[5]}`
+  marketingregsellercategoryindex = `${--dataarray[6]}`
+
+  Selleregfullname                = `${dataarray[7]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+  response = `END Mwakwanilitsa kulembetsa ngati ogulitsa malonda
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Selleregfullname}
+  `
+
+}
+
+
+
+//..........if the seller is an organisation........................................
+else if (dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]=='0' && dataarray[5]!=='0' && dataarray[6]=='2' && language == "Chichewa"){
+
+  response = ` CON Lembani zina la  organisation`
+
+}
+
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]=='0' && dataarray[5]!=='0'  && dataarray[6]=='2' && dataarray[7]!='' && language == "Chichewa"){
+
+  response = ` CON Lembani zina lanu lose
+  `
+}
+
+else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]=='0' && dataarray[5]!=='0'  && dataarray[6]=='2' && dataarray[8]!='' && language == "Chichewa"){
+
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[5]}`
+  marketingregsellercategoryindex = `${--dataarray[6]}`
+
+  Selleregfullname                = `${dataarray[8]}`
+  Marketingorganisationname       = `${dataarray[7]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+  response = ` END Mwakwanilitsa kulembesa ngati ogulitsa malonda
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Marketingorganisationname }
+  5.${Selleregfullname}
+
+  `
+}
+
+
+
+//........seller registration if the second next is clicked............................
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && language == "Chichewa"){
+
+  sellercategory = ['individual','organisation']
+
+  response =`CON sakhani seller category
+  1.individual
+  2.organisation
+  `
+}
+
+//......                 if the seller is an individual................................
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && dataarray[7]=='1' && language == "Chichewa"){
+ 
+  response = `CON Lembani zina lanu lose`
+
+}
+
+else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0'  && dataarray[7]=='1' && dataarray[8]!='' && language == "Chichewa"){
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[6]}`
+  marketingregsellercategoryindex = `${--dataarray[7]}`
+
+  Selleregfullname                = `${dataarray[8]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+  response = `END Mwakwanilisa kulembesa ngati ogulisa malonda
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Selleregfullname}
+  `
+
+}
+
+
+//..........if the seller is an organisation........................................
+else if (dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && dataarray[7]=='2' && language == "Chichewa"){
+
+  response = ` CON Lembani zina la  organisation`
+
+}
+
+else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0'  && dataarray[7]=='2' && dataarray[8]!='' && language == "Chichewa"){
+
+  response = ` CON Lembani zina lanu lose
+  `
+}
+
+else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='1' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0'  && dataarray[7]=='2' && dataarray[9]!='' && language == "Chichewa"){
+
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[6]}`
+  marketingregsellercategoryindex = `${--dataarray[7]}`
+
+  Selleregfullname                = `${dataarray[9]}`
+  Marketingorganisationname       = `${dataarray[8]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+  response = ` END Mwakwanilisa kulembesa ngati ogulisa malonda
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Marketingorganisationname }
+  5.${Selleregfullname}
+
+  `
+}
+
+
+//..................................product buyer registration.......................
+else if(text == '1*1*2*2' &&  language == "Chichewa"){
+
+  response = ` CON Sakhani Boma
   1. Salima
   2. Zomba
   3. Mulanje
@@ -1953,7 +2145,7 @@ else if(text == '1*1*2*2' && language == "Chichewa"){
 
 else if(text == '1*1*2*2*0' && language == "Chichewa"){
 
- response = ` CON select District
+ response = ` CON Sakhani Boma
   10. Machinga
   11. Rumphi
   12. Nkhatabay
@@ -1971,7 +2163,7 @@ else if(text == '1*1*2*2*0' && language == "Chichewa"){
 
 else if(text == '1*1*2*2*0*0' && language == "Chichewa"){
 
-  response = ` CON select District
+  response = ` CON Sakhani Boma
   20. Karonga
   21. Chitipa
   22. Mulanje
@@ -1981,9 +2173,9 @@ else if(text == '1*1*2*2*0*0' && language == "Chichewa"){
 
 else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && language == "Chichewa"){
 
-  sellercategory = ['individual','organisation']
+  buyercategory = ['individual','organisation']
 
-  response =`CON select buyer category
+  response =`CON Sakhani buyer category
   1.individual
   2.organisation
   `
@@ -1992,35 +2184,234 @@ else if(dataarraysize==5 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 //......                 if the buyer is an individual................................
 else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='1' && language == "Chichewa"){
  
-  response = `CON Enter your name`
+  response = `CON Lembani zina lanu lose`
 
 }
 
 else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='1' && dataarray[6]!='' && language == "Chichewa"){
   
-  response = `END you have successfully registered as a buyer`
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[4]}`
+  marketingregbuyercategoryindex = `${--dataarray[5]}`
+
+  Buyeregfullname                = `${dataarray[6]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+  
+  response = `END Mwakwanisa kulembesa ngati ogula malonda
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Buyeregfullname}
+  `
 
 }
 
 
 
-
-//..........if the seller is an organisation........................................
+//..........if the buyer is an organisation........................................
 else if (dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='2' && language == "Chichewa"){
 
-  response = ` CON Enter the name of the organisation`
+  response = ` CON Lembani zina la organisation`
 
 }
 
 else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[6]!='' && language == "Chichewa"){
 
-  response = ` CON Enter your full name
+  response = ` CON Lembani zina lanu lose
   `
 }
 
 else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]!='0' && dataarray[5]=='2' && dataarray[7]!='' && language == "Chichewa"){
 
-  response = ` END your organisation have sucessfully registered as a buyer
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[4]}`
+  marketingregbuyercategoryindex = `${--dataarray[5]}`
+
+  Buyeregfullname                = `${dataarray[7]}`
+  Marketingorganisationname       = `${dataarray[6]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+
+
+  response = ` END Mwakwanisa kulembesa ngati ogula malonda
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Marketingorganisationname }
+  5.${Buyeregfullname }
+  `
+}
+
+
+//...............buyer registration if the first next on districts is clicked..........
+else if(dataarraysize==6 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]!='0' && language == "Chichewa"){
+
+  buyercategory = ['individual','organisation']
+
+  response =`CON Sakhani buyer category
+  1.individual
+  2.organisation
+  `
+}
+
+//......                 if the buyer is an individual................................
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]!='0' && dataarray[6]=='1' && language == "Chichewa"){
+ 
+  response = `CON Lembani zina lanu lose`
+
+}
+
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]!='0' && dataarray[6]=='1' && dataarray[7]!='' && language == "Chichewa"){
+  
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[5]}`
+  marketingregbuyercategoryindex = `${--dataarray[6]}`
+
+  Buyeregfullname                = `${dataarray[7]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+  
+  response = `END Mwakwanisa kulembesa ngati ogula malonda
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Buyeregfullname}
+  `
+
+}
+
+
+
+//..........if the buyer is an organisation........................................
+else if (dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]!='0' && dataarray[6]=='2' && language == "Chichewa"){
+
+  response = ` CON Lembani zina la organisation`
+
+}
+
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]!='0' && dataarray[6]=='2' && dataarray[7]!='' && language == "Chichewa"){
+
+  response = ` CON Lembani zina lanu lose
+  `
+}
+
+else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]!='0' && dataarray[6]=='2' && dataarray[8]!='' && language == "Chichewa"){
+
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[5]}`
+  marketingregbuyercategoryindex = `${--dataarray[6]}`
+
+  Buyeregfullname                = `${dataarray[8]}`
+  Marketingorganisationname       = `${dataarray[7]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+
+
+  response = ` END Mwakwanisa kulembesa ngati ogula malonda
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Marketingorganisationname }
+  5.${Buyeregfullname }
+  `
+}
+
+
+//.............buyer registration if the second next on district is clicked..........................
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && language == "Chichewa"){
+
+  buyercategory = ['individual','organisation']
+
+  response =`CON Sakhani buyer category
+  1.individual
+  2.organisation
+  `
+}
+
+//......                 if the buyer is an individual................................
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && dataarray[7]=='1' && language == "Chichewa"){
+ 
+  response = `CON Lembani zina lanu lose`
+
+}
+
+else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && dataarray[7]=='1' && dataarray[8]!='' && language == "Chichewa"){
+  
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[6]}`
+  marketingregbuyercategoryindex = `${--dataarray[7]}`
+
+  Buyeregfullname                = `${dataarray[8]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+  
+  response = `END Mwakwanisa kulembesa ngati ogula malonda
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Buyeregfullname}
+  `
+
+}
+
+
+
+//..........if the buyer is an organisation........................................
+else if (dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && dataarray[7]=='2' && language == "Chichewa"){
+
+  response = ` CON lemani zina la organisation`
+
+}
+
+else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && dataarray[7]=='2' && dataarray[8]!='' && language == "Chichewa"){
+
+  response = ` CON Lembani zina lanu lose
+  `
+}
+
+else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && dataarray[7]=='2' && dataarray[9]!='' && language == "Chichewa"){
+
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[6]}`
+  marketingregbuyercategoryindex = `${--dataarray[7]}`
+
+  Buyeregfullname                = `${dataarray[9]}`
+  Marketingorganisationname       = `${dataarray[8]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+
+
+  response = ` END Mwakwanisa kulembesa ngati ogura malonda
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Marketingorganisationname }
+  5.${Buyeregfullname }
   `
 }
 
