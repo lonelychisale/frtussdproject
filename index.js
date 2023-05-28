@@ -1744,6 +1744,88 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
 }
 
 
+//.............buyer registration if the second next on district is clicked..........................
+else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && language=="English"){
+
+  buyercategory = ['individual','organisation']
+
+  response =`CON select buyer category
+  1.individual
+  2.organisation
+  `
+}
+
+//......                 if the buyer is an individual................................
+else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && dataarray[7]=='1' && language=='English'){
+ 
+  response = `CON Enter your name`
+
+}
+
+else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && dataarray[7]=='1' && dataarray[8]!='' && language=='English'){
+  
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[6]}`
+  marketingregbuyercategoryindex = `${--dataarray[7]}`
+
+  Buyeregfullname                = `${dataarray[8]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+  
+  response = `END you have successfully registered as a buyer
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Buyeregfullname}
+  `
+
+}
+
+
+
+//..........if the buyer is an organisation........................................
+else if (dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && dataarray[7]=='2' && language=="English"){
+
+  response = ` CON Enter the name of the organisation`
+
+}
+
+else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && dataarray[7]=='2' && dataarray[8]!='' && language=="English"){
+
+  response = ` CON Enter your full name
+  `
+}
+
+else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[2]=='2' && dataarray[3]=='2' && dataarray[4]=='0' && dataarray[5]=='0' && dataarray[6]!='0' && dataarray[7]=='2' && dataarray[9]!='' && language=="English"){
+
+  marketingregcategoryindex       = `${--dataarray[3]}`
+  marketingregdistrictindex       = `${--dataarray[6]}`
+  marketingregbuyercategoryindex = `${--dataarray[7]}`
+
+  Buyeregfullname                = `${dataarray[9]}`
+  Marketingorganisationname       = `${dataarray[8]}`
+  Marketregcategory               =  marketingregcategory[marketingregcategoryindex]
+  Markertingregdistrict           =  registrationdistricts[marketingregdistrictindex]
+  Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
+  Marketingproduct                =  ``
+  Marketingproductquantity        =  ``
+
+
+
+  response = ` END your organisation have sucessfully registered as a buyer
+  1.${Marketregcategory}
+  2.${Markertingregdistrict}
+  3.${Marketingregsellercategory}
+  4.${Marketingorganisationname }
+  5.${Buyeregfullname }
+  `
+}
+
+
 
 
 
