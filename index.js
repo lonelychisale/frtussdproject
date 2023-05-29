@@ -3413,7 +3413,7 @@ else if (text == "2*3*3" && language =="English") {
   //...............................buyer in chichewa............................................................
   else if (text == "2*3*3" &&  language == "Chichewa") {
 
-
+    
     buyerproductarray = ['Maize','Soya bean','Rice','Beans']
   
     response = `CON Sakhani zomwe mkufuna kugura
@@ -3425,12 +3425,12 @@ else if (text == "2*3*3" && language =="English") {
     }
      
     
-  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' &&  language == "Chichewa") {
+  else if (dataarraysize==4 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[3]!='' &&  language == "Chichewa") {
      
-      buyerproductindex = `${--dataarray[3]}`
-      buyerproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
+      marketproductindex = `${--dataarray[3]}`
+      marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
   
-      response = `CON Sakhani ma kg omwe mkufuna kugura a ${buyerproductarray[buyerproductindex]}
+      response = `CON Sakhani ma kg omwe mkufuna kugura a ${buyerproductarray[marketproductindex]}
       1. 1-20kg
       2. 21-40kg
       3. 41-80kg
@@ -3441,12 +3441,21 @@ else if (text == "2*3*3" && language =="English") {
     }
   
   
-    else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[4]!='' &&  language == "Chichewa"){
-     
-      quatityindix = `${--dataarray[4]}`
   
-      response = `END Mwakwanilisa kutumiza zomwe mkufuna a farm radio trust akuthandize kugura za ${marketproductquatityarray[quatityindix]} of ${marketproductarray[marketproductindex]} to farm radio trust`
+  else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' &&  language == "Chichewa"){
+     
+      quatityindix  = `${--dataarray[4]}`
+  
+      sellerproduct = `${buyerproductarray[marketproductindex]}`
+      sellerproductquatity = `${marketproductquatityarray[quatityindix]}`
+  
+      response = `END Mwakwanilisa kutumiza zomwe mkufuna a farm radio trust akuthandize kugura za ${sellerproductquatity} of ${sellerproduct} to farm radio trust
+      1.${sellerproduct}
+      2.${sellerproductquatity}
+      
+      `
     }
+  
   
 
 
