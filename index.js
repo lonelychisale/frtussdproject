@@ -3399,7 +3399,7 @@ else if (text == "2*3*3" && language =="English") {
    
     quatityindix  = `${--dataarray[4]}`
 
-    sellerproduct = `${marketproductarray[marketproductindex]}`
+    sellerproduct = `${buyerproductarray[marketproductindex]}`
     sellerproductquatity = `${marketproductquatityarray[quatityindix]}`
 
     response = `END you have successfully  sent marketing processing request for ${sellerproductquatity} of ${sellerproduct} to farm radio trust
