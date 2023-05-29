@@ -3344,7 +3344,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   }
 
 
-  else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[4]!='' && language=='Chichewa'){
+  else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && language=='Chichewa'){
    
     quatityindix  = `${--dataarray[4]}`
 
