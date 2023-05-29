@@ -1833,6 +1833,8 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 
 else if(text == '1*1*2' && language == "Chichewa"){
 
+  marketingregcategory = ['Seller','Buyer']
+
   response = `CON select Marketing user category
   1. Ogulitsa Malonda
   2. Ogula malonda
