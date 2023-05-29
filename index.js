@@ -58,6 +58,7 @@ const regdb = regiintialize.database();
 let phone = `+265995537312`;
 const regref = regdb.ref("sectors");
 const newregref = regdb.ref("users");
+var marketingregdb = regdb.ref("Marketing")
 
 let mylanguage ='chichewa'
 
@@ -454,7 +455,6 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
  
   
   newregref.child(phoneNumber).set({
-    usercategry:Registrationcategory ,
     userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
@@ -592,7 +592,6 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
   
 
   newregref.child(phoneNumber).set({
-    usercategry:Registrationcategory ,
     userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
@@ -727,7 +726,6 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
 
 
     newregref.child(phoneNumber).set({
-    usercategry:Registrationcategory ,
     userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
@@ -933,7 +931,6 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
  
   
   newregref.child(phoneNumber).set({
-    usercategry:Registrationcategory ,
     userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
@@ -1070,7 +1067,6 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
   
 
   newregref.child(phoneNumber).set({
-    usercategry:Registrationcategory ,
     userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
@@ -1205,7 +1201,6 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
 
 
     newregref.child(phoneNumber).set({
-    usercategry:Registrationcategory ,
     userdistrict:Registratindistrict   ,
     userTA:RegistrationTA,
     userGVH:RegistratinGVH ,
@@ -1326,6 +1321,19 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
 
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Selleregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:'',
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
+
   response = `END you have successfully register as the seller
   1.${Marketregcategory}
   2.${Markertingregdistrict}
@@ -1363,6 +1371,18 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Selleregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:Marketingorganisationname,
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
 
   response = ` END you have sucessfully registered
   1.${Marketregcategory}
@@ -1406,6 +1426,18 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
 
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Selleregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:'',
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
+
   response = `END you have successfully register as the seller
   1.${Marketregcategory}
   2.${Markertingregdistrict}
@@ -1443,6 +1475,18 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Selleregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:Marketingorganisationname,
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
 
   response = ` END you have sucessfully registered
   1.${Marketregcategory}
@@ -1486,6 +1530,21 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
 
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Selleregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:'',
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
+
+  
+
   response = `END you have successfully register as the seller
   1.${Marketregcategory}
   2.${Markertingregdistrict}
@@ -1523,6 +1582,18 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Selleregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:Marketingorganisationname,
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
 
   response = ` END you have sucessfully registered
   1.${Marketregcategory}
