@@ -3365,8 +3365,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
 
 
 //.....................................buyer in english.......................................................
-else if (text == "2*3*3" && language == "English") {
-
+else if (text == "2*3*3" && language =="English") {
 
   buyerproductarray = ['Maize','Soya bean','Rice','Beans']
 
@@ -3379,12 +3378,12 @@ else if (text == "2*3*3" && language == "English") {
   }
    
   
-  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && language =="English") {
+  else if (dataarraysize==4 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[3]!='' && language =="English") {
    
-    buyerproductindex = `${--dataarray[3]}`
-    buyerproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
+    marketproductindex = `${--dataarray[3]}`
+    marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
 
-    response = `CON choose quantity(kg) of ${buyerproductarray[buyerproductindex]}
+    response = `CON choose quantity(kg) of ${marketproductarray[marketproductindex]}
     1. 1-20kg
     2. 21-40kg
     3. 41-80kg
@@ -3395,11 +3394,19 @@ else if (text == "2*3*3" && language == "English") {
   }
 
 
+
   else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[4]!='' && language=='English'){
    
-    quatityindix = `${--dataarray[4]}`
+    quatityindix  = `${--dataarray[4]}`
 
-    response = `END you have successfully  sent marketing processing request for ${marketproductquatityarray[quatityindix]} of ${marketproductarray[marketproductindex]} to farm radio trust`
+    sellerproduct = `${marketproductarray[marketproductindex]}`
+    sellerproductquatity = `${marketproductquatityarray[quatityindix]}`
+
+    response = `END you have successfully  sent marketing processing request for ${sellerproductquatity} of ${sellerproduct} to farm radio trust
+    1.${sellerproduct}
+    2.${sellerproductquatity}
+    
+    `
   }
 
 
