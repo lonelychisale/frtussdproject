@@ -1344,7 +1344,8 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -1395,7 +1396,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -1450,7 +1452,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -1501,7 +1504,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -1557,7 +1561,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -1610,7 +1615,8 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -1711,7 +1717,8 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -1765,7 +1772,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -1821,7 +1829,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -1874,7 +1883,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -1931,7 +1941,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -1984,7 +1995,8 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -2102,7 +2114,8 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -2153,7 +2166,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -2208,7 +2222,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -2259,7 +2274,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -2314,7 +2330,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -2365,7 +2382,8 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -2466,7 +2484,8 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -2519,7 +2538,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -2576,7 +2596,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -2629,7 +2650,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -2686,7 +2708,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -2739,7 +2762,8 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp
+    time:timestamp,
+    marketrequesttime:''
 
   })
 
@@ -3309,7 +3333,8 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
 
     const updateMarketingdb = {
       'product': sellerproduct,
-      'productquatity':sellerproductquatity
+      'productquatity':sellerproductquatity,
+      'marketrequesttime':timestamp
     };
     
     // Update the field in Firebase
@@ -3365,7 +3390,8 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
 
       const updateMarketingdb = {
         'product': sellerproduct,
-        'productquatity':sellerproductquatity
+        'productquatity':sellerproductquatity,
+        'marketrequesttime':timestamp
       };
       
       // Update the field in Firebase
@@ -3420,7 +3446,8 @@ else if (text == "2*3*3" && language =="English") {
 
     const updateMarketingdb = {
       'product': sellerproduct,
-      'productquatity':sellerproductquatity
+      'productquatity':sellerproductquatity,
+      'marketrequesttime':timestamp
     };
     
     // Update the field in Firebase
@@ -3475,7 +3502,8 @@ else if (text == "2*3*3" && language =="English") {
 
       const updateMarketingdb = {
         'product': sellerproduct,
-        'productquatity':sellerproductquatity
+        'productquatity':sellerproductquatity,
+        'marketrequesttime':timestamp
       };
       
       // Update the field in Firebase
