@@ -3317,48 +3317,51 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
   
   
   //................................seller  in chichewa.....................................................................
+  
+  
   else if (text == "2*3*2" && language == "Chichewa") {
+
     marketproductarray = ['Maize','Soya bean','Rice','Beans']
     response = `CON sankhani chomwe mkufuna kugulisa
   1.Chimanga
   2.Soya
   3.Mpunga
   4.Nyemba`;
-
-  }
+  
+    }
+     
+    
+  else if (dataarraysize==4 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[3]!='' && language == "Chichewa") {
+     
+      marketproductindex = `${--dataarray[3]}`
+      marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
+  
+      response = `CON Sakhani ma kg omwe mkufuna kugula a ${marketproductarray[marketproductindex]}
+      1. 1-20kg
+      2. 21-40kg
+      3. 41-80kg
+      4. 81-100kg
+      5. 100kg above
+      `;
+  
+    }
   
   
-  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[3]!='' && language == "Chichewa") {
-   
-    marketproductindex = `${--dataarray[3]}`
-    marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
+  
+  else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && dataarray[4]!='' && language == "Chichewa"){
+     
+      quatityindix  = `${--dataarray[4]}`
 
-    response = `CON Sakhani ma kg omwe mkufuna kugula a ${marketproductarray[marketproductindex]}
-    1. 1-20kg
-    2. 21-40kg
-    3. 41-80kg
-    4. 81-100kg
-    5. 100kg above
-    `;
-
-  }
-
-
-  else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='2' && language=='Chichewa'){
-   
-    quatityindix  = `${--dataarray[4]}`
-
-    sellerproduct = `${marketproductarray[marketproductindex]}`
-    sellerproductquatity = `${marketproductquatityarray[quatityindix]}`
-
-    response = `END Mwatumiza zomwe mkufuna a farm radio trust akuthandizeni kugura za ${sellerproductquatity} of ${sellerproduct} to farm radio trust
-    1.${sellerproduct}
-    2.${sellerproductquatity}
-    `
-  }
-
-
-
+      sellerproduct = `${marketproductarray[marketproductindex]}`
+      sellerproductquatity = `${marketproductquatityarray[quatityindix]}`
+  
+      response = `END Mwatumiza zomwe mkufuna a farm radio trust akuthandizeni kugura za ${sellerproductquatity} of ${sellerproduct} to farm radio trust
+      1.${sellerproduct}
+      2.${sellerproductquatity}
+      
+      `
+    }
+  
 
 
 //.....................................buyer in english.......................................................
