@@ -1344,8 +1344,9 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
     userPhonenumber:phoneNumber,
-    time:timestamp,
-    marketrequesttime:''
+    marketrequesttime:'',
+    time:timestamp
+    
 
   })
 
