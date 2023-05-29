@@ -229,6 +229,10 @@ app.post("*", (req, res) => {
   let dataarraysize = dataarray.length;
 
 
+  var currentDate = new Date();
+  var timestamp = currentDate.toISOString();
+
+
 //............. Read the existing JSON data from the file.........................
 const languagejsonfile = fs.readFileSync('language.json');
 const obj = JSON.parse(languagejsonfile);
@@ -286,6 +290,8 @@ mainmenuselector = ['1','2','3']
     `;
 
   }
+  
+
   
 
 //..............................................English registration..............................................
@@ -464,7 +470,8 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
     useragerange:Registrationagerange,
     usergroupname:Registrationgroupname ,
     userpostion:Registrationfarmerpositon,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
   
@@ -601,7 +608,8 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
     useragerange:Registrationagerange,
     usergroupname:Registrationgroupname ,
     userpostion:Registrationfarmerpositon,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
   
@@ -735,7 +743,8 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
     useragerange:Registrationagerange,
     usergroupname:Registrationgroupname ,
     userpostion:Registrationfarmerpositon,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -927,7 +936,8 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
   Registrationagerange      =farmersagerange[regageindex]
   Registrationgroupname     =`${dataarray[10]}`
   Registrationfarmerpositon =farmerposition[regpostionindex]
-  Registrationphonenumber   =phoneNumber
+  Registrationphonenumber   =phoneNumber,
+  
  
   
   newregref.child(phoneNumber).set({
@@ -940,7 +950,8 @@ else if (dataarraysize == 12 && dataarray[0] == "1" && dataarray[11]!='' && data
     useragerange:Registrationagerange,
     usergroupname:Registrationgroupname ,
     userpostion:Registrationfarmerpositon,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
   
@@ -1076,7 +1087,8 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
     useragerange:Registrationagerange,
     usergroupname:Registrationgroupname ,
     userpostion:Registrationfarmerpositon,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
   
@@ -1210,7 +1222,8 @@ else if (dataarraysize == 13 && dataarray[0] == "1" && dataarray[2]=='1' && data
     useragerange:Registrationagerange,
     usergroupname:Registrationgroupname ,
     userpostion:Registrationfarmerpositon,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -1330,7 +1343,8 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:'',
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -1380,7 +1394,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:Marketingorganisationname,
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -1434,7 +1449,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:'',
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -1484,7 +1500,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:Marketingorganisationname,
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -1539,7 +1556,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:'',
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -1591,7 +1609,8 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
     organisation:Marketingorganisationname,
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -1691,7 +1710,8 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:'',
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -1744,7 +1764,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:Marketingorganisationname,
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -1799,7 +1820,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:'',
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -1851,7 +1873,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:Marketingorganisationname ,
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -1907,7 +1930,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:'',
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -1959,7 +1983,8 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
     organisation:Marketingorganisationname ,
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -2076,7 +2101,8 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:'',
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -2126,7 +2152,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:Marketingorganisationname,
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -2180,7 +2207,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:'',
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -2230,7 +2258,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:Marketingorganisationname,
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -2284,7 +2313,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:'',
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -2334,7 +2364,8 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
     organisation:Marketingorganisationname,
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -2434,7 +2465,8 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:'',
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -2486,7 +2518,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:Marketingorganisationname,
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -2542,7 +2575,8 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:'',
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -2594,7 +2628,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:Marketingorganisationname,
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -2650,7 +2685,8 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
     organisation:'',
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
@@ -2702,7 +2738,8 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
     organisation:Marketingorganisationname,
     product:Marketingproduct ,
     productquatity:Marketingproductquantity ,
-    userPhonenumber:phoneNumber
+    userPhonenumber:phoneNumber,
+    time:timestamp
 
   })
 
