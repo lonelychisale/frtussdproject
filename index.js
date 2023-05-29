@@ -2068,6 +2068,18 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
 
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Selleregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:'',
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
+
   response = `END Mwakwanilisa kulembesa ngati Ogulitsa malonda
   1.${Marketregcategory}
   2.${Markertingregdistrict}
@@ -2105,6 +2117,18 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Selleregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:Marketingorganisationname,
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
 
   response = ` END Mwakwanilisa kulembesa ngati Ogulitsa malonda
   1.${Marketregcategory}
@@ -2148,6 +2172,18 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
 
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Selleregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:'',
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
+
   response = `END Mwakwanilitsa kulembetsa ngati ogulitsa malonda
   1.${Marketregcategory}
   2.${Markertingregdistrict}
@@ -2185,6 +2221,18 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Selleregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:Marketingorganisationname,
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
 
   response = ` END Mwakwanilitsa kulembesa ngati ogulitsa malonda
   1.${Marketregcategory}
@@ -2228,6 +2276,18 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
 
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Selleregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:'',
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
+
   response = `END Mwakwanilisa kulembesa ngati ogulisa malonda
   1.${Marketregcategory}
   2.${Markertingregdistrict}
@@ -2264,6 +2324,19 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   Marketingregsellercategory      =  sellercategory[marketingregsellercategoryindex]
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
+
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Selleregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:Marketingorganisationname,
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
 
   response = ` END Mwakwanilisa kulembesa ngati ogulisa malonda
   1.${Marketregcategory}
@@ -2352,6 +2425,19 @@ else if(dataarraysize==7 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
 
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Buyeregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:'',
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
+
   
   response = `END Mwakwanisa kulembesa ngati ogula malonda
   1.${Marketregcategory}
@@ -2390,6 +2476,19 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
+
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Buyeregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:Marketingorganisationname,
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
 
 
 
@@ -2434,6 +2533,19 @@ else if(dataarraysize==8 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
 
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Buyeregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:'',
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
+
   
   response = `END Mwakwanisa kulembesa ngati ogula malonda
   1.${Marketregcategory}
@@ -2472,6 +2584,19 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
+
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Buyeregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:Marketingorganisationname,
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
 
 
 
@@ -2516,6 +2641,19 @@ else if(dataarraysize==9 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray[
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
 
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Buyeregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:'',
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
+
   
   response = `END Mwakwanisa kulembesa ngati ogula malonda
   1.${Marketregcategory}
@@ -2554,6 +2692,19 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   Marketingregsellercategory      =  buyercategory[marketingregbuyercategoryindex]
   Marketingproduct                =  ``
   Marketingproductquantity        =  ``
+
+
+  marketingregdb.child(phoneNumber).set({
+    marketingcategory:Marketregcategory   ,
+    fullname:Buyeregfullname,
+    district:Markertingregdistrict ,
+    category:Marketingregsellercategory  ,
+    organisation:Marketingorganisationname,
+    product:Marketingproduct ,
+    productquatity:Marketingproductquantity ,
+    userPhonenumber:phoneNumber
+
+  })
 
 
 
