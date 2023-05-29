@@ -3288,7 +3288,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
     marketproductindex = `${--dataarray[3]}`
     marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
 
-    response = `CON choose quantity(kg) of ${marketproductarray[marketproductindex]}
+    response = `CON choose quantity(kg)
     1. 1-20kg
     2. 21-40kg
     3. 41-80kg
@@ -3306,6 +3306,14 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
 
     sellerproduct = `${marketproductarray[marketproductindex]}`
     sellerproductquatity = `${marketproductquatityarray[quatityindix]}`
+
+    const updateMarketingdb = {
+      'product': sellerproduct,
+      'productquatity':sellerproductquatity
+    };
+    
+    // Update the field in Firebase
+    marketingregdb.child(phoneNumber).update(updateMarketingdb)
 
     response = `END you have successfully  sent marketing processing request for ${sellerproductquatity} of ${sellerproduct} to farm radio trust
     1.${sellerproduct}
@@ -3336,7 +3344,7 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
       marketproductindex = `${--dataarray[3]}`
       marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
   
-      response = `CON Sakhani ma kg omwe mkufuna kugula a ${marketproductarray[marketproductindex]}
+      response = `CON Sakhani ma kg omwe mkufuna kugula 
       1. 1-20kg
       2. 21-40kg
       3. 41-80kg
@@ -3354,6 +3362,14 @@ else if(dataarray[1]=='2' && dataarray[3]=='3' && dataarray[4]!='' && dataarrays
 
       sellerproduct = `${marketproductarray[marketproductindex]}`
       sellerproductquatity = `${marketproductquatityarray[quatityindix]}`
+
+      const updateMarketingdb = {
+        'product': sellerproduct,
+        'productquatity':sellerproductquatity
+      };
+      
+      // Update the field in Firebase
+      marketingregdb.child(phoneNumber).update(updateMarketingdb)
   
       response = `END Mwatumiza zomwe mkufuna a farm radio trust akuthandizeni kugura za ${sellerproductquatity} of ${sellerproduct} to farm radio trust
       1.${sellerproduct}
@@ -3383,7 +3399,7 @@ else if (text == "2*3*3" && language =="English") {
     marketproductindex = `${--dataarray[3]}`
     marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
 
-    response = `CON choose quantity(kg) of ${buyerproductarray[marketproductindex]}
+    response = `CON choose quantity(kg)
     1. 1-20kg
     2. 21-40kg
     3. 41-80kg
@@ -3401,6 +3417,14 @@ else if (text == "2*3*3" && language =="English") {
 
     sellerproduct = `${buyerproductarray[marketproductindex]}`
     sellerproductquatity = `${marketproductquatityarray[quatityindix]}`
+
+    const updateMarketingdb = {
+      'product': sellerproduct,
+      'productquatity':sellerproductquatity
+    };
+    
+    // Update the field in Firebase
+    marketingregdb.child(phoneNumber).update(updateMarketingdb)
 
     response = `END you have successfully  sent marketing processing request for ${sellerproductquatity} of ${sellerproduct} to farm radio trust
     1.${sellerproduct}
@@ -3430,7 +3454,7 @@ else if (text == "2*3*3" && language =="English") {
       marketproductindex = `${--dataarray[3]}`
       marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
   
-      response = `CON Sakhani ma kg omwe mkufuna kugura a ${buyerproductarray[marketproductindex]}
+      response = `CON Sakhani ma kg omwe mkufuna kugura
       1. 1-20kg
       2. 21-40kg
       3. 41-80kg
@@ -3448,6 +3472,14 @@ else if (text == "2*3*3" && language =="English") {
   
       sellerproduct = `${buyerproductarray[marketproductindex]}`
       sellerproductquatity = `${marketproductquatityarray[quatityindix]}`
+
+      const updateMarketingdb = {
+        'product': sellerproduct,
+        'productquatity':sellerproductquatity
+      };
+      
+      // Update the field in Firebase
+      marketingregdb.child(phoneNumber).update(updateMarketingdb)
   
       response = `END Mwakwanilisa kutumiza zomwe mkufuna a farm radio trust akuthandize kugura za ${sellerproductquatity} of ${sellerproduct} to farm radio trust
       1.${sellerproduct}
