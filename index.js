@@ -3409,21 +3409,21 @@ else if (text == "2*3*3" && language == "English") {
 
     buyerproductarray = ['Maize','Soya bean','Rice','Beans']
   
-    response = `CON choose product to buy
-    1. Maize
-    2. Soya bean
-    3. Rice
-    4. Beans`;
+    response = `CON Sakhani zomwe mkufuna kugura
+    1. Chimanga
+    2. Soya
+    3. Mpunga
+    4. Nymba`;
   
     }
      
     
-    else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[3]!='' && language == "Chichewa") {
+  else if (dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' &&  language == "Chichewa") {
      
       buyerproductindex = `${--dataarray[3]}`
       buyerproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
   
-      response = `CON choose quantity(kg) of ${buyerproductarray[buyerproductindex]}
+      response = `CON Sakhani ma kg omwe mkufuna kugura a ${buyerproductarray[buyerproductindex]}
       1. 1-20kg
       2. 21-40kg
       3. 41-80kg
@@ -3434,13 +3434,13 @@ else if (text == "2*3*3" && language == "English") {
     }
   
   
-    else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[4]!='' && language=='Chichewa'){
-   
-     quatityindix = `${--dataarray[4]}`
-
-     response = `END you have successfully  sent marketing processing request for ${marketproductquatityarray[quatityindix]} of ${marketproductarray[marketproductindex]} to farm radio trust`
+    else if(dataarraysize==5 && dataarray[0]=='2' && dataarray[1]=='3' && dataarray[2]=='3' && dataarray[4]!='' &&  language == "Chichewa"){
+     
+      quatityindix = `${--dataarray[4]}`
+  
+      response = `END Mwakwanilisa kutumiza zomwe mkufuna a farm radio trust akuthandize kugura za ${marketproductquatityarray[quatityindix]} of ${marketproductarray[marketproductindex]} to farm radio trust`
     }
-
+  
 
 
   //.............................. ......my account menu.............................................................
