@@ -3383,7 +3383,7 @@ else if (text == "2*3*3" && language =="English") {
     marketproductindex = `${--dataarray[3]}`
     marketproductquatityarray = ['1-20kg','21-40kg','41-80kg','81-100kg','100kg above']
 
-    response = `CON choose quantity(kg) of ${marketproductarray[marketproductindex]}
+    response = `CON choose quantity(kg) of ${buyerproductarray[marketproductindex]}
     1. 1-20kg
     2. 21-40kg
     3. 41-80kg
