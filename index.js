@@ -260,7 +260,7 @@ app.get("*", (req, res) => {
   res.send("USSD deployed successfully");
 });
 
-app.post("*", (req, res) => {
+app.post("*", async(req, res) => {
   let { sessionId, serviceCode, phoneNumber, text, response } = req.body;
   //creating an array of data
   let dataarray = text.split("*");
@@ -2870,7 +2870,7 @@ async function handleUSSDRequest(req, res) {
 }
 
 
-handleUSSDRequest(req, res);
+
     
    }
   
