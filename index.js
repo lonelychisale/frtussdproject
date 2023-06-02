@@ -170,6 +170,48 @@ if (!existingLanguage) {
 
 
 
+//...............registration validation.................................................
+
+
+
+
+var number = '+265988170022'; // The phone number to check
+
+async function checkNumberRegistration() {
+  try {
+    const snapshot = await newregref.child(number).once('value');
+    const isRegistered = snapshot.exists();
+    return isRegistered;
+  } catch (error) {
+    console.error('Error checking number registration:', error);
+    throw error;
+  }
+}
+
+async function handleUSSDRequest() {
+  try {
+    const isRegistered = await checkNumberRegistration();
+
+    if (isRegistered) {
+      // The number is registered in Firebase
+      console.log('Number is registered');
+      // Display the desired USSD response
+     
+    } else {
+      // The number is not registered in Firebase
+      console.log('Number is not registered');
+    }
+
+    // Send the USSD response back to the user
+    
+  } catch (error) {
+    console.error('Error handling USSD request:', error);
+    // Send an error response to the user
+  }
+}
+handleUSSDRequest()
+
+
 
 
 
@@ -3799,6 +3841,7 @@ else if (text == "2*4*2" && language =="English") {
   //......................................send the response back.................................
   res.set("Content-Type: text/plain");
   res.send(response);
+  handleUSSDRequest(req, res);
 });
 
 app.listen(port, () => {
