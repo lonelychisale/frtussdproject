@@ -2782,14 +2782,50 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 
   
 //.........................................main menu in english.........................................................
-  else if (text == "2" && language =="English") {
+ else if (text == "2" && language =="English") {
 
-    response = `CON Mlimi Main Manu
-		1. Advesories
-		2. Weather reports
-		3. Marketing
-		4. Account
-		5. help`;
+  async function checkNumberRegistration() {
+    try {
+      const snapshot = await databaseRef.child(phoneNumber).once('value');
+     const isRegistered = snapshot.exists();
+     return isRegistered;
+   } catch (error) {
+    console.error('Error checking number registration:', error);
+    throw error;
+   }
+ }
+
+async function handleUSSDRequest(req, res) {
+  try {
+    const isRegistered = await checkNumberRegistration();
+
+    if (isRegistered) {
+      // The number is registered in Firebase
+      console.log('Number is registered');
+      // Display the desired USSD response
+      response = `CON Mlimi Main Menu
+        1. Advisories
+        2. Weather reports
+        3. Marketing
+        4. Account
+        5. Help`;
+    } else {
+      // The number is not registered in Firebase
+      console.log('Number is not registered');
+      // Display a different USSD response or end the session
+      response = 'END Your number is not registered. Please register to access the menu.';
+    }
+
+    // Send the USSD response back to the user
+    res.send(response);
+  } catch (error) {
+    console.error('Error handling USSD request:', error);
+    // Send an error response to the user
+    response = 'END An error occurred. Please try again later.';
+
+  }
+}
+
     
    }
   
@@ -3703,7 +3739,7 @@ else if (text == "2*4*2" && language =="English") {
   //.......................................what we buy in English......................................
   else if(text=='2*4*3' && language=='English'){
 
-    response = `END this is the list of farm product farm radio trust buy
+    response = `END Farm products on market
     1.Maize
     2.Soya beans
     3.Beans
@@ -3715,7 +3751,7 @@ else if (text == "2*4*2" && language =="English") {
    //.......................................what we buy in English......................................
    else if(text=='2*4*3' && language=='Chichewa'){
 
-    response = `END iyi ndi list ya zinthu zomwe farm radio trust timagura
+    response = `END zomwe zili pa msika
     1.chimanga
     2.Soya 
     3.Nyemba
