@@ -2866,6 +2866,7 @@ async function handleUSSDRequest(req, res) {
     response = 'END An error occurred. Please try again later.';
     res.send(response);
   }
+  handleUSSDRequest(req, res);
 }
 
 
@@ -3842,7 +3843,7 @@ else if (text == "2*4*2" && language =="English") {
   //......................................send the response back.................................
   res.set("Content-Type: text/plain");
   res.send(response);
-  handleUSSDRequest(req, res);
+  
 });
 
 app.listen(port, () => {
