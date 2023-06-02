@@ -2866,10 +2866,11 @@ async function handleUSSDRequest(req, res) {
     response = 'END An error occurred. Please try again later.';
     res.send(response);
   }
-  handleUSSDRequest(req, res);
+  
 }
 
 
+handleUSSDRequest(req, res);
     
    }
   
