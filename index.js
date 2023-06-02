@@ -2828,7 +2828,7 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 
   async function checkNumberRegistration() {
     try {
-      const snapshot = await databaseRef.child(phoneNumber).once('value');
+      const snapshot = await newregref.child(phoneNumber).once('value');
      const isRegistered = snapshot.exists();
      return isRegistered;
    } catch (error) {
