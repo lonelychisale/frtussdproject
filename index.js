@@ -2826,16 +2826,16 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
 //.........................................main menu in english.........................................................
  else if (text == "2" && language =="English") {
 
-  async function checkNumberRegistration() {
-    try {
-      const snapshot = await newregref.child(phoneNumber).once('value');
-     const isRegistered = snapshot.exists();
-     return isRegistered;
-   } catch (error) {
+async function checkNumberRegistration() {
+  try {
+    const snapshot = await newregref.child(phoneNumber).once('value');
+    const isRegistered = snapshot.exists();
+    return isRegistered;
+  } catch (error) {
     console.error('Error checking number registration:', error);
     throw error;
-   }
- }
+  }
+}
 
 async function handleUSSDRequest(req, res) {
   try {
@@ -2864,9 +2864,10 @@ async function handleUSSDRequest(req, res) {
     console.error('Error handling USSD request:', error);
     // Send an error response to the user
     response = 'END An error occurred. Please try again later.';
-
+    res.send(response);
   }
 }
+
 
     
    }
