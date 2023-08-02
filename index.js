@@ -2825,8 +2825,14 @@ else if(dataarraysize==10 && dataarray[0]=='1' && dataarray[1]=='1' && dataarray
   
 //.........................................main menu in english.........................................................
  else if (text == "2" && language =="English") {
+	   response = `CON Mlimi Main Menu
+        1. Advisories
+        2. Weather reports
+        3. Marketing
+        4. Account
+        5. Help`;
 
-async function checkNumberRegistration() {
+/*async function checkNumberRegistration() {
   try {
     const snapshot = await newregref.child(phoneNumber).once('value');
     const isRegistered = snapshot.exists();
@@ -2870,7 +2876,7 @@ async function handleUSSDRequest(req, res) {
 }
 
 
-
+*/
     
    }
   
