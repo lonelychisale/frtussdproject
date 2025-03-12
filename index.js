@@ -317,7 +317,7 @@ mainmenuselector = ['1','2','3']
   //......................................first menu...........................................
   if (text == "" && language == "English") {
     
-    response = `CON Welcome to Farm Radio Trust
+    response = `CON Welcome to Farm Radio Trust Test
       1.Register
       2.Main Menu
       3.Help`
